@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: API 문서 (Swagger)
+    url: http://localhost:8000/docs
+    about: BE 서버 띄운 상태에서만 접속 가능. 엔드포인트 / schema / 시도해보기
