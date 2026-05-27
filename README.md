@@ -69,9 +69,11 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 |---|---|---|
 | GET | `/` | 기본 인사 + 링크 |
 | GET | `/api/health` | 모델 로드 상태 + 메타 |
-| GET | `/api/questionnaire` | 자가진단 질문지 (15개) |
+| GET | `/api/scanner/health` | ESP32-CAM 도달 여부 (3초 timeout) |
+| GET | `/api/questionnaire` | 자가진단 질문지 (10개) |
 | POST | `/api/questionnaire/score` | 답변 채점 (JSON body: `{answers: {qid: opt_idx, ...}}`) |
-| POST | `/api/predict` | 메인 추론 (multipart: image + region + 사용자입력 + 센서) |
+| POST | `/api/predict` | 이미지 업로드 추론 (multipart: image + region + 사용자입력 + 센서) |
+| POST | `/api/measure` | ESP32 스캐너 자동 측정 + 추론 (~6초, multipart: region + 사용자입력) |
 
 ## 환경 변수
 
@@ -79,6 +81,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 |---|---|---|
 | `DAMDA_CHECKPOINT` | `AI/checkpoints/epoch045.pt` | 사용할 ckpt 경로 |
 | `DAMDA_CONFIG` | `AI/configs/baseline.yaml` | 모델 config 경로 |
+| `DAMDA_ESP32_URL` | `http://10.174.185.100` | ESP32-CAM 기본 URL (시연 환경 Wi-Fi) |
 
 ## 자가진단 질문지 수정
 
@@ -98,8 +101,27 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ## 시연 시나리오
 
-1. 사용자가 브라우저에서 `http://<lab-pc-ip>:8000/static/index.html` 접속
+1. 사용자가 브라우저에서 `http://<host>:8000/static/index.html` 접속
 2. "내 피부 알아요" / "잘 모르겠어요" 선택
-3. (모르면) 15개 질문 자가진단 → skin_type, sensitivity, aging_score 자동 산정
-4. 측정 부위 선택 + ESP32-CAM 이미지 + FDC2112 측정값 입력
-5. POST `/api/predict` → predictions + narrative 표시
+3. (모르면) 10개 질문 자가진단 → skin_type, sensitivity, aging_score 자동 산정
+4. 측정 부위 선택 + 두 가지 방식 중 선택:
+   - **방식 A**: ESP32-CAM 스캐너에 부위 대고 "스캐너로 측정" → POST `/api/measure` (~6초)
+   - **방식 B**: 사진 직접 업로드 + 센서값 수동 입력 → POST `/api/predict`
+5. 결과 화면 — 종합 점수 + 헤드별 평가 + 케어 tip 표시
+
+## ESP32-CAM 사전 점검
+
+시연 전 필수:
+
+```cmd
+:: 1. ESP32 와 BE 서버가 같은 Wi-Fi 인지 확인
+ping 10.174.185.100
+
+:: 2. BE 띄운 상태에서
+curl http://localhost:8000/api/scanner/health
+:: 또는 브라우저 → http://localhost:8000/api/scanner/health
+:: → {"status":"ok", "esp32_data":{...}} 면 OK
+:: → {"status":"unreachable", "error":"..."} 면 Wi-Fi / IP / 펌웨어 확인 필요
+```
+
+ESP32 의 자체 UI `http://10.174.185.100` 가 브라우저에서 바로 떠야 정상 동작 보장.
