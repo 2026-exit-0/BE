@@ -1,0 +1,10 @@
+# BE/ 의존성 — AI/ 와 별도 venv 권장 (또는 같은 venv 에 추가 설치)
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6     # UploadFile 처리용
+pydantic>=2.0.0
+Pillow>=10.0.0
+PyYAML>=6.0
+
+# AI 모듈 (src.infer) 도 import 되므로 torch 도 필요
+# AI/requirements.txt 의 torch, torchvision, numpy, pandas 가 같이 설치되어야 함
