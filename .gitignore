@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+
+# 환경변수 / 비밀
+.env
+.env.local
+*.secret
+
+# 로그
+*.log
+logs/
+uvicorn.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 업로드 / 임시 파일
+uploads/
+tmp/
+*.tmp
+
+# 모델 / 데이터 (BE 가 아닌 AI repo 가 관리)
+# 단, BE 가 ckpt 를 직접 들고 있을 일은 없음 — 환경변수 DAMDA_CHECKPOINT 로 경로만 참조
+*.pt
+*.pth
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg
