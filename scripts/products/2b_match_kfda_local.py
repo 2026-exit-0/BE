@@ -57,17 +57,17 @@ def build_lookup(kfda_csv: Path) -> Dict[str, Dict]:
 
 
 def check_ingredient(ing_text: str, lookup: Dict) -> Dict:
-    """단일 성분이 규제 DB 에 있나 확인. 일치하면 info 반환."""
+    """단일 성분이 규제 DB 에 있나 확인. 정확 매칭만 (false positive 방지).
+
+    이전 partial match 는 글리세린/토코페롤 같은 일반 안전 성분이 긴 규제 성분명의
+    substring 으로 잘못 매칭됨 → 92% 가짜 위험. 정확 매칭으로 변경.
+    """
     norm = _normalize(ing_text)
-    if not norm:
+    if not norm or len(norm) < 3:
         return {}
-    # 정확 매칭
+    # 정확 매칭만
     if norm in lookup:
         return lookup[norm]
-    # 부분 매칭 (정규화된 키가 검색어에 포함되거나 그 반대)
-    for key, info in lookup.items():
-        if key in norm or norm in key:
-            return info
     return {}
 
 

@@ -59,11 +59,24 @@ SUBCATEGORY_KEYWORDS = {
 SKIN_TYPES = ["건성", "지성", "복합성", "민감성", "중성"]
 
 
-def auto_category(ing_text: str) -> list:
+def _safe_str(x) -> str:
+    """NaN / float / None → 빈 문자열 안전 변환."""
+    if x is None:
+        return ""
+    try:
+        if pd.isna(x):
+            return ""
+    except (TypeError, ValueError):
+        pass
+    return str(x)
+
+
+def auto_category(ing_text) -> list:
     """성분 텍스트 보고 카테고리 추정 (multi-label)."""
-    if not ing_text:
+    text = _safe_str(ing_text)
+    if not text:
         return []
-    text_lower = ing_text.lower()
+    text_lower = text.lower()
     matched = []
     for cat, kws in CATEGORY_KEYWORDS.items():
         if any(kw in text_lower for kw in kws):
@@ -71,32 +84,34 @@ def auto_category(ing_text: str) -> list:
     return matched
 
 
-def auto_subcategory(name: str) -> str:
+def auto_subcategory(name) -> str:
     """제품명 보고 subcategory 추정."""
-    if not name:
+    text = _safe_str(name)
+    if not text:
         return "?"
-    name_lower = name.lower()
+    text_lower = text.lower()
     for sub, kws in SUBCATEGORY_KEYWORDS.items():
-        if any(kw in name_lower for kw in kws):
+        if any(kw in text_lower for kw in kws):
             return sub
     return "?"
 
 
-def auto_fragrance_free(ing_text: str) -> bool:
+def auto_fragrance_free(ing_text) -> bool:
     """전성분에 향료 없으면 무향."""
-    if not ing_text:
+    text = _safe_str(ing_text)
+    if not text:
         return False
     keywords = ["fragrance", "parfum", "perfume", "향료"]
-    text_lower = ing_text.lower()
+    text_lower = text.lower()
     return not any(kw in text_lower for kw in keywords)
 
 
-def auto_alcohol_free(ing_text: str) -> bool:
+def auto_alcohol_free(ing_text) -> bool:
     """전성분에 알코올 (변성알코올) 없으면 무알코올."""
-    if not ing_text:
+    text = _safe_str(ing_text)
+    if not text:
         return False
-    text_lower = ing_text.lower()
-    # "Alcohol Denat" 또는 "변성알코올" 만 위험. "Cetyl Alcohol" 등은 제외 (지방알코올, 안전)
+    text_lower = text.lower()
     if "alcohol denat" in text_lower or "변성알코올" in text_lower:
         return False
     if "ethanol" in text_lower and "phenoxy" not in text_lower:
@@ -113,18 +128,19 @@ def prompt(msg: str, default: str = "", choices: Optional[list] = None) -> str:
     return val or default
 
 
-def review_one(row: pd.Series, idx: int, total: int) -> dict:
+def review_one(row: pd.Series, idx: int, total: int, auto: bool = False) -> dict:
     """한 제품 인터랙티브 라벨링."""
-    name = row.get("product_name") or "?"
-    brand = row.get("brands") or "?"
-    ing_en = row.get("ingredients_text_en") or row.get("ingredients_text") or ""
-    ing_kor = row.get("main_ingredients_kor") or ""
+    name = _safe_str(row.get("product_name")) or "?"
+    brand = _safe_str(row.get("brands")) or "?"
+    ing_en = _safe_str(row.get("ingredients_text_en")) or _safe_str(row.get("ingredients_text"))
+    ing_kor = _safe_str(row.get("main_ingredients_kor"))
 
     print(f"\n{'=' * 60}")
     print(f"[{idx + 1}/{total}] {brand}")
     print(f"  {name}")
     print(f"  성분 (top): {ing_kor[:100]}")
-    print(f"  위험성분 포함: {'⚠️ ' + row.get('risky_ingredients_kor', '') if row.get('has_risky') else '✓ 안전'}")
+    risky_text = _safe_str(row.get("risky_ingredients_kor")) or _safe_str(row.get("risky_ingredients"))
+    print(f"  위험성분 포함: {'⚠️ ' + risky_text[:80] if row.get('has_risky') else '✓ 안전'}")
     print()
 
     # 자동 추정
@@ -133,14 +149,24 @@ def review_one(row: pd.Series, idx: int, total: int) -> dict:
     ff = auto_fragrance_free(ing_en)
     af = auto_alcohol_free(ing_en)
 
-    # 사용자 확인 / 수정
-    cat_str = prompt(f"카테고리 (comma)", default=",".join(cats) or "보습")
-    sub_str = prompt(f"세부", default=sub)
-    skin_str = prompt(f"적합 피부타입 (comma)", default="중성,건성")
-    ff_str = prompt(f"무향?", default="y" if ff else "n", choices=["y", "n"])
-    af_str = prompt(f"무알코올?", default="y" if af else "n", choices=["y", "n"])
-    price_str = prompt(f"가격대 (예: 2만원대)", default="?")
-    note_str = prompt(f"메모 (옵션)", default="")
+    if auto:
+        # 자동 모드 — 추정값 그대로 사용
+        cat_str = ",".join(cats) or "보습"
+        sub_str = sub
+        skin_str = "중성,건성,지성,복합성"  # 광범위 — 추천에서 score 로 차등
+        ff_str = "y" if ff else "n"
+        af_str = "y" if af else "n"
+        price_str = "?"
+        note_str = ""
+    else:
+        # 인터랙티브 모드
+        cat_str = prompt(f"카테고리 (comma)", default=",".join(cats) or "보습")
+        sub_str = prompt(f"세부", default=sub)
+        skin_str = prompt(f"적합 피부타입 (comma)", default="중성,건성")
+        ff_str = prompt(f"무향?", default="y" if ff else "n", choices=["y", "n"])
+        af_str = prompt(f"무알코올?", default="y" if af else "n", choices=["y", "n"])
+        price_str = prompt(f"가격대 (예: 2만원대)", default="?")
+        note_str = prompt(f"메모 (옵션)", default="")
 
     return {
         "id": f"P{idx + 1:03d}",
@@ -177,6 +203,8 @@ def main():
     ap.add_argument("--output", default=r"C:\damda\data\products\output\products.json")
     ap.add_argument("--max", type=int, default=50, help="최대 라벨링 개수 (기본 50)")
     ap.add_argument("--resume", action="store_true", help="중단 지점부터 이어서")
+    ap.add_argument("--auto", action="store_true",
+                    help="자동 모드 — 사용자 입력 없이 추정값 그대로 저장 (시연 prototype 용)")
     args = ap.parse_args()
 
     out_path = Path(args.output)
@@ -194,7 +222,7 @@ def main():
     start_idx = len(products)
     for idx in range(start_idx, len(df)):
         try:
-            p = review_one(df.iloc[idx], idx, len(df))
+            p = review_one(df.iloc[idx], idx, len(df), auto=args.auto)
             products.append(p)
         except (KeyboardInterrupt, EOFError):
             print("\n[중단] 진행분 저장 후 종료")
