@@ -21,6 +21,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Dict, List, Optional
+from urllib.parse import quote
 
 
 # 제품 DB 로드 (한 번만)
@@ -228,10 +229,93 @@ def recommend(
             "image_url": p.get("image_url", ""),
             "score": round(s, 2),
             "reason": _generate_reason(p, measurement, user_inputs, weather),
+            "effect": _generate_effect(p, measurement, user_inputs),
+            "purchase_url": _purchase_link(p),
+            "warnings": _warning_badges(p),
         }
         for p, s in scored[:top_k]
     ]
 
+
+# ============================================================
+# 사용자 친화적 부가 정보 — 효과 / 구매 링크 / 주의 배지
+# ============================================================
+
+# 카테고리별 효과 문구 (사용자 친화적 한국어)
+CATEGORY_EFFECTS = {
+    "보습": "건조한 피부에 깊은 수분",
+    "미백": "칙칙한 톤을 환하게",
+    "진정": "민감해진 피부 진정",
+    "모공": "넓어진 모공을 매끄럽게",
+    "탄력": "탄력 있는 피부 결",
+}
+
+
+def _generate_effect(product: dict, measurement: dict, user_inputs: dict) -> str:
+    """이 제품으로 기대할 수 있는 효과 — 카드 상단에 표시될 한 줄."""
+    cats = product.get("category", []) or []
+    phrases = [CATEGORY_EFFECTS[c] for c in cats if c in CATEGORY_EFFECTS]
+    if not phrases:
+        return "데일리 케어로 피부 컨디션 유지"
+    body = " · ".join(phrases[:2])  # 최대 2개
+    return f"이 제품으로 {body} 효과를 기대할 수 있어요"
+
+
+def _purchase_link(product: dict) -> str:
+    """구매처 링크. 제품에 명시된 URL 있으면 우선, 없으면 네이버 쇼핑 검색."""
+    if product.get("purchase_url"):
+        return product["purchase_url"]
+    brand = (product.get("brand") or "").strip()
+    name = (product.get("name_kr") or product.get("name_en") or "").strip()
+    query = f"{brand} {name}".strip()
+    if not query:
+        return ""
+    return f"https://search.shopping.naver.com/search/all?query={quote(query)}"
+
+
+# 태그/성분명 → 사용자 친화적 라벨 + 위험도 매핑
+_TAG_LABEL = {
+    "주의성분포함": ("주의 성분 함유", "medium"),
+    "알코올": ("알코올 함유", "low"),
+    "알코올 함유": ("알코올 함유", "low"),
+    "향료": ("향료 함유", "low"),
+    "향료 함유": ("향료 함유", "low"),
+    "에센셜오일": ("에센셜 오일 함유", "low"),
+    "파라벤": ("파라벤 함유", "high"),
+}
+
+
+def _warning_badges(product: dict) -> List[dict]:
+    """주의 사항 — 사용자에게 한국어로 쉽게 보여주기 위한 배지 리스트.
+    [{label, level}] (level: high / medium / low)
+    """
+    badges: List[dict] = []
+    seen = set()
+
+    def _add(label: str, level: str):
+        if label and label not in seen:
+            badges.append({"label": label, "level": level})
+            seen.add(label)
+
+    # 1) 위험 성분 (식약처 규제 매칭된 것 등)
+    for ing in (product.get("risky_ingredients") or []):
+        if isinstance(ing, dict):
+            ing_label = ing.get("kr") or ing.get("name") or ing.get("inci") or ""
+        else:
+            ing_label = str(ing)
+        if ing_label:
+            _add(f"{ing_label} 주의", "high")
+
+    # 2) 태그 기반
+    for tag in (product.get("tags") or []):
+        if tag in _TAG_LABEL:
+            label, level = _TAG_LABEL[tag]
+            _add(label, level)
+
+    return badges
+
+
+# ============================================================
 
 def _generate_reason(product: dict, measurement: dict, user_inputs: dict, weather: Optional[dict]) -> str:
     """추천 이유를 한 줄로 생성. 측정값/사용자입력의 실제 수치 포함해 설득력 ↑."""
