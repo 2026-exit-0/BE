@@ -170,9 +170,11 @@ def main():
     top.to_csv(out_path, index=False, encoding="utf-8-sig")
     print(f"[save] {out_path}  ({len(top)}행)")
     print()
-    print("[sample] 상위 5개:")
-    for i, row in top.head(5).iterrows():
-        print(f"  {row.get('brands', '?'):20s} | {row.get('product_name', '?')[:50]}")
+    print("[sample] 상위 10개:")
+    for i, row in top.head(10).iterrows():
+        brand = str(row.get("brands") or "?")[:20].ljust(20)
+        name = str(row.get("product_name") or "?")[:50]
+        print(f"  {brand} | {name}")
 
 
 if __name__ == "__main__":
