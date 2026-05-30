@@ -40,14 +40,14 @@ def build_lookup(kfda_csv: Path) -> Dict[str, Dict]:
     - 한국어 표준명 / 영문 INCI 양쪽 모두 키로 등록
     - 정규화 적용 (lowercase, 특수문자 제거)
     """
-    df = pd.read_csv(kfda_csv, encoding="utf-8-sig")
+    df = pd.read_csv(kfda_csv, encoding="utf-8-sig").fillna("")
     lookup: Dict[str, Dict] = {}
     for _, row in df.iterrows():
         info = {
-            "kor": row.get("ingr_std_name", "") or "",
-            "eng": row.get("ingr_eng_name", "") or "",
-            "prohibited": row.get("prohibited_countries", "") or "",
-            "limited": row.get("limited_countries", "") or "",
+            "kor": str(row.get("ingr_std_name", "")),
+            "eng": str(row.get("ingr_eng_name", "")),
+            "prohibited": str(row.get("prohibited_countries", "")),
+            "limited": str(row.get("limited_countries", "")),
         }
         for k in (info["kor"], info["eng"]):
             norm = _normalize(k)
