@@ -168,31 +168,38 @@ def review_one(row: pd.Series, idx: int, total: int, auto: bool = False) -> dict
         price_str = prompt(f"가격대 (예: 2만원대)", default="?")
         note_str = prompt(f"메모 (옵션)", default="")
 
+    # 모든 row 필드는 _safe_str 로 NaN 안전 처리
+    name_ko = _safe_str(row.get("product_name_ko")) or name
+    name_en_field = _safe_str(row.get("product_name_en")) or name
+    barcode = _safe_str(row.get("code"))
+    main_ings_raw = _safe_str(row.get("main_ingredients"))
+    main_ings_kor = _safe_str(row.get("main_ingredients_kor"))
+    risky_kor = _safe_str(row.get("risky_ingredients_kor"))
+    image = _safe_str(row.get("image_front_url")) or _safe_str(row.get("image_url"))
+    url = _safe_str(row.get("url"))
+
     return {
         "id": f"P{idx + 1:03d}",
-        "name_kr": row.get("product_name_ko") or name,
-        "name_en": row.get("product_name_en") or name,
+        "name_kr": name_ko,
+        "name_en": name_en_field,
         "brand": brand,
-        "barcode": str(row.get("code", "")),
+        "barcode": barcode,
         "category": [c.strip() for c in cat_str.split(",") if c.strip()],
         "subcategory": sub_str,
         "for_skin": [s.strip() for s in skin_str.split(",") if s.strip() in SKIN_TYPES],
         "main_ingredients": [
             {"inci": en.strip(), "kr": kr.strip()}
-            for en, kr in zip(
-                str(row.get("main_ingredients", "")).split("|"),
-                str(row.get("main_ingredients_kor", "")).split("|"),
-            )
+            for en, kr in zip(main_ings_raw.split("|"), main_ings_kor.split("|"))
             if en.strip()
         ][:8],
         "tags": ["저자극"] if not row.get("has_risky") else ["주의성분포함"],
         "fragrance_free": ff_str == "y",
         "alcohol_free": af_str == "y",
-        "risky_ingredients": str(row.get("risky_ingredients_kor", "")).split("|") if row.get("risky_ingredients_kor") else [],
+        "risky_ingredients": risky_kor.split("|") if risky_kor else [],
         "price_range": price_str,
-        "image_url": row.get("image_front_url") or row.get("image_url") or "",
-        "obf_url": row.get("url") or "",
-        "source": "OBF + manual",
+        "image_url": image,
+        "obf_url": url,
+        "source": "OBF + auto" if auto else "OBF + manual",
         "note": note_str,
     }
 
