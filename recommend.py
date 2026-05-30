@@ -234,26 +234,75 @@ def recommend(
 
 
 def _generate_reason(product: dict, measurement: dict, user_inputs: dict, weather: Optional[dict]) -> str:
-    """추천 이유를 한 줄로 생성."""
+    """추천 이유를 한 줄로 생성. 측정값/사용자입력의 실제 수치 포함해 설득력 ↑."""
     reasons = []
     cats = set(product.get("category", []))
 
-    if "보습" in cats and measurement.get("moisture", 50) < 35:
-        reasons.append("수분 부족")
-    if "미백" in cats and measurement.get("pigmentation_value", 0) > 30:
-        reasons.append("색소 케어")
-    if "모공" in cats and measurement.get("pore_value", 0) > 250:
-        reasons.append("모공 두드러짐")
-    if "진정" in cats and user_inputs.get("sensitivity", 0) >= 3:
-        reasons.append("민감성 안전")
-    if "탄력" in cats and (user_inputs.get("aging_score", 0) >= 4):
-        reasons.append("노화 케어")
+    # 측정값 기반 — 실제 수치 노출
+    moisture = measurement.get("moisture")
+    if "보습" in cats and moisture is not None:
+        if moisture < 30:
+            reasons.append(f"수분 {moisture:.0f} 부족 (보습 시급)")
+        elif moisture < 45:
+            reasons.append(f"수분 {moisture:.0f} 보통 (보충 권장)")
 
+    pig = measurement.get("pigmentation_value")
+    pig_grade = measurement.get("pigmentation_grade")
+    if "미백" in cats:
+        if pig is not None and pig > 30:
+            reasons.append(f"색소반점 {int(pig)}개 (관리 권장)")
+        elif pig_grade is not None and pig_grade >= 3:
+            reasons.append(f"색소 등급 {pig_grade}/5 (개선 필요)")
+
+    pore = measurement.get("pore_value")
+    pore_grade = measurement.get("pore_grade")
+    if "모공" in cats:
+        if pore is not None and pore > 300:
+            reasons.append(f"모공 두드러짐 (수치 {int(pore)})")
+        elif pore_grade is not None and pore_grade >= 3:
+            reasons.append(f"모공 등급 {pore_grade}/5")
+
+    wrinkle = measurement.get("wrinkle_value")
+    wrinkle_grade = measurement.get("wrinkle_grade")
+    if "탄력" in cats:
+        aging = user_inputs.get("aging_score", 0) or 0
+        if aging >= 4:
+            reasons.append(f"자가 노화 점수 {aging}/5")
+        elif wrinkle_grade is not None and wrinkle_grade >= 4:
+            reasons.append(f"주름 등급 {wrinkle_grade}/6")
+
+    # 진정 — 민감성 점수 포함
+    sensitivity = user_inputs.get("sensitivity", 0) or 0
+    if "진정" in cats and sensitivity >= 3:
+        reasons.append(f"민감도 {sensitivity}/5 — 자극 최소화")
+
+    # 피부타입 매칭
     skin_type = user_inputs.get("skin_type", "")
     if skin_type and skin_type in product.get("for_skin", []):
-        reasons.append(f"{skin_type} 적합")
+        reasons.append(f"{skin_type} 피부 적합")
 
-    return " · ".join(reasons[:3]) if reasons else "범용 케어"
+    # 제품 특성 — 민감도 ≥3 이면 무향 강조
+    if sensitivity >= 3 and product.get("fragrance_free"):
+        reasons.append("무향 처방")
+
+    # 핵심 성분 1개 강조 (있으면)
+    main_ings = product.get("main_ingredients", [])
+    if main_ings:
+        first_ing = main_ings[0]
+        ing_name = first_ing.get("kr") or first_ing.get("inci", "")
+        if ing_name and len(ing_name) < 20:
+            reasons.append(f"주성분: {ing_name}")
+
+    # 날씨 보정
+    if weather:
+        humidity = weather.get("humidity")
+        if humidity is not None and humidity < 40 and "보습" in cats:
+            reasons.append(f"오늘 습도 {int(humidity)}% (건조)")
+        uv = weather.get("uv_index")
+        if uv is not None and uv >= 7 and product.get("subcategory") == "선크림":
+            reasons.append(f"UV 지수 {uv} (강함)")
+
+    return " · ".join(reasons[:4]) if reasons else "범용 케어"
 
 
 if __name__ == "__main__":

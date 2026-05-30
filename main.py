@@ -47,6 +47,7 @@ from src.infer import DamdaInferenceModel  # noqa: E402
 
 from questionnaire import QUESTIONS, score_answers, get_questions_for_ui  # noqa: E402
 from narrative import generate_narrative  # noqa: E402
+from recommend import recommend as recommend_products  # noqa: E402
 
 
 # ============================================================
@@ -409,12 +410,25 @@ async def predict(
         user_inputs=user_inputs,
     )
 
+    # 제품 추천 — 측정값 + 사용자 입력 기반
+    try:
+        recommendations = recommend_products(
+            measurement={**pred["regression"], **pred["classification"]},
+            user_inputs=user_inputs,
+            weather=None,  # TODO: 기상 API 통합
+            top_k=5,
+        )
+    except Exception as e:
+        recommendations = []
+        print(f"[recommend] 실패 (무시): {e}")
+
     return {
         "predictions": {
             "regression": pred["regression"],
             "classification": pred["classification"],
         },
         "narrative": narrative,
+        "recommended_products": recommendations,
         "user_inputs": user_inputs,
         "sensor": sensor,
         "meta": pred["meta"],
@@ -547,12 +561,25 @@ async def measure_via_scanner(
         user_inputs=user_inputs,
     )
 
+    # 제품 추천 — 측정값 + 사용자 입력 기반
+    try:
+        recommendations = recommend_products(
+            measurement={**pred["regression"], **pred["classification"]},
+            user_inputs=user_inputs,
+            weather=None,
+            top_k=5,
+        )
+    except Exception as e:
+        recommendations = []
+        print(f"[recommend] 실패 (무시): {e}")
+
     return {
         "predictions": {
             "regression": pred["regression"],
             "classification": pred["classification"],
         },
         "narrative": narrative,
+        "recommended_products": recommendations,
         "user_inputs": user_inputs,
         "sensor": {
             "moisture_raw": moisture_raw,
