@@ -77,6 +77,8 @@ def main():
     ap.add_argument("--limit", type=int, default=100, help="최종 출력 개수 (기본 100)")
     ap.add_argument("--global-also", action="store_true",
                     help="한국 시장 외 글로벌 K-beauty / 인기 브랜드도 포함")
+    ap.add_argument("--lax", action="store_true",
+                    help="스킨케어 카테고리 필터 비활성 — 한국 시장 + 전성분 있는 모든 제품")
     args = ap.parse_args()
 
     out_path = Path(args.output)
@@ -92,39 +94,62 @@ def main():
         encoding="utf-8",
     )
     print(f"[load] 전체 행: {len(df):,}")
+    print(f"[load] 실제 컬럼: {sorted(df.columns)}")
+
+    # 누락 컬럼은 빈 값으로 보완 (OBF 덤프마다 컬럼 다를 수 있음)
+    for col in USE_COLS:
+        if col not in df.columns:
+            df[col] = ""
+
+    def safe_str(col):
+        return df[col].fillna("").astype(str)
 
     # 1. 한국 시장 필터 (countries 또는 countries_tags 에 KR)
     mask_kr = (
-        df["countries"].fillna("").apply(lambda x: _contains_any(x, KR_KEYWORDS))
-        | df["countries_tags"].fillna("").apply(lambda x: _contains_any(x, KR_KEYWORDS))
+        safe_str("countries").apply(lambda x: _contains_any(x, KR_KEYWORDS))
+        | safe_str("countries_tags").apply(lambda x: _contains_any(x, KR_KEYWORDS))
     )
     df_kr = df[mask_kr].copy()
     print(f"[filter] 한국 시장: {len(df_kr):,}")
 
     # 글로벌 옵션 — K-beauty 브랜드는 한국 시장 아니어도 추가
     if args.global_also:
-        mask_kbrand = df["brands"].fillna("").apply(lambda x: _contains_any(x, PRIORITY_BRANDS))
+        mask_kbrand = safe_str("brands").apply(lambda x: _contains_any(x, PRIORITY_BRANDS))
         df_kbrand = df[mask_kbrand & ~mask_kr].copy()
         print(f"[filter] 한국외 K-beauty 브랜드: {len(df_kbrand):,}")
         df_kr = pd.concat([df_kr, df_kbrand], ignore_index=True)
         print(f"[filter] 한국 + K-beauty 합: {len(df_kr):,}")
 
-    # 2. 스킨케어 카테고리 필터
+    def s(col_name):
+        return df_kr[col_name].fillna("").astype(str)
+
+    # 2. 스킨케어 카테고리 필터 — 4개 컬럼 어디든 매칭되면 OK
     mask_skin = (
-        df_kr["categories"].fillna("").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
-        | df_kr["categories_tags"].fillna("").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
-        | df_kr["product_name"].fillna("").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        s("categories").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        | s("categories_tags").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        | s("product_name").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        | s("product_name_en").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        | s("product_name_ko").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
     )
     df_skin = df_kr[mask_skin].copy()
-    print(f"[filter] 스킨케어: {len(df_skin):,}")
+    print(f"[filter] 스킨케어 (엄격): {len(df_skin):,}")
 
-    # 3. 전성분 텍스트 있는 것만
-    mask_ing = (
-        df_skin["ingredients_text"].notna()
-        | df_skin["ingredients_text_en"].notna()
-        | df_skin["ingredients_text_ko"].notna()
-    )
-    df_ing = df_skin[mask_ing].copy()
+    # 매칭이 너무 적으면 (10개 미만) 카테고리 필터 완화 — 한국 시장 + 전성분 있는 거 다 포함
+    if len(df_skin) < 30 and not args.lax:
+        print(f"[filter] 스킨케어 매칭 부족 ({len(df_skin)}) — 카테고리 필터 완화 적용")
+        df_skin = df_kr.copy()
+
+    # 3. 전성분 텍스트 있는 것만 (덤프마다 컬럼 다름 — 있는 것 사용)
+    ing_cols = [c for c in ["ingredients_text", "ingredients_text_en", "ingredients_text_ko"]
+                if c in df_skin.columns]
+    if not ing_cols:
+        print("[filter] 전성분 컬럼 없음 — 모두 통과")
+        df_ing = df_skin.copy()
+    else:
+        mask_ing = pd.Series([False] * len(df_skin), index=df_skin.index)
+        for c in ing_cols:
+            mask_ing = mask_ing | df_skin[c].notna()
+        df_ing = df_skin[mask_ing].copy()
     print(f"[filter] 전성분 있음: {len(df_ing):,}")
 
     # 4. 우선순위 정렬: 우선 브랜드 → 이름 길이 (짧은 게 보통 인기 메인 제품)
