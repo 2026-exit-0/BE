@@ -33,7 +33,27 @@ SKINCARE_KEYWORDS = [
     "skincare", "skin-care", "skin care", "face-care", "face care",
     "cream", "serum", "toner", "lotion", "essence", "ampoule",
     "moisturizer", "moisturiser", "face-cream", "facial",
+    "mask", "exfoliat", "sunscreen", "spf",
     "스킨케어", "세럼", "토너", "에센스", "크림", "앰플", "로션", "수분크림",
+    "마스크", "팩", "선크림",
+]
+
+# 명백히 비-skincare — 제외 키워드 (product_name / brands / categories 어디든 매칭되면 제외)
+EXCLUDE_KEYWORDS = [
+    "shampoo", "conditioner", "hair-care", "hair care", "hair color", "hair dye",
+    "샴푸", "린스", "트리트먼트",
+    "deodorant", "antiperspirant", "데오드란트",
+    "perfume", "fragrance", "eau de", "cologne", "향수",
+    "shaving", "shave", "razor", "razors", "면도",
+    "baby", "babies", "infant", "유아", "아기",
+    "toothpaste", "dental", "mouth", "치약", "구강",
+    "nail", "manicure", "polish", "네일",
+    "lipstick", "lip color", "립스틱",
+    "mascara", "마스카라", "eyeliner", "아이라이너",
+    "foundation", "concealer", "파운데이션", "컨실러",
+    "pet", "pets", "dog", "cat", "반려",
+    "household", "laundry", "detergent", "세제",
+    "tampon", "pad", "feminine",
 ]
 
 # 우선순위 K-beauty 브랜드 (소문자 매칭)
@@ -101,63 +121,76 @@ def main():
         if col not in df.columns:
             df[col] = ""
 
-    def safe_str(col):
-        return df[col].fillna("").astype(str)
+    def s(col, frame=None):
+        f = frame if frame is not None else df
+        return f[col].fillna("").astype(str)
 
-    # 1. 한국 시장 필터 (countries 또는 countries_tags 에 KR)
+    # 0. 필수 컬럼 NaN 제거 — product_name 또는 ingredients_text 없으면 의미 없음
+    n_before = len(df)
+    df = df[(df["product_name"].notna()) & (df["product_name"].astype(str).str.strip() != "")
+            & (df["ingredients_text"].notna()) & (df["ingredients_text"].astype(str).str.strip() != "")]
+    df = df.copy()
+    print(f"[filter] 이름/성분 있는 것: {n_before:,} → {len(df):,}")
+
+    # 0.5. 명백히 비-skincare 제외 (shampoo / baby / perfume / lipstick 등)
+    n_before = len(df)
+    exclude_mask = (
+        s("product_name").apply(lambda x: _contains_any(x, EXCLUDE_KEYWORDS))
+        | s("categories").apply(lambda x: _contains_any(x, EXCLUDE_KEYWORDS))
+        | s("categories_tags").apply(lambda x: _contains_any(x, EXCLUDE_KEYWORDS))
+    )
+    df = df[~exclude_mask].copy()
+    print(f"[filter] 비-skincare 제외: {n_before:,} → {len(df):,}")
+
+    # 1. 한국 시장 필터
     mask_kr = (
-        safe_str("countries").apply(lambda x: _contains_any(x, KR_KEYWORDS))
-        | safe_str("countries_tags").apply(lambda x: _contains_any(x, KR_KEYWORDS))
+        s("countries").apply(lambda x: _contains_any(x, KR_KEYWORDS))
+        | s("countries_tags").apply(lambda x: _contains_any(x, KR_KEYWORDS))
     )
     df_kr = df[mask_kr].copy()
     print(f"[filter] 한국 시장: {len(df_kr):,}")
 
-    # 글로벌 옵션 — K-beauty 브랜드는 한국 시장 아니어도 추가
-    if args.global_also:
-        mask_kbrand = safe_str("brands").apply(lambda x: _contains_any(x, PRIORITY_BRANDS))
+    # 한국 시장만으로 부족하면 자동으로 글로벌 K-beauty 브랜드 추가
+    auto_global = (len(df_kr) < 50) or args.global_also
+    if auto_global:
+        mask_kbrand = s("brands").apply(lambda x: _contains_any(x, PRIORITY_BRANDS))
         df_kbrand = df[mask_kbrand & ~mask_kr].copy()
-        print(f"[filter] 한국외 K-beauty 브랜드: {len(df_kbrand):,}")
+        print(f"[filter] 한국외 K-beauty / 인기 브랜드: {len(df_kbrand):,}")
         df_kr = pd.concat([df_kr, df_kbrand], ignore_index=True)
-        print(f"[filter] 한국 + K-beauty 합: {len(df_kr):,}")
+        print(f"[filter] 한국 + 글로벌 합: {len(df_kr):,}")
 
-    def s(col_name):
-        return df_kr[col_name].fillna("").astype(str)
-
-    # 2. 스킨케어 카테고리 필터 — 4개 컬럼 어디든 매칭되면 OK
-    mask_skin = (
-        s("categories").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
-        | s("categories_tags").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
-        | s("product_name").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
-        | s("product_name_en").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
-        | s("product_name_ko").apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+    # 2. 스킨케어 카테고리 매칭 — 우선 strict 매칭만 별도 라벨
+    skincare_mask = (
+        df_kr["categories"].fillna("").astype(str).apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        | df_kr["categories_tags"].fillna("").astype(str).apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
+        | df_kr["product_name"].fillna("").astype(str).apply(lambda x: _contains_any(x, SKINCARE_KEYWORDS))
     )
-    df_skin = df_kr[mask_skin].copy()
-    print(f"[filter] 스킨케어 (엄격): {len(df_skin):,}")
+    df_kr["_skincare_strict"] = skincare_mask
+    n_strict = skincare_mask.sum()
+    print(f"[filter] 스킨케어 strict 매칭: {n_strict:,}")
 
-    # 매칭이 너무 적으면 (10개 미만) 카테고리 필터 완화 — 한국 시장 + 전성분 있는 거 다 포함
-    if len(df_skin) < 30 and not args.lax:
-        print(f"[filter] 스킨케어 매칭 부족 ({len(df_skin)}) — 카테고리 필터 완화 적용")
-        df_skin = df_kr.copy()
-
-    # 3. 전성분 텍스트 있는 것만 (덤프마다 컬럼 다름 — 있는 것 사용)
-    ing_cols = [c for c in ["ingredients_text", "ingredients_text_en", "ingredients_text_ko"]
-                if c in df_skin.columns]
-    if not ing_cols:
-        print("[filter] 전성분 컬럼 없음 — 모두 통과")
-        df_ing = df_skin.copy()
+    if args.lax or n_strict < 30:
+        if not args.lax:
+            print(f"[filter] strict 부족 ({n_strict}) — 우선 strict 정렬 후 나머지 추가")
+        df_skin = df_kr.copy()  # 모두 포함 (이미 EXCLUDE 적용된 상태)
     else:
-        mask_ing = pd.Series([False] * len(df_skin), index=df_skin.index)
-        for c in ing_cols:
-            mask_ing = mask_ing | df_skin[c].notna()
-        df_ing = df_skin[mask_ing].copy()
+        df_skin = df_kr[skincare_mask].copy()
+    print(f"[filter] 스킨케어 후보: {len(df_skin):,}")
+
+    # 3. 전성분 다시 확인 (위에서 한 번 했지만 K-beauty 글로벌 추가 후 재확인)
+    df_ing = df_skin[df_skin["ingredients_text"].notna() & (df_skin["ingredients_text"].astype(str).str.strip() != "")].copy()
     print(f"[filter] 전성분 있음: {len(df_ing):,}")
 
-    # 4. 우선순위 정렬: 우선 브랜드 → 이름 길이 (짧은 게 보통 인기 메인 제품)
-    df_ing["_priority"] = df_ing["brands"].fillna("").apply(
+    # 4. 우선순위 정렬: skincare strict > 우선 브랜드 > 이름 길이
+    df_ing["_skincare_score"] = df_ing.get("_skincare_strict", False).astype(int)
+    df_ing["_priority"] = df_ing["brands"].fillna("").astype(str).apply(
         lambda x: 1 if _contains_any(x, PRIORITY_BRANDS) else 0
     )
-    df_ing["_name_len"] = df_ing["product_name"].fillna("").str.len()
-    df_ing = df_ing.sort_values(["_priority", "_name_len"], ascending=[False, True])
+    df_ing["_name_len"] = df_ing["product_name"].fillna("").astype(str).str.len()
+    df_ing = df_ing.sort_values(
+        ["_skincare_score", "_priority", "_name_len"],
+        ascending=[False, False, True],
+    )
 
     # 5. 중복 제거 (같은 제품명 + 브랜드)
     df_ing = df_ing.drop_duplicates(subset=["product_name", "brands"], keep="first")
@@ -165,7 +198,7 @@ def main():
 
     # 6. Top N
     top = df_ing.head(args.limit).copy()
-    top = top.drop(columns=["_priority", "_name_len"], errors="ignore")
+    top = top.drop(columns=["_skincare_score", "_priority", "_name_len", "_skincare_strict"], errors="ignore")
 
     top.to_csv(out_path, index=False, encoding="utf-8-sig")
     print(f"[save] {out_path}  ({len(top)}행)")
