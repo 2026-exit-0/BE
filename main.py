@@ -626,6 +626,51 @@ def _collect_user_inputs(
     return user_inputs
 
 
+# ============================================================
+# 엔드포인트 — 추천 재요청 (필터 / 새로고침 용)
+# ============================================================
+
+class RecommendRequest(BaseModel):
+    """FE 에서 측정 결과 기억해뒀다가 필터/새로고침 시 다시 호출."""
+    measurement: Dict = Field(default_factory=dict, description="회귀+분류 결과 dict")
+    user_inputs: Dict = Field(default_factory=dict, description="자가진단 결과")
+    weather: Optional[Dict] = Field(default=None, description="습도/UV")
+    filter_category: Optional[str] = Field(default=None, description="보습/미백/진정/모공/탄력")
+    seed: Optional[int] = Field(default=None, description="랜덤 시드 (새로고침용)")
+    top_k: int = Field(default=5, ge=1, le=20)
+
+
+@app.post(
+    "/api/recommend",
+    tags=["측정"],
+    summary="제품 추천 (필터/새로고침)",
+    description=(
+        "이미 측정된 결과를 다시 추천 알고리즘에 통과시킴. "
+        "filter_category 로 특정 케어 카테고리만 받거나, "
+        "seed 를 바꿔서 같은 측정값에 대해 다른 추천 풀을 받을 수 있음."
+    ),
+)
+async def api_recommend(req: RecommendRequest) -> Dict:
+    try:
+        recommendations = recommend_products(
+            measurement=req.measurement,
+            user_inputs=req.user_inputs,
+            weather=req.weather,
+            top_k=req.top_k,
+            filter_category=req.filter_category,
+            seed=req.seed,
+        )
+    except Exception as e:
+        print(f"[/api/recommend] 실패: {e}")
+        raise HTTPException(status_code=500, detail=f"추천 실패: {e}")
+
+    return {
+        "recommended_products": recommendations,
+        "filter_category": req.filter_category,
+        "count": len(recommendations),
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

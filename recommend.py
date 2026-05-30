@@ -19,9 +19,181 @@
 from __future__ import annotations
 
 import json
+import random
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import quote
+
+
+# ============================================================
+# 성분 → 카테고리 자동 매핑 (제품 DB 의 카테고리가 빈약할 때 보강)
+# ============================================================
+# key 는 부분 일치 (lower) — INCI 와 한글 둘 다 잡힘
+INGREDIENT_TO_CATEGORIES: Dict[str, List[str]] = {
+    # 보습 — 다국어 root substring 매칭
+    "히알루론": ["보습"], "hyaluron": ["보습"], "hialuron": ["보습"],
+    "글리세린": ["보습"], "글리세롤": ["보습"], "glycerin": ["보습"], "glicerin": ["보습"], "glicerol": ["보습"], "glycerol": ["보습"],
+    "세라마이드": ["보습", "진정"], "ceramid": ["보습", "진정"], "ceramida": ["보습", "진정"],
+    "스쿠알란": ["보습"], "스쿠알렌": ["보습"], "squalane": ["보습"], "squalene": ["보습"],
+    "판테놀": ["보습", "진정"], "panthenol": ["보습", "진정"], "pantenol": ["보습", "진정"],
+    "베타인": ["보습"], "betaine": ["보습"],
+    "트레할로스": ["보습"], "trehalose": ["보습"],
+    "글루칸": ["보습"], "glucan": ["보습"],
+    "콜레스테롤": ["보습"], "cholesterol": ["보습"],
+    "쉐어버터": ["보습"], "shea butter": ["보습"], "butyrospermum": ["보습"],
+    "호호바": ["보습"], "jojoba": ["보습"],
+    "프로폴리스": ["보습", "진정"], "propolis": ["보습", "진정"],
+    # 진정
+    "알로에": ["진정"], "aloe": ["진정"],
+    "마데카": ["진정"], "madecass": ["진정"], "centella": ["진정"], "asiaticoside": ["진정"],
+    "병풀": ["진정"], "cica": ["진정"],
+    "녹차": ["진정"], "green tea": ["진정"], "camellia": ["진정"],
+    "어성초": ["진정"], "houttuynia": ["진정"],
+    "알란토인": ["진정"], "allantoin": ["진정"],
+    "비사보롤": ["진정"], "bisabolol": ["진정"],
+    "카모마일": ["진정"], "chamomile": ["진정"], "matricaria": ["진정"],
+    "라벤더": ["진정"], "lavender": ["진정"], "lavandula": ["진정"],
+    "잔탄검": ["진정"], "xanthan": ["진정"],  # 보충제이긴 한데 일단 진정 카테고리
+    # 미백/톤업
+    "나이아신아마이드": ["미백"], "niacinamid": ["미백"], "nicotinamid": ["미백"],
+    "비타민c": ["미백"], "ascorbic": ["미백"], "ascorbyl": ["미백"], "비타민 c": ["미백"],
+    "알부틴": ["미백"], "arbutin": ["미백"],
+    "트라넥삼산": ["미백"], "tranexamic": ["미백"],
+    "감초": ["미백", "진정"], "licorice": ["미백", "진정"], "glycyrrhiza": ["미백", "진정"],
+    # 모공/각질
+    "살리실산": ["모공"], "salicylic": ["모공"],
+    "글리콜산": ["모공"], "glycolic": ["모공"],
+    "락트산": ["모공"], "lactic": ["모공"],
+    "파파인": ["모공"], "papain": ["모공"],
+    "활성탄": ["모공"], "charcoal": ["모공"],
+    "카올린": ["모공"], "kaolin": ["모공"],
+    "벤토나이트": ["모공"], "bentonite": ["모공"],
+    "징크": ["모공"], "zinc oxide": ["모공"], "산화아연": ["모공"],
+    # 탄력/항노화
+    "레티놀": ["탄력"], "retinol": ["탄력"], "retinal": ["탄력"], "retinyl": ["탄력"],
+    "펩타이드": ["탄력"], "peptide": ["탄력"],
+    "콜라겐": ["탄력"], "collagen": ["탄력"], "colageno": ["탄력"],
+    "egf": ["탄력"], "growth factor": ["탄력"],
+    "아데노신": ["탄력"], "adenosine": ["탄력"],
+    "코엔자임": ["탄력"], "coenzyme": ["탄력"],
+    "토코페롤": ["탄력"], "tocopherol": ["탄력"],  # 비타민E
+    "비타민e": ["탄력"], "vitamin e": ["탄력"],
+}
+
+
+# 성분 → 효과 문구 (사용자 친화적 한국어)
+# 우선순위: 점수가 높은 핵심 성분이 카드 effect 에 노출됨
+INGREDIENT_EFFECTS: Dict[str, Tuple[str, int]] = {
+    # (효과 문구, 우선순위 — 높을수록 먼저). 다국어 root 매칭.
+    "히알루론": ("히알루론산이 피부 속까지 수분을 전달", 10),
+    "hyaluron": ("히알루론산이 피부 속까지 수분을 전달", 10),
+    "hialuron": ("히알루론산이 피부 속까지 수분을 전달", 10),
+    "나이아신아마이드": ("나이아신아마이드가 톤업과 피부 장벽 강화", 10),
+    "niacinamid": ("나이아신아마이드가 톤업과 피부 장벽 강화", 10),
+    "nicotinamid": ("나이아신아마이드가 톤업과 피부 장벽 강화", 10),
+    "세라마이드": ("세라마이드가 피부 장벽을 단단하게 채워줍니다", 9),
+    "ceramid": ("세라마이드가 피부 장벽을 단단하게 채워줍니다", 9),
+    "ceramida": ("세라마이드가 피부 장벽을 단단하게 채워줍니다", 9),
+    "판테놀": ("판테놀(프로비타민 B5)이 진정과 보습을 동시에", 9),
+    "panthenol": ("판테놀(프로비타민 B5)이 진정과 보습을 동시에", 9),
+    "마데카": ("마데카쇼사이드가 손상된 피부를 부드럽게 진정", 9),
+    "madecass": ("마데카쇼사이드가 손상된 피부를 부드럽게 진정", 9),
+    "centella": ("시카 성분이 자극받은 피부를 진정", 8),
+    "cica": ("시카 성분이 자극받은 피부를 진정", 8),
+    "병풀": ("병풀(시카) 성분이 자극받은 피부를 진정", 8),
+    "알로에": ("알로에 베라가 자극받은 피부를 시원하게 진정", 8),
+    "aloe": ("알로에 베라가 자극받은 피부를 시원하게 진정", 8),
+    "녹차": ("녹차 추출물의 항산화 성분이 피부를 보호", 7),
+    "green tea": ("녹차 추출물의 항산화 성분이 피부를 보호", 7),
+    "camellia": ("동백/녹차 추출물의 항산화 성분이 피부를 보호", 7),
+    "비타민c": ("비타민C가 칙칙한 톤을 환하게 정돈", 10),
+    "ascorbic": ("비타민C가 칙칙한 톤을 환하게 정돈", 10),
+    "ascorbyl": ("비타민C 유도체가 자극 없이 톤업", 9),
+    "알부틴": ("알부틴이 색소침착을 완화", 8),
+    "arbutin": ("알부틴이 색소침착을 완화", 8),
+    "트라넥삼산": ("트라넥삼산이 기미·잡티를 케어", 8),
+    "tranexamic": ("트라넥삼산이 기미·잡티를 케어", 8),
+    "살리실산": ("살리실산(BHA)이 모공 속 노폐물을 부드럽게", 10),
+    "salicylic": ("살리실산(BHA)이 모공 속 노폐물을 부드럽게", 10),
+    "글리콜산": ("AHA(글리콜산)가 묵은 각질을 매끄럽게", 9),
+    "glycolic": ("AHA(글리콜산)가 묵은 각질을 매끄럽게", 9),
+    "락트산": ("락트산이 자극 적게 각질을 케어", 7),
+    "lactic": ("락트산이 자극 적게 각질을 케어", 7),
+    "레티놀": ("레티놀이 주름 개선과 탄력을 끌어올림", 10),
+    "retinol": ("레티놀이 주름 개선과 탄력을 끌어올림", 10),
+    "펩타이드": ("펩타이드가 콜라겐 생성을 도와 탄력 부스팅", 9),
+    "peptide": ("펩타이드가 콜라겐 생성을 도와 탄력 부스팅", 9),
+    "콜라겐": ("콜라겐이 피부 결을 매끄럽게", 7),
+    "collagen": ("콜라겐이 피부 결을 매끄럽게", 7),
+    "아데노신": ("아데노신이 주름 개선에 도움", 8),
+    "adenosine": ("아데노신이 주름 개선에 도움", 8),
+    "스쿠알란": ("스쿠알란이 유분 장벽을 보강해 수분 증발 차단", 8),
+    "squalane": ("스쿠알란이 유분 장벽을 보강해 수분 증발 차단", 8),
+    "토코페롤": ("토코페롤(비타민E)이 항산화 보호막 형성", 7),
+    "tocopherol": ("토코페롤(비타민E)이 항산화 보호막 형성", 7),
+    "쉐어버터": ("쉐어버터의 풍부한 유분이 건조함을 완화", 6),
+    "shea butter": ("쉐어버터의 풍부한 유분이 건조함을 완화", 6),
+    "butyrospermum": ("쉐어버터의 풍부한 유분이 건조함을 완화", 6),
+    "호호바": ("호호바 오일이 피부 친화적 유분으로 보습", 6),
+    "jojoba": ("호호바 오일이 피부 친화적 유분으로 보습", 6),
+    "프로폴리스": ("프로폴리스가 진정과 영양을 동시에", 7),
+    "propolis": ("프로폴리스가 진정과 영양을 동시에", 7),
+    "감초": ("감초 추출물이 진정·미백 효과", 7),
+    "licorice": ("감초 추출물이 진정·미백 효과", 7),
+    "glycyrrhiza": ("감초 추출물이 진정·미백 효과", 7),
+    "알란토인": ("알란토인이 피부를 부드럽게 정돈", 6),
+    "allantoin": ("알란토인이 피부를 부드럽게 정돈", 6),
+    "글리세린": ("글리세린이 피부 표면에 수분을 끌어당김", 4),
+    "glycerin": ("글리세린이 피부 표면에 수분을 끌어당김", 4),
+    "glicerin": ("글리세린이 피부 표면에 수분을 끌어당김", 4),
+    "glicerol": ("글리세린이 피부 표면에 수분을 끌어당김", 4),
+    "트레할로스": ("트레할로스가 깊은 수분 보존", 5),
+    "trehalose": ("트레할로스가 깊은 수분 보존", 5),
+    "베타인": ("베타인이 부드러운 수분 보충", 4),
+    "betaine": ("베타인이 부드러운 수분 보충", 4),
+    "산화아연": ("산화아연이 물리적 자외선 차단", 7),
+    "zinc oxide": ("산화아연이 물리적 자외선 차단", 7),
+}
+
+
+# ============================================================
+# 위험 성분 화이트리스트 — 실제로 사용자에게 알릴 가치 있는 것만
+# ============================================================
+# 매칭은 부분 문자열 (lower) 기준. 키워드는 false-positive 안 나도록 충분히 긴 것만.
+TRULY_RISKY_KEYWORDS: Dict[str, str] = {
+    # key: 매칭 키워드 (lower), value: 사용자에게 보일 라벨
+    "파라벤": "파라벤(방부제)",
+    "paraben": "파라벤(방부제)",
+    "메칠클로로이소치아졸리논": "MIT/CMIT 방부제",
+    "methylchloroisothiazolinone": "MIT/CMIT 방부제",
+    "메칠이소치아졸리논": "MIT 방부제",
+    "methylisothiazolinone": "MIT 방부제",
+    "포름알데히드": "포름알데히드 방출 성분",
+    "formaldehyde": "포름알데히드 방출 성분",
+    "옥시벤존": "옥시벤존(화학 자외선차단제)",
+    "oxybenzone": "옥시벤존(화학 자외선차단제)",
+    "옥토크릴렌": "옥토크릴렌(화학 자외선차단제)",
+    "octocrylene": "옥토크릴렌(화학 자외선차단제)",
+    "에칠헥실메톡시신나메이트": "옥티노세이트(화학 자외선차단제)",
+    "ethylhexyl methoxycinnamate": "옥티노세이트(화학 자외선차단제)",
+    "homosalate": "호모살레이트(화학 자외선차단제)",
+    "호모살레이트": "호모살레이트(화학 자외선차단제)",
+    "트리클로산": "트리클로산",
+    "triclosan": "트리클로산",
+    "프탈레이트": "프탈레이트",
+    "phthalate": "프탈레이트",
+    "이미다졸리디닐우레아": "이미다졸리디닐우레아(방부제)",
+    "imidazolidinyl urea": "이미다졸리디닐우레아(방부제)",
+    "디아졸리디닐우레아": "디아졸리디닐우레아(방부제)",
+    "diazolidinyl urea": "디아졸리디닐우레아(방부제)",
+    "triethanolamine": "트리에탄올아민(자극 가능)",
+    "diethanolamine": "디에탄올아민(자극 가능)",
+    "변성알코올": "변성알코올(에탄올)",
+    "alcohol denat": "변성알코올(에탄올)",
+    "álcool desnaturado": "변성알코올(에탄올)",
+}
+
+# 카테고리 → 이모지/아이콘은 FE 에서 처리. BE 는 문자열만.
 
 
 # 제품 DB 로드 (한 번만)
@@ -45,26 +217,48 @@ def get_product_db() -> List[dict]:
 # Hard filter — 탈락 조건
 # ============================================================
 
+def _has_truly_risky(product: dict) -> bool:
+    """제품에 진짜로 알릴 만한 위험 성분 (TRULY_RISKY_KEYWORDS) 이 있는가.
+    글리세린/토코페롤 같은 false-positive 는 무시.
+    """
+    pool: List[str] = []
+    for ing in (product.get("risky_ingredients") or []):
+        if isinstance(ing, dict):
+            pool.append(str(ing.get("kr") or ing.get("inci") or "").lower())
+        else:
+            pool.append(str(ing).lower())
+    pool.extend(_ingredient_strings(product))
+    for kw in TRULY_RISKY_KEYWORDS:
+        kw_lower = kw.lower()
+        if any(kw_lower in s for s in pool):
+            return True
+    return False
+
+
 def _passes_hard_filter(product: dict, user_inputs: dict) -> bool:
-    """제품이 사용자에게 적합한가 (탈락 조건)."""
+    """제품이 사용자에게 적합한가 (탈락 조건).
+
+    민감도 처리:
+      ≥5 (극민감): 무향 + 진짜 위험 성분 없음
+      ≥4 (매우민감): 진짜 위험 성분 없음 (무향은 가산점)
+      ≥3 (민감): 진짜 위험 성분 없음 + 향료/알코올 가산점
+    """
     sensitivity = user_inputs.get("sensitivity", 0) or 0
     skin_type = user_inputs.get("skin_type", "")
 
-    # 민감도 ≥4 → 무향 + 위험성분 없는 제품만
-    if sensitivity >= 4:
-        if not product.get("fragrance_free", False):
+    # 민감도 ≥5 → 가장 엄격
+    if sensitivity >= 5:
+        if product.get("fragrance_free") is False:
             return False
-        if "주의성분포함" in product.get("tags", []):
-            return False
-        if product.get("risky_ingredients"):
+        if _has_truly_risky(product):
             return False
 
-    # 민감도 ≥3 → 위험성분 제외 (무향은 허용)
+    # 민감도 ≥3 → 진짜 위험 성분 (파라벤, 옥시벤존 등) 만 제외
     elif sensitivity >= 3:
-        if product.get("risky_ingredients"):
+        if _has_truly_risky(product):
             return False
 
-    # 피부타입 매칭 (제품의 for_skin 에 사용자 타입 있어야)
+    # 피부타입 매칭 — for_skin 있는 제품만 체크 (없으면 통과)
     if skin_type and product.get("for_skin"):
         if skin_type not in product["for_skin"]:
             return False
@@ -79,7 +273,8 @@ def _passes_hard_filter(product: dict, user_inputs: dict) -> bool:
 def _score(product: dict, measurement: dict, user_inputs: dict, weather: Optional[dict]) -> float:
     """제품에 대한 점수. 높을수록 적합."""
     score = 0.0
-    cats = set(product.get("category", []))
+    # 성분 기반 카테고리 보강
+    cats = set(_enrich_categories(product))
 
     # 측정값 기반 — 약한 헤드일수록 해당 카테고리 가산
     # 회귀 (denormalized): moisture < 40 = 건조, pore_value > 300 = 모공 많음 등
@@ -172,15 +367,21 @@ def recommend(
     weather: Optional[Dict] = None,
     top_k: int = 5,
     diversify_by_category: bool = True,
+    filter_category: Optional[str] = None,
+    seed: Optional[int] = None,
+    max_per_brand: int = 2,
 ) -> List[Dict]:
     """제품 추천 메인 함수.
 
     Args:
         measurement: AI 모델 출력 (regression / classification 값)
         user_inputs: 자가진단 결과
-        weather: {humidity: 0-100, uv_index: 0-11, ...} (옵션)
+        weather: {humidity, uv_index, ...} (옵션)
         top_k: 반환 개수
-        diversify_by_category: True 면 카테고리별 1개씩 (다양성)
+        diversify_by_category: 다양성 모드 (카테고리/서브카테고리 분산)
+        filter_category: 특정 카테고리만 추천 ("보습" / "미백" / "진정" / "모공" / "탄력")
+        seed: 랜덤 시드 (None 이면 결정적 → 같은 입력 = 같은 결과 / 정수면 jitter 적용)
+        max_per_brand: top_k 안에 같은 브랜드 최대 몇 개까지
 
     Returns:
         [{name, brand, category, score, ...}] 점수 내림차순
@@ -189,30 +390,79 @@ def recommend(
     if not db:
         return []
 
+    rng = random.Random(seed) if seed is not None else None
+
     # Hard filter
     candidates = [p for p in db if _passes_hard_filter(p, user_inputs)]
 
-    # Soft score
-    scored = [(p, _score(p, measurement, user_inputs, weather)) for p in candidates]
-    scored = [(p, s) for p, s in scored if s > 0]
+    # 카테고리 필터 (성분 기반 보강된 카테고리 기준)
+    if filter_category:
+        candidates = [
+            p for p in candidates
+            if filter_category in _enrich_categories(p)
+        ]
+
+    # Soft score (+ jitter if seed)
+    scored: List[Tuple[dict, float]] = []
+    for p in candidates:
+        s = _score(p, measurement, user_inputs, weather)
+        if s <= 0:
+            continue
+        if rng is not None:
+            # 같은 점수 제품들 사이에 약한 흔들기 (점수 자체 순위는 유지)
+            s += rng.uniform(-0.5, 0.5)
+        scored.append((p, s))
     scored.sort(key=lambda x: -x[1])
 
-    # 다양성: 카테고리별 1개씩
+    # 다양성: 카테고리 + 서브카테고리 + 브랜드 분산
     if diversify_by_category and len(scored) > top_k:
-        seen_cats = set()
-        diverse = []
-        rest = []
+        result: List[Tuple[dict, float]] = []
+        rest: List[Tuple[dict, float]] = []
+        seen_cat_keys: set = set()
+        seen_sub: dict = {}
+        brand_count: dict = {}
+
         for p, s in scored:
-            cat_key = tuple(sorted(p.get("category", [])))
-            if cat_key not in seen_cats:
-                diverse.append((p, s))
-                seen_cats.add(cat_key)
-            else:
+            brand = p.get("brand", "?")
+            sub = p.get("subcategory", "?")
+            cat_key = tuple(sorted(_enrich_categories(p)))
+
+            # 브랜드 상한
+            if brand_count.get(brand, 0) >= max_per_brand:
                 rest.append((p, s))
-        # 다양화 후 부족하면 나머지로 채움
-        result = diverse[:top_k]
+                continue
+            # 카테고리 조합 새것 우선
+            if cat_key in seen_cat_keys and seen_sub.get(sub, 0) >= 2:
+                rest.append((p, s))
+                continue
+
+            result.append((p, s))
+            seen_cat_keys.add(cat_key)
+            seen_sub[sub] = seen_sub.get(sub, 0) + 1
+            brand_count[brand] = brand_count.get(brand, 0) + 1
+
+            if len(result) >= top_k:
+                break
+
+        # 부족하면 rest 로 채움
         if len(result) < top_k:
-            result.extend(rest[:top_k - len(result)])
+            for p, s in rest:
+                brand = p.get("brand", "?")
+                if brand_count.get(brand, 0) >= max_per_brand:
+                    continue
+                result.append((p, s))
+                brand_count[brand] = brand_count.get(brand, 0) + 1
+                if len(result) >= top_k:
+                    break
+        if len(result) < top_k:
+            # 그래도 부족하면 브랜드 제한 풀고 채움
+            for p, s in rest:
+                if (p, s) in result:
+                    continue
+                result.append((p, s))
+                if len(result) >= top_k:
+                    break
+
         scored = result
 
     # 응답 포맷
@@ -221,12 +471,16 @@ def recommend(
             "id": p["id"],
             "name": p.get("name_kr") or p.get("name_en"),
             "brand": p.get("brand", ""),
-            "category": p.get("category", []),
+            "category": _enrich_categories(p),  # 보강된 카테고리 반환
             "subcategory": p.get("subcategory", ""),
-            "main_ingredients": [m.get("kr", m.get("inci", "")) for m in p.get("main_ingredients", [])[:3]],
+            "main_ingredients": [m.get("kr", m.get("inci", "")) for m in p.get("main_ingredients", [])[:5]],
+            "all_ingredients": [m.get("kr", m.get("inci", "")) for m in p.get("main_ingredients", [])],
             "fragrance_free": p.get("fragrance_free", False),
+            "alcohol_free": p.get("alcohol_free", False),
+            "for_skin": p.get("for_skin", []),
             "price_range": p.get("price_range", ""),
             "image_url": p.get("image_url", ""),
+            "obf_url": p.get("obf_url", ""),
             "score": round(s, 2),
             "reason": _generate_reason(p, measurement, user_inputs, weather),
             "effect": _generate_effect(p, measurement, user_inputs),
@@ -251,14 +505,62 @@ CATEGORY_EFFECTS = {
 }
 
 
+def _ingredient_strings(product: dict) -> List[str]:
+    """제품의 main_ingredients 를 소문자 문자열 리스트로 평탄화."""
+    out: List[str] = []
+    for ing in (product.get("main_ingredients") or []):
+        if isinstance(ing, dict):
+            for k in ("kr", "inci", "name"):
+                v = ing.get(k)
+                if v:
+                    out.append(str(v).lower())
+        else:
+            out.append(str(ing).lower())
+    return out
+
+
+def _enrich_categories(product: dict) -> List[str]:
+    """제품 main_ingredients 기반으로 카테고리 동적 보강.
+    예: 나이아신아마이드 함유 → 미백 카테고리 추가
+    """
+    cats = set(product.get("category", []) or [])
+    ings = _ingredient_strings(product)
+    for kw, added in INGREDIENT_TO_CATEGORIES.items():
+        kw_lower = kw.lower()
+        if any(kw_lower in s for s in ings):
+            cats.update(added)
+    return sorted(cats)
+
+
 def _generate_effect(product: dict, measurement: dict, user_inputs: dict) -> str:
-    """이 제품으로 기대할 수 있는 효과 — 카드 상단에 표시될 한 줄."""
-    cats = product.get("category", []) or []
+    """이 제품으로 기대할 수 있는 효과 — 카드 상단에 표시될 한 줄.
+    성분 기반으로 다양화. 성분이 매칭 안 되면 카테고리 fallback.
+    """
+    ings = _ingredient_strings(product)
+
+    # 1) 성분 기반 효과 문구 수집 (중복 제거)
+    seen_msgs = set()
+    matched: List[Tuple[str, int]] = []
+    for kw, (msg, prio) in INGREDIENT_EFFECTS.items():
+        if msg in seen_msgs:
+            continue
+        kw_lower = kw.lower()
+        if any(kw_lower in s for s in ings):
+            matched.append((msg, prio))
+            seen_msgs.add(msg)
+
+    if matched:
+        matched.sort(key=lambda x: -x[1])
+        top = [m for m, _ in matched[:2]]
+        return " · ".join(top)
+
+    # 2) 카테고리 fallback
+    cats = _enrich_categories(product)
     phrases = [CATEGORY_EFFECTS[c] for c in cats if c in CATEGORY_EFFECTS]
     if not phrases:
         return "데일리 케어로 피부 컨디션 유지"
-    body = " · ".join(phrases[:2])  # 최대 2개
-    return f"이 제품으로 {body} 효과를 기대할 수 있어요"
+    body = " · ".join(phrases[:2])
+    return f"이 제품으로 {body} 효과를 기대해 보세요"
 
 
 def _purchase_link(product: dict) -> str:
@@ -286,8 +588,11 @@ _TAG_LABEL = {
 
 
 def _warning_badges(product: dict) -> List[dict]:
-    """주의 사항 — 사용자에게 한국어로 쉽게 보여주기 위한 배지 리스트.
+    """주의 사항 — 화이트리스트 기반으로 진짜 알릴 만한 것만.
     [{label, level}] (level: high / medium / low)
+
+    글리세린/토코페롤/정제수 같은 명백 안전 성분은 risky_ingredients 에 있어도 무시.
+    실제로 알릴 가치 있는 성분 (TRULY_RISKY_KEYWORDS) 과 fragrance/alcohol 태그만 노출.
     """
     badges: List[dict] = []
     seen = set()
@@ -297,19 +602,47 @@ def _warning_badges(product: dict) -> List[dict]:
             badges.append({"label": label, "level": level})
             seen.add(label)
 
-    # 1) 위험 성분 (식약처 규제 매칭된 것 등)
+    # 1) risky_ingredients 중 화이트리스트에 걸리는 것만
+    risky_strings: List[str] = []
     for ing in (product.get("risky_ingredients") or []):
         if isinstance(ing, dict):
             ing_label = ing.get("kr") or ing.get("name") or ing.get("inci") or ""
         else:
             ing_label = str(ing)
         if ing_label:
-            _add(f"{ing_label} 주의", "high")
+            risky_strings.append(ing_label.lower())
 
-    # 2) 태그 기반
+    for kw, label in TRULY_RISKY_KEYWORDS.items():
+        kw_lower = kw.lower()
+        if any(kw_lower in s for s in risky_strings):
+            _add(label, "high")
+
+    # 2) main_ingredients 직접 스캔 (위험 성분이 risky_ingredients 에 없을 수도 있음)
+    ings = _ingredient_strings(product)
+    for kw, label in TRULY_RISKY_KEYWORDS.items():
+        kw_lower = kw.lower()
+        if any(kw_lower in s for s in ings):
+            _add(label, "high")
+
+    # 3) 향료/알코올 — fragrance_free 가 False 이면 향료 함유로 추정
+    if product.get("fragrance_free") is False:
+        # parfum/fragrance INCI 직접 확인
+        if any(("parfum" in s or "fragrance" in s or "향료" in s) for s in ings):
+            _add("향료 함유", "low")
+        else:
+            _add("향료 함유 가능", "low")
+
+    if product.get("alcohol_free") is False:
+        if any(("alcohol denat" in s or "ethanol" in s or "변성알코올" in s) for s in ings):
+            _add("알코올 함유", "low")
+
+    # 4) 태그 기반 (커스텀 라벨링 시)
     for tag in (product.get("tags") or []):
         if tag in _TAG_LABEL:
             label, level = _TAG_LABEL[tag]
+            # "주의 성분 함유" 같은 모호한 라벨은 high 매칭 없을 때만 노출
+            if level == "medium" and any(b["level"] == "high" for b in badges):
+                continue
             _add(label, level)
 
     return badges
