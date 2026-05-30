@@ -1,0 +1,6518 @@
+{
+  "version": "0.1",
+  "products": [
+    {
+      "id": "P001",
+      "name_kr": "Hand cream",
+      "name_en": "Hand cream",
+      "brand": "Neutrogena",
+      "barcode": "3574661016702",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Palmitic Acid",
+          "kr": "Palmitic Acid"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        },
+        {
+          "inci": "Sodium Cetearyl Sulfate",
+          "kr": "Sodium Cetearyl Sulfate"
+        },
+        {
+          "inci": "Sodium Sulfate",
+          "kr": "Sodium Sulfate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "토코페롤 [제한:한국]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/101/6702/front_es.6.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661016702/hand-cream-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P002",
+      "name_kr": "hand cream",
+      "name_en": "hand cream",
+      "brand": "Neutrogena",
+      "barcode": "3574661685977",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Sodium Cetearyl Sulfate",
+          "kr": "Sodium Cetearyl Sulfate"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Caprylyl Glycol",
+          "kr": "Caprylyl Glycol"
+        },
+        {
+          "inci": "Palmitic Acid",
+          "kr": "Palmitic Acid"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/168/5977/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661685977/hand-cream-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P003",
+      "name_kr": "Crème mains",
+      "name_en": "Crème mains",
+      "brand": "Neutrogena",
+      "barcode": "3574660260052",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Palmitic Acid",
+          "kr": "Palmitic Acid"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        },
+        {
+          "inci": "Sodium Cetearyl Sultate",
+          "kr": "Sodium Cetearyl Sultate"
+        },
+        {
+          "inci": "Sodium Cetearyl Alcohol",
+          "kr": "Sodium Cetearyl Alcohol"
+        },
+        {
+          "inci": "Suifate",
+          "kr": "Suifate"
+        },
+        {
+          "inci": "Phenoxyethanol",
+          "kr": "페녹시에탄올"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/026/0052/front_fr.20.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660260052/creme-mains-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P004",
+      "name_kr": "3606000537750",
+      "name_en": "3606000537750",
+      "brand": "Cerave",
+      "barcode": "3606000537750",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "COCAMIDOPROPYL HYDROXYSULTAINE",
+          "kr": "COCAMIDOPROPYL HYDROXYSULTAINE"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "SODIUM LAUROYL SARCOSINATE",
+          "kr": "SODIUM LAUROYL SARCOSINATE"
+        },
+        {
+          "inci": "PEG-150 PENTAERYTHRITYL TETRASTEARATE",
+          "kr": "PEG-150 PENTAERYTHRITYL TETRASTEARATE"
+        },
+        {
+          "inci": "NIACINAMIDE",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "PEG-6 CAPRYLIC/CAPRIC GLYCERIDES",
+          "kr": "PEG-6 CAPRYLIC/CAPRIC GLYCERIDES"
+        },
+        {
+          "inci": "SODIUM METHYL COCOYL TAURATE",
+          "kr": "SODIUM METHYL COCOYL TAURATE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "소듐라우로일사코시네이트 [제한:일본,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7750/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537750/3606000537750-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P005",
+      "name_kr": "Herbal essences",
+      "name_en": "Herbal essences",
+      "brand": "Real Botanicals, Cerave",
+      "barcode": "8001841768946",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Sodium Laureth Sulfate",
+          "kr": "Sodium Laureth Sulfate"
+        },
+        {
+          "inci": "Cocamidopropyl Betaine",
+          "kr": "Cocamidopropyl Betaine"
+        },
+        {
+          "inci": "Sodium Chloride",
+          "kr": "Sodium Chloride"
+        },
+        {
+          "inci": "Parfum",
+          "kr": "향료"
+        },
+        {
+          "inci": "Sodium Benzoate",
+          "kr": "Sodium Benzoate"
+        },
+        {
+          "inci": "Citric Acid",
+          "kr": "시트릭애씨드"
+        },
+        {
+          "inci": "Polyquaternium-7",
+          "kr": "Polyquaternium-7"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "소듐벤조에이트 [제한:대만]",
+        "시트릭애씨드 [제한:대만,브라질,아르헨티나,캐나다]",
+        "폴리쿼터늄-7 [제한:EU,브라질,아르헨티나,아세안]",
+        "리모넨 [제한:EU]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/800/184/176/8946/front_es.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8001841768946/herbal-essences-real-botanicals",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P006",
+      "name_kr": "Moisturing Lotion",
+      "name_en": "Moisturing Lotion",
+      "brand": "CeraVe",
+      "barcode": "3606000534797",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua/water/eau",
+          "kr": "aqua/water/eau"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "caprylic/capric triglyceride",
+          "kr": "caprylic/capric triglyceride"
+        },
+        {
+          "inci": "cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "cetyl alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "potassium phosphate",
+          "kr": "potassium phosphate"
+        },
+        {
+          "inci": "ceramide np",
+          "kr": "세라마이드NP"
+        },
+        {
+          "inci": "ceramide ap",
+          "kr": "세라마이드AP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/4797/front_en.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000534797/moisturing-lotion-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P007",
+      "name_kr": "Renewing SA Cream",
+      "name_en": "Renewing SA Cream",
+      "brand": "CeraVe",
+      "barcode": "3606000538078",
+      "category": [
+        "보습",
+        "미백",
+        "모공"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "SALICYLIC ACID 3%",
+          "kr": "SALICYLIC ACID 3%"
+        },
+        {
+          "inci": "AQUA",
+          "kr": "정제수"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "PARAFFINUM LIQUIDUM",
+          "kr": "PARAFFINUM LIQUIDUM"
+        },
+        {
+          "inci": "GLYCERYL STEARATE",
+          "kr": "글리세릴스테아레이트"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL TRIETHANOLAMINE",
+          "kr": "CETEARYL ALCOHOL TRIETHANOLAMINE"
+        },
+        {
+          "inci": "NIACINAMIDE",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "트라이에탄올아민 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "암모늄락테이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/8078/front_en.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000538078/renewing-sa-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P008",
+      "name_kr": "Oil-Free Acne Wash",
+      "name_en": "Oil-Free Acne Wash",
+      "brand": "Neutrogena",
+      "barcode": "70501017128",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Sodium C14-16 Olefin Sulfonate",
+          "kr": "Sodium C14-16 Olefin Sulfonate"
+        },
+        {
+          "inci": "Cocamidopropyl Betaine",
+          "kr": "Cocamidopropyl Betaine"
+        },
+        {
+          "inci": "Sodium Chloride",
+          "kr": "Sodium Chloride"
+        },
+        {
+          "inci": "PEG-80 Sorbitan Laurate",
+          "kr": "PEG-80 Sorbitan Laurate"
+        },
+        {
+          "inci": "Citric Acid",
+          "kr": "시트릭애씨드"
+        },
+        {
+          "inci": "Disodium",
+          "kr": "Disodium"
+        },
+        {
+          "inci": "EDTA",
+          "kr": "EDTA"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "시트릭애씨드 [제한:대만,브라질,아르헨티나,캐나다]",
+        "다이소듐옥타보레이트안하이드로스 [금지:EU]",
+        "티이에이-이디티에이 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "캠퍼벤잘코늄메토설페이트 [제한:EU,대만,아세안,중국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/007/050/101/7128/front_en.14.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501017128/oil-free-acne-wash-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P009",
+      "name_kr": "Alcohol-Free Toner",
+      "name_en": "Alcohol-Free Toner",
+      "brand": "Neutrogena",
+      "barcode": "70501027004",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Butylene Glycol",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "PEG-4",
+          "kr": "PEG-4"
+        },
+        {
+          "inci": "Polysorbate 20",
+          "kr": "Polysorbate 20"
+        },
+        {
+          "inci": "Oleth-30",
+          "kr": "Oleth-30"
+        },
+        {
+          "inci": "Sodium Chloride",
+          "kr": "Sodium Chloride"
+        },
+        {
+          "inci": "Methylparaben",
+          "kr": "메칠파라벤"
+        },
+        {
+          "inci": "Propylparaben",
+          "kr": "프로필파라벤"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "디이에이-피이지-4라우레이트 [금지:EU,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "솔베이트 [제한:일본]",
+        "메틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "프로필파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "디소듐이디티에이-카퍼 [제한:미국,브라질,아르헨티나,한국]",
+        "목향뿌리오일  [금지:중국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/007/050/102/7004/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501027004/alcohol-free-toner-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P010",
+      "name_kr": "moisturising cream",
+      "name_en": "moisturising cream",
+      "brand": "CeraVe",
+      "barcode": "3337875598996",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Eau",
+          "kr": "Eau"
+        },
+        {
+          "inci": "glycérine",
+          "kr": "glycérine"
+        },
+        {
+          "inci": "alcool cétéarylique",
+          "kr": "alcool cétéarylique"
+        },
+        {
+          "inci": "triglycéride caprylique/caprique",
+          "kr": "triglycéride caprylique/caprique"
+        },
+        {
+          "inci": "alcool cétylique",
+          "kr": "alcool cétylique"
+        },
+        {
+          "inci": "céteareth-20",
+          "kr": "céteareth-20"
+        },
+        {
+          "inci": "vaseline",
+          "kr": "vaseline"
+        },
+        {
+          "inci": "phosphate de potassium",
+          "kr": "phosphate de potassium"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "메틸유게놀 [금지:아세안,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/8996/front_en.28.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875598996/moisturising-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P011",
+      "name_kr": "Hand & Nagel Creme",
+      "name_en": "Hand & Nagel Creme",
+      "brand": "Neutrogena",
+      "barcode": "3574661687049",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Isopropyl Myristate",
+          "kr": "Isopropyl Myristate"
+        },
+        {
+          "inci": "Panthenol",
+          "kr": "판테놀"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Caprylyl Glycol",
+          "kr": "Caprylyl Glycol"
+        },
+        {
+          "inci": "Potassium Cetyl Phosphate",
+          "kr": "Potassium Cetyl Phosphate"
+        },
+        {
+          "inci": "Cetyl Alcohol",
+          "kr": "세틸알코올"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "판테놀 [제한:일본]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/168/7049/front_de.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661687049/hand-nagel-creme-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P012",
+      "name_kr": "Moisturizing cream",
+      "name_en": "Moisturizing cream",
+      "brand": "CeraVe",
+      "barcode": "3606000537422",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER",
+          "kr": "AQUA/WATER"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CAPRYLIC",
+          "kr": "CAPRYLIC"
+        },
+        {
+          "inci": "CETEARETH-20",
+          "kr": "CETEARETH-20"
+        },
+        {
+          "inci": "PETROLATUM",
+          "kr": "PETROLATUM"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATE",
+          "kr": "POTASSIUM PHOSPHATE"
+        },
+        {
+          "inci": "CERAMIDE NP",
+          "kr": "세라마이드NP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "하이드록시카프릴릭애씨드 [제한:대만,캐나다]",
+        "페트롤라툼 [금지:EU,브라질,아르헨티나,아세안,중국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7422/front_en.5.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537422/moisturizing-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P013",
+      "name_kr": "Moisturizing Cream",
+      "name_en": "Moisturizing Cream",
+      "brand": "CeraVe",
+      "barcode": "3606000537439",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "CETEARETH-20",
+          "kr": "CETEARETH-20"
+        },
+        {
+          "inci": "PETROLATUM",
+          "kr": "PETROLATUM"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATE",
+          "kr": "POTASSIUM PHOSPHATE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "페트롤라툼 [금지:EU,브라질,아르헨티나,아세안,중국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7439/front_en.13.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537439/moisturizing-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P014",
+      "name_kr": "Moisturizing Cream",
+      "name_en": "Moisturizing Cream",
+      "brand": "Cerave",
+      "barcode": "3606000537668",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "CETEARETH-20",
+          "kr": "CETEARETH-20"
+        },
+        {
+          "inci": "PETROLATUM",
+          "kr": "PETROLATUM"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATE",
+          "kr": "POTASSIUM PHOSPHATE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "페트롤라툼 [금지:EU,브라질,아르헨티나,아세안,중국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7668/front_en.13.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537668/moisturizing-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P015",
+      "name_kr": "Moisturizing Lotion",
+      "name_en": "Moisturizing Lotion",
+      "brand": "Nestlé, Cetaphil, Galderma",
+      "barcode": "772618078008",
+      "category": [
+        "보습",
+        "미백",
+        "진정"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Isopropyl palmitate",
+          "kr": "Isopropyl palmitate"
+        },
+        {
+          "inci": "Cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Ceteareth-20",
+          "kr": "Ceteareth-20"
+        },
+        {
+          "inci": "Panthenol",
+          "kr": "판테놀"
+        },
+        {
+          "inci": "niacinamide",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "Tocopheryl acetate",
+          "kr": "토코페릴아세테이트"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "판테놀 [제한:일본]",
+        "토코페릴아세테이트 [제한:일본]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/077/261/807/8008/front_en.15.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0772618078008/moisturizing-lotion-nestle",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P016",
+      "name_kr": "Daily Facial Cleanser",
+      "name_en": "Daily Facial Cleanser",
+      "brand": "Cetaphil",
+      "barcode": "302993927167",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "cetyl alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "propylene glycol",
+          "kr": "프로필렌글라이콜"
+        },
+        {
+          "inci": "sodium lauryl sulfate",
+          "kr": "sodium lauryl sulfate"
+        },
+        {
+          "inci": "stearyl alcohol",
+          "kr": "스테아릴알코올"
+        },
+        {
+          "inci": "methylparaben",
+          "kr": "메칠파라벤"
+        },
+        {
+          "inci": "propylparaben",
+          "kr": "프로필파라벤"
+        },
+        {
+          "inci": "butylparaben.",
+          "kr": "butylparaben."
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "에탄올․붕사․라우릴황산나트륨혼합물 [제한:한국]",
+        "메틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "프로필파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "부틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/030/299/392/7167/front_en.5.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0302993927167/daily-facial-cleanser-cetaphil",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P017",
+      "name_kr": "Hydro Boost Aqua-Gel ",
+      "name_en": "Hydro Boost Aqua-Gel ",
+      "brand": "Neutrogena",
+      "barcode": "3574661287201",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Dimethicone/Vinyl Dimethicone Crosspolymer",
+          "kr": "Dimethicone/Vinyl Dimethicone Crosspolymer"
+        },
+        {
+          "inci": "Sodium Hyaluronate",
+          "kr": "히알루론산나트륨"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Dimethiconol",
+          "kr": "Dimethiconol"
+        },
+        {
+          "inci": "Cetearyl Olivate",
+          "kr": "Cetearyl Olivate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "엠이에이피피지-6라우레스-7카복실레이트 [금지:한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/128/7201/front_en.10.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661287201/hydro-boost-aqua-gel-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P018",
+      "name_kr": "Daily Hydrating Lotion",
+      "name_en": "Daily Hydrating Lotion",
+      "brand": "Cetaphil",
+      "barcode": "2000000003081",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "WATER",
+          "kr": "정제수"
+        },
+        {
+          "inci": "DICAPRYLYL CARBONATE",
+          "kr": "DICAPRYLYL CARBONATE"
+        },
+        {
+          "inci": "HYDROXYETHYL UREA CYCLOPENTÁSILOXANE",
+          "kr": "HYDROXYETHYL UREA CYCLOPENTÁSILOXANE"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "GLYCERYL STEARATE",
+          "kr": "글리세릴스테아레이트"
+        },
+        {
+          "inci": "PEG-100 STEARATE",
+          "kr": "PEG-100스테아레이트"
+        },
+        {
+          "inci": "HYDROLYŽED HYALURONIC ACID",
+          "kr": "HYDROLYŽED HYALURONIC ACID"
+        },
+        {
+          "inci": "SODIUM HYDROXIDE",
+          "kr": "소듐하이드록사이드"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "우레아 [금지:EU,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "소듐하이드록사이드 [제한:EU,대만,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/200/000/000/3081/front_en.11.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/2000000003081/daily-hydrating-lotion-cetaphil",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P019",
+      "name_kr": "Foaming Facial Cleanser",
+      "name_en": "Foaming Facial Cleanser",
+      "brand": "CeraVe",
+      "barcode": "787734793087",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Purified Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Behentrimonium Methosulfate and Cetearyl Alcohol",
+          "kr": "Behentrimonium Methosulfate and Cetearyl Alcohol"
+        },
+        {
+          "inci": "Ceramide 3",
+          "kr": "Ceramide 3"
+        },
+        {
+          "inci": "Ceramide 6-II",
+          "kr": "Ceramide 6-II"
+        },
+        {
+          "inci": "Ceramide 1",
+          "kr": "Ceramide 1"
+        },
+        {
+          "inci": "Hyaluronic Acid",
+          "kr": "히알루론산"
+        },
+        {
+          "inci": "Cholesterol",
+          "kr": "콜레스테롤"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/078/773/479/3087/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0787734793087/foaming-facial-cleanser-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P020",
+      "name_kr": "Hand Cream concentrated",
+      "name_en": "Hand Cream concentrated",
+      "brand": "Neutrogena",
+      "barcode": "3574660600124",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Palmitic Acid",
+          "kr": "Palmitic Acid"
+        },
+        {
+          "inci": "Stearin Acid",
+          "kr": "Stearin Acid"
+        },
+        {
+          "inci": "Sodium Cetearyl Sulfate",
+          "kr": "Sodium Cetearyl Sulfate"
+        },
+        {
+          "inci": "Sodium Sulfate",
+          "kr": "Sodium Sulfate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "토코페롤 [제한:한국]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/060/0124/front_sv.12.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660600124/hand-cream-concentrated-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P021",
+      "name_kr": "CeraVe Eye Repair Cream",
+      "name_en": "CeraVe Eye Repair Cream",
+      "brand": "CeraVe",
+      "barcode": "3606000537613",
+      "category": [
+        "보습",
+        "미백",
+        "진정"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "NIACINAMIDE",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "PROPANEDIOL",
+          "kr": "PROPANEDIOL"
+        },
+        {
+          "inci": "ISONONYL ISONONANOATE",
+          "kr": "ISONONYL ISONONANOATE"
+        },
+        {
+          "inci": "JOJOBA ESTERS",
+          "kr": "JOJOBA ESTERS"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "3-[[4-[메틸아미노]-2-니트로페닐]아미노]-1,2-프로판다이올 및 그 염류 [금지:아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537613/cerave-eye-repair-cream",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P022",
+      "name_kr": "Aloe Soothing Sun Cream",
+      "name_en": "Aloe Soothing Sun Cream",
+      "brand": "COSRX",
+      "barcode": "8809598454354",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Ethylhexyl Methoxycinnamate",
+          "kr": "에칠헥실메톡시신나메이트"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Propylene Glycol",
+          "kr": "프로필렌글라이콜"
+        },
+        {
+          "inci": "Cyclopentasiloxane",
+          "kr": "Cyclopentasiloxane"
+        },
+        {
+          "inci": "Phenylbenzimidazole Sulfonic Acid",
+          "kr": "Phenylbenzimidazole Sulfonic Acid"
+        },
+        {
+          "inci": "Bis-Éthy - lhexyloxyphenol Methoxyphenyl Triazine",
+          "kr": "Bis-Éthy - lhexyloxyphenol Methoxyphenyl Triazine"
+        },
+        {
+          "inci": "Dicaprylyl Carbonate",
+          "kr": "Dicaprylyl Carbonate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "에칠헥실메톡시신나메이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "페닐벤즈이미다졸설포닉애씨드 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "페놀 [금지:EU,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "이소아밀p-메톡시신나메이트 [제한:EU,대만,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/959/845/4354/front_en.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809598454354/aloe-soothing-sun-cream-cosrx",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P023",
+      "name_kr": "CeraVe Hydraterende Melk",
+      "name_en": "CeraVe Hydraterende Melk",
+      "brand": "CeraVe",
+      "barcode": "3337875597395",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "caprylic/capric triglyceride",
+          "kr": "caprylic/capric triglyceride"
+        },
+        {
+          "inci": "dimethicone",
+          "kr": "dimethicone"
+        },
+        {
+          "inci": "phenoxyethanol",
+          "kr": "페녹시에탄올"
+        },
+        {
+          "inci": "sodium methyl sulfate",
+          "kr": "sodium methyl sulfate"
+        },
+        {
+          "inci": "sodium polyacrylate",
+          "kr": "sodium polyacrylate"
+        },
+        {
+          "inci": "ethylhexylglycerin",
+          "kr": "ethylhexylglycerin"
+        },
+        {
+          "inci": "potassium phosphate",
+          "kr": "potassium phosphate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/7395/front_en.24.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875597395/cerave-hydraterende-melk",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P024",
+      "name_kr": "daily moisturizing cream",
+      "name_en": "daily moisturizing cream",
+      "brand": "cerave",
+      "barcode": "3606000537743",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATE",
+          "kr": "POTASSIUM PHOSPHATE"
+        },
+        {
+          "inci": "CERAMIDE NP",
+          "kr": "세라마이드NP"
+        },
+        {
+          "inci": "CERAMIDE AP",
+          "kr": "세라마이드AP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7743/front_en.37.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537743/daily-moisturizing-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P025",
+      "name_kr": "Skin Renewing Night Cream",
+      "name_en": "Skin Renewing Night Cream",
+      "brand": "CeraVe",
+      "barcode": "301872484029",
+      "category": [
+        "보습",
+        "미백",
+        "진정",
+        "탄력"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Purified Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Biosaccharide Gum-1",
+          "kr": "Biosaccharide Gum-1"
+        },
+        {
+          "inci": "Caprylic/Capric Triglyceride",
+          "kr": "Caprylic/Capric Triglyceride"
+        },
+        {
+          "inci": "Butyrospermum Parkii",
+          "kr": "Butyrospermum Parkii"
+        },
+        {
+          "inci": "Dimethicone/Vinyl Dimethicone Crosspolymer",
+          "kr": "Dimethicone/Vinyl Dimethicone Crosspolymer"
+        },
+        {
+          "inci": "Glyceryl Stearate SE",
+          "kr": "Glyceryl Stearate SE"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/030/187/248/4029/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0301872484029/skin-renewing-night-cream-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P026",
+      "name_kr": "Cerave Moisturising Cream",
+      "name_en": "Cerave Moisturising Cream",
+      "brand": "Cerave",
+      "barcode": "3337875597470",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER",
+          "kr": "AQUA/WATER"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "CETEARETH-20",
+          "kr": "CETEARETH-20"
+        },
+        {
+          "inci": "PETROLATUM",
+          "kr": "PETROLATUM"
+        },
+        {
+          "inci": "DIMETHICONE",
+          "kr": "DIMETHICONE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "페트롤라툼 [금지:EU,브라질,아르헨티나,아세안,중국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/7470/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875597470/cerave-moisturising-cream",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P027",
+      "name_kr": "Deep Moisture Body Lotion",
+      "name_en": "Deep Moisture Body Lotion",
+      "brand": "Neutrogena",
+      "barcode": "3574660527452",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "paraffinum liquidum",
+          "kr": "paraffinum liquidum"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "hydrogenated palm glycerides",
+          "kr": "hydrogenated palm glycerides"
+        },
+        {
+          "inci": "cetyl alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "caprylyl glycol",
+          "kr": "caprylyl glycol"
+        },
+        {
+          "inci": "potassium cetyl phosphate",
+          "kr": "potassium cetyl phosphate"
+        },
+        {
+          "inci": "carbomer",
+          "kr": "카보머"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "소듐하이드록사이드 [제한:EU,대만,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/052/7452/front_en.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660527452/deep-moisture-body-lotion-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P028",
+      "name_kr": "Handcrem mit Nordic Berry",
+      "name_en": "Handcrem mit Nordic Berry",
+      "brand": "Neutrogena",
+      "barcode": "3574661022543",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "INGREDIENTS: Aqua",
+          "kr": "INGREDIENTS: Aqua"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Paraffinum Liquidum",
+          "kr": "Paraffinum Liquidum"
+        },
+        {
+          "inci": "Behenyl Alcohol",
+          "kr": "Behenyl Alcohol"
+        },
+        {
+          "inci": "Dimethicone Butyrospermum Parkii Butter",
+          "kr": "Dimethicone Butyrospermum Parkii Butter"
+        },
+        {
+          "inci": "Elaeis Guineensis Oil",
+          "kr": "Elaeis Guineensis Oil"
+        },
+        {
+          "inci": "Glyceryl Stearate",
+          "kr": "글리세릴스테아레이트"
+        },
+        {
+          "inci": "Isopropul Palmitate",
+          "kr": "Isopropul Palmitate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/102/2543/front_de.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661022543/handcrem-mit-nordic-berry-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P029",
+      "name_kr": "Neutrogena Gesichtspflege",
+      "name_en": "Neutrogena Gesichtspflege",
+      "brand": "Neutrogena",
+      "barcode": "3574661750521",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "glycerine",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "isopropyl myristate",
+          "kr": "isopropyl myristate"
+        },
+        {
+          "inci": "cetyl alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "carbomer",
+          "kr": "카보머"
+        },
+        {
+          "inci": "potassium cetyl phosphate",
+          "kr": "potassium cetyl phosphate"
+        },
+        {
+          "inci": "caprylyl glycol",
+          "kr": "caprylyl glycol"
+        },
+        {
+          "inci": "p-anisic acid",
+          "kr": "p-anisic acid"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "소듐하이드록사이드 [제한:EU,대만,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/175/0521/front_nl.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661750521/neutrogena-gesichtspflege",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P030",
+      "name_kr": "Hydrating Facial Cleanser",
+      "name_en": "Hydrating Facial Cleanser",
+      "brand": "CeraVe",
+      "barcode": "3606000537576",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "PEG-40 STEARATE",
+          "kr": "PEG-40 STEARATE"
+        },
+        {
+          "inci": "STEARYL ALCOHOL",
+          "kr": "스테아릴알코올"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATE",
+          "kr": "POTASSIUM PHOSPHATE"
+        },
+        {
+          "inci": "CERAMIDE NP",
+          "kr": "세라마이드NP"
+        },
+        {
+          "inci": "CERAMIDE AP",
+          "kr": "세라마이드AP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7576/front_en.11.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537576/hydrating-facial-cleanser-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P031",
+      "name_kr": "Daily Moisturizing Lotion",
+      "name_en": "Daily Moisturizing Lotion",
+      "brand": "CeraVe",
+      "barcode": "3606000537736",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER/EAU",
+          "kr": "AQUA/WATER/EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATE",
+          "kr": "POTASSIUM PHOSPHATE"
+        },
+        {
+          "inci": "CERAMIDE NP",
+          "kr": "세라마이드NP"
+        },
+        {
+          "inci": "CERAMIDE AP",
+          "kr": "세라마이드AP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7736/front_en.13.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537736/daily-moisturizing-lotion-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P032",
+      "name_kr": "Laneige Lip sleeping mask",
+      "name_en": "Laneige Lip sleeping mask",
+      "brand": "Laneige",
+      "barcode": "8809643053273",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Laneige product cream base and Lip sleeping mask mixed flavors.",
+          "kr": "Laneige product cream base and Lip sleeping mask mixed flavors."
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/964/305/3273/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809643053273/laneige-lip-sleeping-mask",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P033",
+      "name_kr": "Cetaphil Moisturizing Cream",
+      "name_en": "Cetaphil Moisturizing Cream",
+      "brand": "Cetaphil",
+      "barcode": "302993917564",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Petrolatum",
+          "kr": "Petrolatum"
+        },
+        {
+          "inci": "Dicaprylyl either",
+          "kr": "Dicaprylyl either"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Glyceryl stearate",
+          "kr": "글리세릴스테아레이트"
+        },
+        {
+          "inci": "cetyl alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "helianthus annus  seed oil",
+          "kr": "helianthus annus  seed oil"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "글리세린 [제한:캐나다]",
+        "페트롤라툼 [금지:EU,브라질,아르헨티나,아세안,중국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/030/299/391/7564/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0302993917564/cetaphil-moisturizing-cream",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P034",
+      "name_kr": "Acne Foaming Cream Cleanser",
+      "name_en": "Acne Foaming Cream Cleanser",
+      "brand": "CeraVe",
+      "barcode": "3606000512238",
+      "category": [
+        "보습",
+        "미백",
+        "모공"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Benzoyl Peroxide 4%. Water",
+          "kr": "Benzoyl Peroxide 4%. Water"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Propylene Glycol",
+          "kr": "프로필렌글라이콜"
+        },
+        {
+          "inci": "Cocamidopropyl Hydroxysultaine",
+          "kr": "Cocamidopropyl Hydroxysultaine"
+        },
+        {
+          "inci": "Sodium C14-16 Olefin Sulfonate",
+          "kr": "Sodium C14-16 Olefin Sulfonate"
+        },
+        {
+          "inci": "Xanthan Gum",
+          "kr": "잔탄검"
+        },
+        {
+          "inci": "Potassium Hydroxide",
+          "kr": "Potassium Hydroxide"
+        },
+        {
+          "inci": "Ceramide Np",
+          "kr": "세라마이드NP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "벤조일퍼옥사이드 [금지:브라질,아르헨티나,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "포타슘하이드록사이드 [제한:EU,대만,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/051/2238/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000512238/acne-foaming-cream-cleanser-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P035",
+      "name_kr": "Sofort einziehende Handcreme",
+      "name_en": "Sofort einziehende Handcreme",
+      "brand": "Neutrogena",
+      "barcode": "3574661287898",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Paraffinum Liquidum",
+          "kr": "Paraffinum Liquidum"
+        },
+        {
+          "inci": "Isopropyl Palmitate",
+          "kr": "Isopropyl Palmitate"
+        },
+        {
+          "inci": "Petrolatum",
+          "kr": "Petrolatum"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Stearyl Alcohol",
+          "kr": "스테아릴알코올"
+        },
+        {
+          "inci": "Glyceryl Stearate",
+          "kr": "글리세릴스테아레이트"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "페트롤라툼 [금지:EU,브라질,아르헨티나,아세안,중국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "판테놀 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/128/7898/front_de.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661287898/sofort-einziehende-handcreme-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P036",
+      "name_kr": "Water Bank Hyaluronique Bleu",
+      "name_en": "Water Bank Hyaluronique Bleu",
+      "brand": "Laneige",
+      "barcode": "8809925136649",
+      "category": [
+        "보습",
+        "미백",
+        "진정",
+        "탄력"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "WATER / AQUA / EAU",
+          "kr": "WATER / AQUA / EAU"
+        },
+        {
+          "inci": "BUTYLENE GLYCOL",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "HYDROGENATED POLY",
+          "kr": "HYDROGENATED POLY"
+        },
+        {
+          "inci": "DIETHYLHEXYL SUCCINATE",
+          "kr": "DIETHYLHEXYL SUCCINATE"
+        },
+        {
+          "inci": "2-HEXANEDIOL",
+          "kr": "2-HEXANEDIOL"
+        },
+        {
+          "inci": "GLYCERYL STEARATE SE",
+          "kr": "GLYCERYL STEARATE SE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "헥산 [금지:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/992/513/6649/front_fr.11.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809925136649/water-bank-hyaluronique-bleu-laneige",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P037",
+      "name_kr": "Cetaphil Moisturising Lotion",
+      "name_en": "Cetaphil Moisturising Lotion",
+      "brand": "Cetaphil",
+      "barcode": "8906005274342",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "GALPERAL Cetaphil®  Avocado Oil  Essential Vitamins E & B3 Pro vitamin B5",
+          "kr": "GALPERAL Cetaphil®  Avocado Oil  Essential Vitamins E & B3 Pro vitamin B5"
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/890/600/527/4342/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8906005274342/cetaphil-moisturising-lotion",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P038",
+      "name_kr": "PM Facial Moisturizing Lotion",
+      "name_en": "PM Facial Moisturizing Lotion",
+      "brand": "CeraVe",
+      "barcode": "3606000537453",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Purified Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Caprylic/Capric Triglycerides",
+          "kr": "Caprylic/Capric Triglycerides"
+        },
+        {
+          "inci": "Niacinamide",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "Behentrimonium Methosulfate and Cetearyl Alcohol",
+          "kr": "Behentrimonium Methosulfate and Cetearyl Alcohol"
+        },
+        {
+          "inci": "Ceteareth-20 and Cetearyl Alcohol",
+          "kr": "Ceteareth-20 and Cetearyl Alcohol"
+        },
+        {
+          "inci": "Ceramide 3",
+          "kr": "Ceramide 3"
+        },
+        {
+          "inci": "Ceramide 6-II",
+          "kr": "Ceramide 6-II"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7453/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537453/pm-facial-moisturizing-lotion-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P039",
+      "name_kr": "Deep Clean Gentle Facial Scrub",
+      "name_en": "Deep Clean Gentle Facial Scrub",
+      "brand": "Neutrogena",
+      "barcode": "70501050354",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Sodium Methyl Cocoyl Taurate",
+          "kr": "Sodium Methyl Cocoyl Taurate"
+        },
+        {
+          "inci": "Jojoba Esters",
+          "kr": "Jojoba Esters"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cocamidopropyl Betaine",
+          "kr": "Cocamidopropyl Betaine"
+        },
+        {
+          "inci": "Glycol Distearate",
+          "kr": "Glycol Distearate"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        },
+        {
+          "inci": "Sodium Chloride",
+          "kr": "Sodium Chloride"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/007/050/105/0354/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501050354/deep-clean-gentle-facial-scrub-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P040",
+      "name_kr": "CeraVe Foaming Facial Cleanser",
+      "name_en": "CeraVe Foaming Facial Cleanser",
+      "brand": "CeraVe",
+      "barcode": "85275710434",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua/Water",
+          "kr": "Aqua/Water"
+        },
+        {
+          "inci": "Cocamidopropyl Hydroxysultaine",
+          "kr": "Cocamidopropyl Hydroxysultaine"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Sodium Lauroyl Sarcosinate",
+          "kr": "Sodium Lauroyl Sarcosinate"
+        },
+        {
+          "inci": "PEG-150 Pentaerythrityl Tetrastearate",
+          "kr": "PEG-150 Pentaerythrityl Tetrastearate"
+        },
+        {
+          "inci": "Niacinamide",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "Sodium Methyl Cocoyl Taurate",
+          "kr": "Sodium Methyl Cocoyl Taurate"
+        },
+        {
+          "inci": "Ceramide NP",
+          "kr": "세라마이드NP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "소듐라우로일사코시네이트 [제한:일본,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0085275710434/cerave-foaming-facial-cleanser",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P041",
+      "name_kr": "Cetaphil Daily Facial Cleanser",
+      "name_en": "Cetaphil Daily Facial Cleanser",
+      "brand": "Cetaphil",
+      "barcode": "302990113204",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Cetyl Alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "Propylene Glycol",
+          "kr": "프로필렌글라이콜"
+        },
+        {
+          "inci": "Sodium Lauryl Sulfate",
+          "kr": "Sodium Lauryl Sulfate"
+        },
+        {
+          "inci": "Stearyl Alcohol",
+          "kr": "스테아릴알코올"
+        },
+        {
+          "inci": "Methylparaben",
+          "kr": "메칠파라벤"
+        },
+        {
+          "inci": "Propylparaben",
+          "kr": "프로필파라벤"
+        },
+        {
+          "inci": "Butylparaben.",
+          "kr": "Butylparaben."
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "에탄올․붕사․라우릴황산나트륨혼합물 [제한:한국]",
+        "메틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "프로필파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "부틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0302990113204/cetaphil-daily-facial-cleanser",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P042",
+      "name_kr": "Crème mains absorption express",
+      "name_en": "Crème mains absorption express",
+      "brand": "Neutrogena",
+      "barcode": "3574660239867",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "isononyl isononanoate",
+          "kr": "isononyl isononanoate"
+        },
+        {
+          "inci": "dimethicone",
+          "kr": "dimethicone"
+        },
+        {
+          "inci": "cyclopentasiloxane",
+          "kr": "cyclopentasiloxane"
+        },
+        {
+          "inci": "cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "cyclohexasiloxane",
+          "kr": "cyclohexasiloxane"
+        },
+        {
+          "inci": "cetyl alcohol",
+          "kr": "세틸알코올"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/023/9867/front_fr.5.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660239867/creme-mains-absorption-express-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P043",
+      "name_kr": "Handcreme - sofort einziehende",
+      "name_en": "Handcreme - sofort einziehende",
+      "brand": "neutrogena, Neutrogena",
+      "barcode": "3574661687018",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Isopropyl Myristate",
+          "kr": "Isopropyl Myristate"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Caprylyl Glycol",
+          "kr": "Caprylyl Glycol"
+        },
+        {
+          "inci": "Cetyl Alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "Potassium Cetyl Phosphate",
+          "kr": "Potassium Cetyl Phosphate"
+        },
+        {
+          "inci": "p-Anisic Acid",
+          "kr": "p-Anisic Acid"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/168/7018/front_de.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661687018/handcreme-sofort-einziehende-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P044",
+      "name_kr": "granactive retinoid 2% emulsion",
+      "name_en": "granactive retinoid 2% emulsion",
+      "brand": "the ordinary",
+      "barcode": "769915190045",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Ingredients/ Ingrédients: AQUA",
+          "kr": "Ingredients/ Ingrédients: AQUA"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "ETHYL LINOLEATE. PROPANEDIOL CAPRYLIC/CAPRIC TRIGLYCERIDE. DIMETHYL ISOSORBIDE",
+          "kr": "ETHYL LINOLEATE. PROPANEDIOL CAPRYLIC/CAPRIC TRIGLYCERIDE. DIMETHYL ISOSORBIDE"
+        },
+        {
+          "inci": "CETEARYL ISONONANOATE",
+          "kr": "CETEARYL ISONONANOATE"
+        },
+        {
+          "inci": "BISABOLOL. HYDROXYPINACOLONE RETINOATE. RETINOL",
+          "kr": "BISABOLOL. HYDROXYPINACOLONE RETINOATE. RETINOL"
+        },
+        {
+          "inci": "TASMANNIA LANCEOLATA FRUIT/LEAF EXTRACT",
+          "kr": "TASMANNIA LANCEOLATA FRUIT/LEAF EXTRACT"
+        },
+        {
+          "inci": "INULIN LAURYL CARBAMATE",
+          "kr": "INULIN LAURYL CARBAMATE"
+        },
+        {
+          "inci": "GLYCERYL STEARATE",
+          "kr": "글리세릴스테아레이트"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "비사보롤 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/076/991/519/0045/front_en.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0769915190045/granactive-retinoid-2-emulsion-the-ordinary",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P045",
+      "name_kr": "CeraVe Schuimende Reinigingsgel",
+      "name_en": "CeraVe Schuimende Reinigingsgel",
+      "brand": "CeraVe",
+      "barcode": "3337875597197",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "cocamidopropyl hydroxysultaine",
+          "kr": "cocamidopropyl hydroxysultaine"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "sodium lauroyl sarcosinate",
+          "kr": "sodium lauroyl sarcosinate"
+        },
+        {
+          "inci": "propanediol",
+          "kr": "propanediol"
+        },
+        {
+          "inci": "peg-150 pentaerythrityl tetrastearate",
+          "kr": "peg-150 pentaerythrityl tetrastearate"
+        },
+        {
+          "inci": "niacinamide",
+          "kr": "나이아신아마이드"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "수용성유황 [제한:일본]",
+        "글리세린 [제한:캐나다]",
+        "소듐라우로일사코시네이트 [제한:일본,한국]",
+        "3-[[4-[메틸아미노]-2-니트로페닐]아미노]-1,2-프로판다이올 및 그 염류 [금지:아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/7197/front_en.5.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875597197/cerave-schuimende-reinigingsgel",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P046",
+      "name_kr": "Crème pieds très secs et abîmés",
+      "name_en": "Crème pieds très secs et abîmés",
+      "brand": "Neutrogena",
+      "barcode": "3574660183818",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Paraffinum Liquidum",
+          "kr": "Paraffinum Liquidum"
+        },
+        {
+          "inci": "Cyclopentasiloxane",
+          "kr": "Cyclopentasiloxane"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Cera Microcristallina",
+          "kr": "Cera Microcristallina"
+        },
+        {
+          "inci": "Panthenol",
+          "kr": "판테놀"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "판테놀 [제한:일본]",
+        "비사보롤 [제한:일본]",
+        "알란토인 [제한:대만,일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/018/3818/front_fr.27.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660183818/creme-pieds-tres-secs-et-abimes-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P047",
+      "name_kr": "crème pieds très secs et abîmés",
+      "name_en": "crème pieds très secs et abîmés",
+      "brand": "johnson-johnson, Neutrogena",
+      "barcode": "3574660183832",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "paraffinum liquidum",
+          "kr": "paraffinum liquidum"
+        },
+        {
+          "inci": "cycloper????",
+          "kr": "cycloper????"
+        },
+        {
+          "inci": "dimethicone",
+          "kr": "dimethicone"
+        },
+        {
+          "inci": "panthenol",
+          "kr": "판테놀"
+        },
+        {
+          "inci": "cera microcristallina",
+          "kr": "cera microcristallina"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "판테놀 [제한:일본]",
+        "비사보롤 [제한:일본]",
+        "알란토인 [제한:대만,일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/018/3832/front_fr.10.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660183832/creme-pieds-tres-secs-et-abimes-johnson-johnson",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P048",
+      "name_kr": "CeraVe Daily Moisturizing Lotion",
+      "name_en": "CeraVe Daily Moisturizing Lotion",
+      "brand": "CeraVe",
+      "barcode": "301871371122",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA / WATER / EAU",
+          "kr": "AQUA / WATER / EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "kr": "CAPRYLIC/CAPRIC TRIGLYCERIDE"
+        },
+        {
+          "inci": "CETEARYL ALCOHOL",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "POTASSIUM PHOSPHATECERAMIDE NPCERAMIDE AP",
+          "kr": "POTASSIUM PHOSPHATECERAMIDE NPCERAMIDE AP"
+        },
+        {
+          "inci": "CERAMIDE EOP",
+          "kr": "세라마이드EOP"
+        },
+        {
+          "inci": "CARBOMER",
+          "kr": "카보머"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/030/187/137/1122/front_en.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0301871371122/cerave-daily-moisturizing-lotion",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P049",
+      "name_kr": "Hydrating cream-to-foam cleanser",
+      "name_en": "Hydrating cream-to-foam cleanser",
+      "brand": "CeraVe",
+      "barcode": "3337875743563",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER",
+          "kr": "AQUA/WATER"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "SODIUM METHYL COCOYL TAURATE",
+          "kr": "SODIUM METHYL COCOYL TAURATE"
+        },
+        {
+          "inci": "COCO-BETAINE",
+          "kr": "COCO-BETAINE"
+        },
+        {
+          "inci": "SODIUM COCOYL ISETHIONATE",
+          "kr": "SODIUM COCOYL ISETHIONATE"
+        },
+        {
+          "inci": "SODIUM CHLORIDE",
+          "kr": "SODIUM CHLORIDE"
+        },
+        {
+          "inci": "PCA",
+          "kr": "PCA"
+        },
+        {
+          "inci": "PPG-5-CETETH-20",
+          "kr": "PPG-5-CETETH-20"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-피씨에이 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/574/3563/front_fr.12.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875743563/hydrating-cream-to-foam-cleanser-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P050",
+      "name_kr": "Ultra Sheeran Body Mist Sunscreen",
+      "name_en": "Ultra Sheeran Body Mist Sunscreen",
+      "brand": "Neutrogena",
+      "barcode": "62600380579",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Homosalate 15%",
+          "kr": "Homosalate 15%"
+        },
+        {
+          "inci": "Octocrylene 10%",
+          "kr": "Octocrylene 10%"
+        },
+        {
+          "inci": "Octisalate 5% Avobenzone 3%",
+          "kr": "Octisalate 5% Avobenzone 3%"
+        },
+        {
+          "inci": "Acrylates/Octylacyline",
+          "kr": "Acrylates/Octylacyline"
+        },
+        {
+          "inci": "copolymer",
+          "kr": "copolymer"
+        },
+        {
+          "inci": "alcohol Denat.",
+          "kr": "alcohol Denat."
+        },
+        {
+          "inci": "Butyloctyl Salicylate",
+          "kr": "Butyloctyl Salicylate"
+        },
+        {
+          "inci": "Dicaprylyl Carbonate 2",
+          "kr": "Dicaprylyl Carbonate 2"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "스타이렌/아크릴아마이드코폴리머 [제한:EU,브라질,아르헨티나,아세안]",
+        "아이소부탄 [금지:EU,브라질,아르헨티나,아세안,중국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/006/260/038/0579/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0062600380579/ultra-sheeran-body-mist-sunscreen-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P051",
+      "name_kr": "CeraVe Hydraterende Gezichtscrème",
+      "name_en": "CeraVe Hydraterende Gezichtscrème",
+      "brand": "CeraVe",
+      "barcode": "3337875597449",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "ÁGUA",
+          "kr": "ÁGUA"
+        },
+        {
+          "inci": "GLICEROL",
+          "kr": "GLICEROL"
+        },
+        {
+          "inci": "TRIGLICERÍDEO CAPRÍLICO/CÁPRICO",
+          "kr": "TRIGLICERÍDEO CAPRÍLICO/CÁPRICO"
+        },
+        {
+          "inci": "NICOTINAMIDA",
+          "kr": "NICOTINAMIDA"
+        },
+        {
+          "inci": "ÁLCOOL CETOESTEARÍLICO",
+          "kr": "ÁLCOOL CETOESTEARÍLICO"
+        },
+        {
+          "inci": "FOSFATO DE POTÁSSIO MONOBÁSICO",
+          "kr": "FOSFATO DE POTÁSSIO MONOBÁSICO"
+        },
+        {
+          "inci": "CERAMIDA NP",
+          "kr": "CERAMIDA NP"
+        },
+        {
+          "inci": "CERAMIDA AP",
+          "kr": "CERAMIDA AP"
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/7449/front_en.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875597449/cerave-hydraterende-gezichtscreme",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P052",
+      "name_kr": "Lotion nettoyante haute tolérance",
+      "name_en": "Lotion nettoyante haute tolérance",
+      "brand": "Cetaphil, Galderma",
+      "barcode": "3401344340666",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER",
+          "kr": "AQUA/WATER"
+        },
+        {
+          "inci": "CETYL ALCOHOL",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "PROPYLENE GLYCOL",
+          "kr": "프로필렌글라이콜"
+        },
+        {
+          "inci": "BUTYLPARABEN",
+          "kr": "부틸파라벤"
+        },
+        {
+          "inci": "METHYLPARABEN",
+          "kr": "메칠파라벤"
+        },
+        {
+          "inci": "PROPYLPARABEN",
+          "kr": "프로필파라벤"
+        },
+        {
+          "inci": "SODIUM LAURYL SULFATE",
+          "kr": "SODIUM LAURYL SULFATE"
+        },
+        {
+          "inci": "STEARYL ALCOHOL.",
+          "kr": "STEARYL ALCOHOL."
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "부틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "메틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "프로필파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "에탄올․붕사․라우릴황산나트륨혼합물 [제한:한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/340/134/434/0666/front_fr.11.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3401344340666/lotion-nettoyante-haute-tolerance-cetaphil",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P053",
+      "name_kr": "Hand Cream Concentrated Unscented",
+      "name_en": "Hand Cream Concentrated Unscented",
+      "brand": "Neutrogena",
+      "barcode": "3574660258288",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Sodium Cetearyl Sulfate",
+          "kr": "Sodium Cetearyl Sulfate"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Palmitic Acid",
+          "kr": "Palmitic Acid"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        },
+        {
+          "inci": "Disodium Phosphate",
+          "kr": "Disodium Phosphate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "토코페롤 [제한:한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/025/8288/front_en.16.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660258288/hand-cream-concentrated-unscented-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P054",
+      "name_kr": "Crème mains hydratante concentrée",
+      "name_en": "Crème mains hydratante concentrée",
+      "brand": "Neutrogena",
+      "barcode": "3574661369426",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "ethylexylglycerin",
+          "kr": "ethylexylglycerin"
+        },
+        {
+          "inci": "palmitic acid",
+          "kr": "palmitic acid"
+        },
+        {
+          "inci": "stearic acid",
+          "kr": "stearic acid"
+        },
+        {
+          "inci": "sodium cetearyl sulfate",
+          "kr": "sodium cetearyl sulfate"
+        },
+        {
+          "inci": "sodium sulfate",
+          "kr": "sodium sulfate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/136/9426/front_fr.6.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661369426/creme-mains-hydratante-concentree-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P055",
+      "name_kr": "Hyrdrating Cream To Foam Cleanser",
+      "name_en": "Hyrdrating Cream To Foam Cleanser",
+      "brand": "CeraVe",
+      "barcode": "3606000559950",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "CeraVe® Hydrating Cream-to-Foam Cleanser Developed with dermatologists",
+          "kr": "CeraVe® Hydrating Cream-to-Foam Cleanser Developed with dermatologists"
+        },
+        {
+          "inci": "its gentle foaming formula - with 3 essential ceramides - cleanses",
+          "kr": "its gentle foaming formula - with 3 essential ceramides - cleanses"
+        },
+        {
+          "inci": "hydrates",
+          "kr": "hydrates"
+        },
+        {
+          "inci": "removes makeup without disrupting the protective skin barrier This formula contains: This formula is: MVE® Delivery Removes Dirt",
+          "kr": "removes makeup without disrupting the protective skin barrier This formula contains: This formula is: MVE® Delivery Removes Dirt"
+        },
+        {
+          "inci": "Technology Oil and Makeup MVE* Controlled release Removes even long - for all day hydration wear facial makeup Amino Acids Fragrance Free Helps to attract and FRAGRANCE To avoid fragrance hold water on the skin irritation Gentle on skin Non-drying pH balanced Directions: Wet skin with lukewarm water Massage cleanser into skin in a gentle",
+          "kr": "Technology Oil and Makeup MVE* Controlled release Removes even long - for all day hydration wear facial makeup Amino Acids Fragrance Free Helps to attract and FRAGRANCE To avoid fragrance hold water on the skin irritation Gentle on skin Non-drying pH balanced Directions: Wet skin with lukewarm water Massage cleanser into skin in a gentle"
+        },
+        {
+          "inci": "circular motion Rinse well Avoid direct eye contact with eyes If contact occurs",
+          "kr": "circular motion Rinse well Avoid direct eye contact with eyes If contact occurs"
+        },
+        {
+          "inci": "rinse thoroughly with water 2021601 20 -  AQUA/WATER/EAU",
+          "kr": "rinse thoroughly with water 2021601 20 -  AQUA/WATER/EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "눈 [금지:한국]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/055/9950/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000559950/hyrdrating-cream-to-foam-cleanser-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P056",
+      "name_kr": "Hydro Boost Gentle Cleansing Lotion",
+      "name_en": "Hydro Boost Gentle Cleansing Lotion",
+      "brand": "Neutrogena",
+      "barcode": "70501111505",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Butylene Glycol",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "Sodium Hydrolyzed Potato Starch Dodecenylsuccinate",
+          "kr": "Sodium Hydrolyzed Potato Starch Dodecenylsuccinate"
+        },
+        {
+          "inci": "Zea Mays  Starch",
+          "kr": "Zea Mays  Starch"
+        },
+        {
+          "inci": "Polysorbate 20",
+          "kr": "Polysorbate 20"
+        },
+        {
+          "inci": "Poloxamer 188",
+          "kr": "Poloxamer 188"
+        },
+        {
+          "inci": "Hydroxyacetophenone",
+          "kr": "Hydroxyacetophenone"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "글리세린 [제한:캐나다]",
+        "솔베이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/007/050/111/1505/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501111505/hydro-boost-gentle-cleansing-lotion-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P057",
+      "name_kr": "Hydro Boost Water Gel Lotion SPF 50",
+      "name_en": "Hydro Boost Water Gel Lotion SPF 50",
+      "brand": "Neutrogena",
+      "barcode": "70501113424",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Homosalate",
+          "kr": "호모살레이트"
+        },
+        {
+          "inci": "Octocrylene",
+          "kr": "옥토크릴렌"
+        },
+        {
+          "inci": "Ethylhexyl Salicylate",
+          "kr": "Ethylhexyl Salicylate"
+        },
+        {
+          "inci": "Oxybenzone",
+          "kr": "Oxybenzone"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Alcohol Denat.",
+          "kr": "Alcohol Denat."
+        },
+        {
+          "inci": "Caprylyl Methicone",
+          "kr": "Caprylyl Methicone"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "에칠헥실살리실레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "부틸메톡시디벤조일메탄 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/007/050/111/3424/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501113424/hydro-boost-water-gel-lotion-spf-50-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P058",
+      "name_kr": "CeraVe Hydraterende Reinigingscrème",
+      "name_en": "CeraVe Hydraterende Reinigingscrème",
+      "brand": "CeraVe",
+      "barcode": "3337875597333",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "PEG-40 Stearate",
+          "kr": "PEG-40 Stearate"
+        },
+        {
+          "inci": "Stearyl Alcohol",
+          "kr": "스테아릴알코올"
+        },
+        {
+          "inci": "Potassium Phosphate",
+          "kr": "Potassium Phosphate"
+        },
+        {
+          "inci": "Ceramide NP",
+          "kr": "세라마이드NP"
+        },
+        {
+          "inci": "Ceramide AP",
+          "kr": "세라마이드AP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-카보머 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/7333/front_en.39.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875597333/cerave-hydraterende-reinigingscreme",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P059",
+      "name_kr": "Neutrogena Hydro Boost Gel-Cream Eye",
+      "name_en": "Neutrogena Hydro Boost Gel-Cream Eye",
+      "brand": "Neutrogena",
+      "barcode": "70501110492",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Dimethicone Crosspolymer",
+          "kr": "Dimethicone Crosspolymer"
+        },
+        {
+          "inci": "Pentaerythrityl Tetraisostearate",
+          "kr": "Pentaerythrityl Tetraisostearate"
+        },
+        {
+          "inci": "Sodium Hyaluronate",
+          "kr": "히알루론산나트륨"
+        },
+        {
+          "inci": "Phenoxyethanol",
+          "kr": "페녹시에탄올"
+        },
+        {
+          "inci": "Citric Acid",
+          "kr": "시트릭애씨드"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "시트릭애씨드 [제한:대만,브라질,아르헨티나,캐나다]",
+        "소듐시트레이트 [제한:캐나다]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501110492/neutrogena-hydro-boost-gel-cream-eye",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P060",
+      "name_kr": "AM Facial Moisturizing Lotion SPF 30",
+      "name_en": "AM Facial Moisturizing Lotion SPF 30",
+      "brand": "CeraVe",
+      "barcode": "793379245584",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Homosalate 12%",
+          "kr": "Homosalate 12%"
+        },
+        {
+          "inci": "Octinoxate 7.5%",
+          "kr": "Octinoxate 7.5%"
+        },
+        {
+          "inci": "Octocrylene 2%",
+          "kr": "Octocrylene 2%"
+        },
+        {
+          "inci": "Zinc Oxide 3.5%. Purified Water",
+          "kr": "Zinc Oxide 3.5%. Purified Water"
+        },
+        {
+          "inci": "Niacinamide",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "Behentrimonium Methosulfate and Cetearyl Alcohol",
+          "kr": "Behentrimonium Methosulfate and Cetearyl Alcohol"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Aluminum Starch Octenylsuccinate and Boron Nitride",
+          "kr": "Aluminum Starch Octenylsuccinate and Boron Nitride"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "알루미늄 [제한:한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/079/337/924/5584/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0793379245584/am-facial-moisturizing-lotion-spf-30-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P061",
+      "name_kr": "Neutrogena fast absorbing hand cream",
+      "name_en": "Neutrogena fast absorbing hand cream",
+      "brand": "Neutrogena",
+      "barcode": "3574660412277",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Isononyl",
+          "kr": "Isononyl"
+        },
+        {
+          "inci": "Isononanoate",
+          "kr": "Isononanoate"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Cyclopentasiloxane",
+          "kr": "Cyclopentasiloxane"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Cyclohexasiloxane",
+          "kr": "Cyclohexasiloxane"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/041/2277/front_pl.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660412277/neutrogena-fast-absorbing-hand-cream",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P062",
+      "name_kr": "Anti-boutons Masque Nettoyant 2-en-1",
+      "name_en": "Anti-boutons Masque Nettoyant 2-en-1",
+      "brand": "Neutrogena",
+      "barcode": "3574661799797",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Kaolin",
+          "kr": "카올린"
+        },
+        {
+          "inci": "Bentonite",
+          "kr": "벤토나이트"
+        },
+        {
+          "inci": "Sodium Methyl Cocoyl Taurate",
+          "kr": "Sodium Methyl Cocoyl Taurate"
+        },
+        {
+          "inci": "CI 77891",
+          "kr": "CI 77891"
+        },
+        {
+          "inci": "Trideceth-9",
+          "kr": "Trideceth-9"
+        },
+        {
+          "inci": "C12-15 Alkyl Lactate",
+          "kr": "C12-15 Alkyl Lactate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "벤토나이트 [제한:EU,대만,아세안,중국,한국]",
+        "CI 77891 [제한:대만,브라질,아르헨티나]",
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "세틸락테이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/179/9797/front_fr.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661799797/anti-boutons-masque-nettoyant-2-en-1-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P063",
+      "name_kr": "SA Lotion For Rough &amp; Bumpy Skin",
+      "name_en": "SA Lotion For Rough &amp; Bumpy Skin",
+      "brand": "CeraVe",
+      "barcode": "3606000537712",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Salicylic Acid",
+          "kr": "살리실릭애씨드"
+        },
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Mineral Oil",
+          "kr": "Mineral Oil"
+        },
+        {
+          "inci": "Triethanolamine",
+          "kr": "Triethanolamine"
+        },
+        {
+          "inci": "Glyceryl Stearate",
+          "kr": "글리세릴스테아레이트"
+        },
+        {
+          "inci": "Ammonium Lactate",
+          "kr": "Ammonium Lactate"
+        },
+        {
+          "inci": "Peg-100 Stearate",
+          "kr": "PEG-100스테아레이트"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "수용성유황 [제한:일본]",
+        "글리세린 [제한:캐나다]",
+        "트라이에탄올아민 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "암모늄락테이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7712/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537712/sa-lotion-for-rough-amp-bumpy-skin-cerave",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P064",
+      "name_kr": "Hydro Boost Hyaluronic Acid Water Gel",
+      "name_en": "Hydro Boost Hyaluronic Acid Water Gel",
+      "brand": "Neutrogena",
+      "barcode": "8850007543336",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Ingredients/N/21981: WATER GLYCERIN DIMETHICONE CETEARYL OLVATE SORBITAN OLIVATE POLIACIMATE CROSSPOLYMER-6. BETAINE CAPRYLYL GLYCOL SYNTHETIC BEESWAX ETALHEALGLYCERIN",
+          "kr": "Ingredients/N/21981: WATER GLYCERIN DIMETHICONE CETEARYL OLVATE SORBITAN OLIVATE POLIACIMATE CROSSPOLYMER-6. BETAINE CAPRYLYL GLYCOL SYNTHETIC BEESWAX ETALHEALGLYCERIN"
+        },
+        {
+          "inci": "PENTYLENE GLYCOL SODIUM RCA FRUCTOSE DMETHICONE CROSSPOLOMMER SCOUMPALURONATE DIMETHICONOL SODUM LACTATE UREA OTRICACD PCA FRAGRANCE SODIUM HVORDADE MALTOSE SERNE ALAVINE GLYONE SODUM CHLORDE TREHALOSE ALLANTON GLUTAMICACD LYSNE HOL THREONNE ARGININE GLUCOSE PROLINE 042090 CONTAINS SYNTHETIC BEESWAX DERIVED FROM SHEEP",
+          "kr": "PENTYLENE GLYCOL SODIUM RCA FRUCTOSE DMETHICONE CROSSPOLOMMER SCOUMPALURONATE DIMETHICONOL SODUM LACTATE UREA OTRICACD PCA FRAGRANCE SODIUM HVORDADE MALTOSE SERNE ALAVINE GLYONE SODUM CHLORDE TREHALOSE ALLANTON GLUTAMICACD LYSNE HOL THREONNE ARGININE GLUCOSE PROLINE 042090 CONTAINS SYNTHETIC BEESWAX DERIVED FROM SHEEP"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "우레아 [금지:EU,브라질,아르헨티나,아세안,중국,캐나다,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/885/000/754/3336/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8850007543336/hydro-boost-hyaluronic-acid-water-gel-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P065",
+      "name_kr": "CeraVe SA Cream for Rough & Bumpy Skin",
+      "name_en": "CeraVe SA Cream for Rough & Bumpy Skin",
+      "brand": "CeraVe",
+      "barcode": "3606000537583",
+      "category": [
+        "보습",
+        "미백",
+        "모공"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua/water/eau",
+          "kr": "aqua/water/eau"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "paraffinum liqui huile minerale",
+          "kr": "paraffinum liqui huile minerale"
+        },
+        {
+          "inci": "glyceryl stearate",
+          "kr": "글리세릴스테아레이트"
+        },
+        {
+          "inci": "cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "triethanolamine",
+          "kr": "triethanolamine"
+        },
+        {
+          "inci": "salicylic acid",
+          "kr": "살리실릭애씨드"
+        },
+        {
+          "inci": "niacinamide",
+          "kr": "나이아신아마이드"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "트라이에탄올아민 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "암모늄락테이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/360/600/053/7583/front_en.8.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3606000537583/cerave-sa-cream-for-rough-bumpy-skin",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P066",
+      "name_kr": "sport face oil-free lotion sunscreen 70",
+      "name_en": "sport face oil-free lotion sunscreen 70",
+      "brand": "Neutrogena",
+      "barcode": "86800870258",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Avobenzone 3%",
+          "kr": "Avobenzone 3%"
+        },
+        {
+          "inci": "homosalate 15%",
+          "kr": "homosalate 15%"
+        },
+        {
+          "inci": "octisalate 5%",
+          "kr": "octisalate 5%"
+        },
+        {
+          "inci": "octocylene 10%",
+          "kr": "octocylene 10%"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/008/680/087/0258/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0086800870258/sport-face-oil-free-lotion-sunscreen-70-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P067",
+      "name_kr": "CeraVe SPF50 Hydraterende Gezichtscrème",
+      "name_en": "CeraVe SPF50 Hydraterende Gezichtscrème",
+      "brand": "cerave",
+      "barcode": "3337875814652",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA/WATER",
+          "kr": "AQUA/WATER"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "ISOPROPYL PALMITATE",
+          "kr": "ISOPROPYL PALMITATE"
+        },
+        {
+          "inci": "BIS-ETHYLHEXYLOXYPHENOL METHOXYPHENYL TRIAZINE",
+          "kr": "BIS-ETHYLHEXYLOXYPHENOL METHOXYPHENYL TRIAZINE"
+        },
+        {
+          "inci": "ETHYLHEXYL SALICYLATE",
+          "kr": "ETHYLHEXYL SALICYLATE"
+        },
+        {
+          "inci": "NIACINAMIDE",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "PENTYLENE GLYCOL",
+          "kr": "펜틸렌글라이콜"
+        },
+        {
+          "inci": "BUTYL METHOXYDIBENZOYLMETHANE",
+          "kr": "BUTYL METHOXYDIBENZOYLMETHANE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "비스-에칠헥실옥시페놀메톡시페닐트리아진 [제한:EU,대만,브라질,아르헨티나,일본,중국,한국]",
+        "에칠헥실살리실레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "부틸메톡시디벤조일메탄 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "에칠헥실트리아존 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "3-[[4-[메틸아미노]-2-니트로페닐]아미노]-1,2-프로판다이올 및 그 염류 [금지:아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/581/4652/front_en.21.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875814652/cerave-spf50-hydraterende-gezichtscreme",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P068",
+      "name_kr": "SÉRUM PARA OLHOS CETAPHIL HEALTHY RENEW",
+      "name_en": "SÉRUM PARA OLHOS CETAPHIL HEALTHY RENEW",
+      "brand": "Cetaphil",
+      "barcode": "3499320015752",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "ÁGUA",
+          "kr": "ÁGUA"
+        },
+        {
+          "inci": "GLICERINA",
+          "kr": "GLICERINA"
+        },
+        {
+          "inci": "PROPANODIOL",
+          "kr": "PROPANODIOL"
+        },
+        {
+          "inci": "PANTENOL",
+          "kr": "PANTENOL"
+        },
+        {
+          "inci": "2-HEXANODIOL",
+          "kr": "2-HEXANODIOL"
+        },
+        {
+          "inci": "NIACINAMIDA",
+          "kr": "NIACINAMIDA"
+        },
+        {
+          "inci": "ALCANO C13-15",
+          "kr": "ALCANO C13-15"
+        },
+        {
+          "inci": "MANTEIGA DE KARITÉ",
+          "kr": "MANTEIGA DE KARITÉ"
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3499320015752/serum-para-olhos-cetaphil-healthy-renew",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P069",
+      "name_kr": "Concentrated Ginseng Rejuvenating Cream",
+      "name_en": "Concentrated Ginseng Rejuvenating Cream",
+      "brand": "Sulwhasoo",
+      "barcode": "8809925175303",
+      "category": [
+        "보습",
+        "미백",
+        "탄력"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "WATER",
+          "kr": "정제수"
+        },
+        {
+          "inci": "BUTYLENE GLYCOL",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "DIMETHICONE",
+          "kr": "DIMETHICONE"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "TRIETHYLHEXANOIN",
+          "kr": "TRIETHYLHEXANOIN"
+        },
+        {
+          "inci": "SQUALANE",
+          "kr": "스쿠알란"
+        },
+        {
+          "inci": "HYDROGENATED POLYISOBUTENE",
+          "kr": "HYDROGENATED POLYISOBUTENE"
+        },
+        {
+          "inci": "2-HEXANEDIOL",
+          "kr": "2-HEXANEDIOL"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "헥산 [금지:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "에틸아크릴레이트 [금지:EU,대만,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/992/517/5303/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809925175303/concentrated-ginseng-rejuvenating-cream-sulwhasoo",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P070",
+      "name_kr": "Visibly Clear Désincrustant Points Noirs",
+      "name_en": "Visibly Clear Désincrustant Points Noirs",
+      "brand": "Neutrogena",
+      "barcode": "3574660219623",
+      "category": [
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Cetyl Alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "PPG-15 Stearyl Ether",
+          "kr": "PPG-15 Stearyl Ether"
+        },
+        {
+          "inci": "Polyethylene",
+          "kr": "Polyethylene"
+        },
+        {
+          "inci": "Polysorbate-60",
+          "kr": "Polysorbate-60"
+        },
+        {
+          "inci": "Salicylic Acid",
+          "kr": "살리실릭애씨드"
+        },
+        {
+          "inci": "Steareth-21",
+          "kr": "Steareth-21"
+        },
+        {
+          "inci": "Jojoba Esters",
+          "kr": "Jojoba Esters"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "벤조피렌pyrene) 0.005%를 초과하여 함유하는 방향족 탄화수소  [금지:브라질,아르헨티나,중국]",
+        "솔베이트 [제한:일본]",
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "메틸락테이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/021/9623/front_fr.19.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660219623/visibly-clear-desincrustant-points-noirs-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P071",
+      "name_kr": "Visibly Clear correct & perfect - Médium",
+      "name_en": "Visibly Clear correct & perfect - Médium",
+      "brand": "Johnson & Johnson, Neutrogena",
+      "barcode": "3574661239439",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "dimethicone",
+          "kr": "dimethicone"
+        },
+        {
+          "inci": "dicaprylyl ether",
+          "kr": "dicaprylyl ether"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "cetearyl alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "CI 77891",
+          "kr": "CI 77891"
+        },
+        {
+          "inci": "C12-15 alkyl benzoate",
+          "kr": "C12-15 alkyl benzoate"
+        },
+        {
+          "inci": "phenyl trimethicone",
+          "kr": "phenyl trimethicone"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "CI 77891 [제한:대만,브라질,아르헨티나]",
+        "벤조에이트 [제한:일본]",
+        "CI 77492 [제한:대만,브라질,아르헨티나]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/123/9439/front_fr.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661239439/visibly-clear-correct-perfect-medium-johnson-johnson",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P072",
+      "name_kr": "Neutrogena Hydro Boost Aqua Gel Dagcrème",
+      "name_en": "Neutrogena Hydro Boost Aqua Gel Dagcrème",
+      "brand": "Neutrogena",
+      "barcode": "3574661554280",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Dimethicone Crosspolymer",
+          "kr": "Dimethicone Crosspolymer"
+        },
+        {
+          "inci": "Trehalose",
+          "kr": "트레할로스"
+        },
+        {
+          "inci": "Sodium Hyaluronate",
+          "kr": "히알루론산나트륨"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Cetearyl Olivate",
+          "kr": "Cetearyl Olivate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]",
+        "폴리아크릴아마이드 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/155/4280/front_nl.13.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661554280/neutrogena-hydro-boost-aqua-gel-dagcreme",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P073",
+      "name_kr": "Innisfree Green Tea Balancing Skin Toner",
+      "name_en": "Innisfree Green Tea Balancing Skin Toner",
+      "brand": "Innisfree",
+      "barcode": "8809843673431",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Propanediol",
+          "kr": "Propanediol"
+        },
+        {
+          "inci": "Butylene Glycol",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Camellia Sinensis Leaf Water",
+          "kr": "Camellia Sinensis Leaf Water"
+        },
+        {
+          "inci": "2-Hexanediol",
+          "kr": "2-Hexanediol"
+        },
+        {
+          "inci": "Betaine",
+          "kr": "Betaine"
+        },
+        {
+          "inci": "PEG-60 Hydrogenated Castor Oil",
+          "kr": "PEG-60 Hydrogenated Castor Oil"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "3-[[4-[메틸아미노]-2-니트로페닐]아미노]-1,2-프로판다이올 및 그 염류 [금지:아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "헥산 [금지:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "베타인살리실레이트 [제한:한국]",
+        "글리세린 [제한:캐나다]",
+        "디소듐이디티에이-카퍼 [제한:미국,브라질,아르헨티나,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809843673431/innisfree-green-tea-balancing-skin-toner",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P074",
+      "name_kr": "Neutrogena Hydro Boost Exfoliating Cleanser",
+      "name_en": "Neutrogena Hydro Boost Exfoliating Cleanser",
+      "brand": "Neutrogena",
+      "barcode": "7899529001956",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Água",
+          "kr": "Água"
+        },
+        {
+          "inci": "sodium C14-16 olefin sulfonate",
+          "kr": "sodium C14-16 olefin sulfonate"
+        },
+        {
+          "inci": "cocamidopropyl hydroxysultaine",
+          "kr": "cocamidopropyl hydroxysultaine"
+        },
+        {
+          "inci": "glicerina",
+          "kr": "glicerina"
+        },
+        {
+          "inci": "sodium hydrolyzed potato starch dodecenylsuccinate",
+          "kr": "sodium hydrolyzed potato starch dodecenylsuccinate"
+        },
+        {
+          "inci": "acrylates crosspolymer-4",
+          "kr": "acrylates crosspolymer-4"
+        },
+        {
+          "inci": "celulose",
+          "kr": "celulose"
+        },
+        {
+          "inci": "polysorbate 20",
+          "kr": "polysorbate 20"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "솔베이트 [제한:일본]",
+        "소듐벤조에이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/7899529001956/neutrogena-hydro-boost-exfoliating-cleanser",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P075",
+      "name_kr": "CeraVe AM Facial Moisturizing Lotion SPF 30",
+      "name_en": "CeraVe AM Facial Moisturizing Lotion SPF 30",
+      "brand": "CeraVe",
+      "barcode": "7922470515323",
+      "category": [
+        "보습",
+        "미백"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Active Ingredients: Homosalate 10.0%",
+          "kr": "Active Ingredients: Homosalate 10.0%"
+        },
+        {
+          "inci": "Octisalate 5.0%",
+          "kr": "Octisalate 5.0%"
+        },
+        {
+          "inci": "Octocrylene 2.7%",
+          "kr": "Octocrylene 2.7%"
+        },
+        {
+          "inci": "Zinc Oxide 7.3% Inactive Ingredients: Water",
+          "kr": "Zinc Oxide 7.3% Inactive Ingredients: Water"
+        },
+        {
+          "inci": "Cyclopentasiloxane",
+          "kr": "Cyclopentasiloxane"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Caprylic/Capric Triglyceride",
+          "kr": "Caprylic/Capric Triglyceride"
+        },
+        {
+          "inci": "Niacinamide",
+          "kr": "나이아신아마이드"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/7922470515323/cerave-am-facial-moisturizing-lotion-spf-30",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P076",
+      "name_kr": "CeraVe Retinol Serum Tegen Post-Acne Vlekjes",
+      "name_en": "CeraVe Retinol Serum Tegen Post-Acne Vlekjes",
+      "brand": "Cerave",
+      "barcode": "3337875829007",
+      "category": [
+        "보습",
+        "미백",
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "INGREDIENTS: AQUA/WATER",
+          "kr": "INGREDIENTS: AQUA/WATER"
+        },
+        {
+          "inci": "PROPANEDIOL",
+          "kr": "PROPANEDIOL"
+        },
+        {
+          "inci": "DIMETHICONE",
+          "kr": "DIMETHICONE"
+        },
+        {
+          "inci": "CETEARYL ETHYLHEXANOATE",
+          "kr": "CETEARYL ETHYLHEXANOATE"
+        },
+        {
+          "inci": "NIACINAMIDE",
+          "kr": "나이아신아마이드"
+        },
+        {
+          "inci": "AMMONIUM POLYACRYLOYLDIMETHYL TAURATE",
+          "kr": "AMMONIUM POLYACRYLOYLDIMETHYL TAURATE"
+        },
+        {
+          "inci": "DIPOTASSIUM GLYCYRRHIZATE",
+          "kr": "DIPOTASSIUM GLYCYRRHIZATE"
+        },
+        {
+          "inci": "HYDROGENATED LECITHIN",
+          "kr": "HYDROGENATED LECITHIN"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "3-[[4-[메틸아미노]-2-니트로페닐]아미노]-1,2-프로판다이올 및 그 염류 [금지:아세안,중국,한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "다이포타슘글리시리제이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/582/9007/front_en.9.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875829007/cerave-retinol-serum-tegen-post-acne-vlekjes",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P077",
+      "name_kr": "Gel de Limpeza Facial Neutrogena Hydro Boost",
+      "name_en": "Gel de Limpeza Facial Neutrogena Hydro Boost",
+      "brand": "Neutrogena",
+      "barcode": "7896095410441",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "dimethicone",
+          "kr": "dimethicone"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "cetearyl olivate",
+          "kr": "cetearyl olivate"
+        },
+        {
+          "inci": "polyacrylamide",
+          "kr": "polyacrylamide"
+        },
+        {
+          "inci": "sorbitan olivate",
+          "kr": "sorbitan olivate"
+        },
+        {
+          "inci": "phenoxyethanol",
+          "kr": "페녹시에탄올"
+        },
+        {
+          "inci": "dimethicone/vinyl dimethicone crosspolymer",
+          "kr": "dimethicone/vinyl dimethicone crosspolymer"
+        },
+        {
+          "inci": "synthetic beeswax",
+          "kr": "synthetic beeswax"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "폴리아크릴아마이드 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/7896095410441/gel-de-limpeza-facial-neutrogena-hydro-boost",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P078",
+      "name_kr": "Dear, Klairs Gentle Black Deep Cleansing Oil",
+      "name_en": "Dear, Klairs Gentle Black Deep Cleansing Oil",
+      "brand": "Klairs",
+      "barcode": "8809115025937",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Caprylic/Capric Triglyceride",
+          "kr": "Caprylic/Capric Triglyceride"
+        },
+        {
+          "inci": "Cetyl Ethylhexanoate",
+          "kr": "Cetyl Ethylhexanoate"
+        },
+        {
+          "inci": "Isononyl Isononanoate",
+          "kr": "Isononyl Isononanoate"
+        },
+        {
+          "inci": "PEG-7 Glyceryl Cocoate",
+          "kr": "PEG-7 Glyceryl Cocoate"
+        },
+        {
+          "inci": "Simmondsia Chinensis  Seed Oil",
+          "kr": "Simmondsia Chinensis  Seed Oil"
+        },
+        {
+          "inci": "Isopropyl Myristate",
+          "kr": "Isopropyl Myristate"
+        },
+        {
+          "inci": "PEG-20 Glyceryl Triisostearate",
+          "kr": "PEG-20 Glyceryl Triisostearate"
+        },
+        {
+          "inci": "Polysorbate 20",
+          "kr": "Polysorbate 20"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "솔베이트 [제한:일본]",
+        "토코페릴아세테이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/911/502/5937/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809115025937/dear-klairs-gentle-black-deep-cleansing-oil",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P079",
+      "name_kr": "Concentrated Ginseng Rejuvenating Cream Rich",
+      "name_en": "Concentrated Ginseng Rejuvenating Cream Rich",
+      "brand": "Sulwhasoo",
+      "barcode": "8809925175372",
+      "category": [
+        "보습",
+        "미백",
+        "모공",
+        "탄력"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "WATER/ AQUA / EAU",
+          "kr": "WATER/ AQUA / EAU"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "SQUALANE",
+          "kr": "스쿠알란"
+        },
+        {
+          "inci": "BUTYLENE GLYCOL",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "TREHALOSE",
+          "kr": "트레할로스"
+        },
+        {
+          "inci": "LIMNANTHES ALBA  SEED OIL",
+          "kr": "LIMNANTHES ALBA  SEED OIL"
+        },
+        {
+          "inci": "CAPRYLYL METHICONE",
+          "kr": "CAPRYLYL METHICONE"
+        },
+        {
+          "inci": "GLYCERYL STEARATE",
+          "kr": "글리세릴스테아레이트"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/992/517/5372/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809925175372/concentrated-ginseng-rejuvenating-cream-rich-sulwhasoo",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P080",
+      "name_kr": "Cetaphil Pro Oil Absorbing Moisturizer SPF 30",
+      "name_en": "Cetaphil Pro Oil Absorbing Moisturizer SPF 30",
+      "brand": "Cetaphil",
+      "barcode": "885229966425",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Active Ingredients: Avobenzone 3%",
+          "kr": "Active Ingredients: Avobenzone 3%"
+        },
+        {
+          "inci": "Homosalate 10%",
+          "kr": "Homosalate 10%"
+        },
+        {
+          "inci": "Octisalate 5%",
+          "kr": "Octisalate 5%"
+        },
+        {
+          "inci": "Octocrylene 2.7%",
+          "kr": "Octocrylene 2.7%"
+        },
+        {
+          "inci": "Oxybenzone 4%. Inactive Ingredients: Water",
+          "kr": "Oxybenzone 4%. Inactive Ingredients: Water"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Styrene/Acrylates Copolymer",
+          "kr": "Styrene/Acrylates Copolymer"
+        },
+        {
+          "inci": "Isodecyl Neopentanoate",
+          "kr": "Isodecyl Neopentanoate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "스타이렌/아크릴레이트코폴리머 [금지:EU]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0885229966425/cetaphil-pro-oil-absorbing-moisturizer-spf-30",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P081",
+      "name_kr": "CeraVe Hydraterende Schuimende Reinigingsolie",
+      "name_en": "CeraVe Hydraterende Schuimende Reinigingsolie",
+      "brand": "CeraVe",
+      "barcode": "3337875773430",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "aqua/water",
+          "kr": "aqua/water"
+        },
+        {
+          "inci": "glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "peg-200 hydrogenated glyceryl palmate",
+          "kr": "peg-200 hydrogenated glyceryl palmate"
+        },
+        {
+          "inci": "coco-betaine",
+          "kr": "coco-betaine"
+        },
+        {
+          "inci": "disodium cocoyl glutamate",
+          "kr": "disodium cocoyl glutamate"
+        },
+        {
+          "inci": "peg-120 methyl glucose dioleate",
+          "kr": "peg-120 methyl glucose dioleate"
+        },
+        {
+          "inci": "polysorbate 20",
+          "kr": "polysorbate 20"
+        },
+        {
+          "inci": "peg-7 glyceryl cocoate",
+          "kr": "peg-7 glyceryl cocoate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "글리세린 [제한:캐나다]",
+        "솔베이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/577/3430/front_en.18.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875773430/cerave-hydraterende-schuimende-reinigingsolie",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P082",
+      "name_kr": "Ultra Sheer Dry-Touch Sunscreen with Helioplex",
+      "name_en": "Ultra Sheer Dry-Touch Sunscreen with Helioplex",
+      "brand": "Neutrogena",
+      "barcode": "62600953674",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Homosalate",
+          "kr": "호모살레이트"
+        },
+        {
+          "inci": "Octocrylene",
+          "kr": "옥토크릴렌"
+        },
+        {
+          "inci": "Oxybenzone",
+          "kr": "Oxybenzone"
+        },
+        {
+          "inci": "Octisalate",
+          "kr": "Octisalate"
+        },
+        {
+          "inci": "Avobenzone",
+          "kr": "아보벤존"
+        },
+        {
+          "inci": "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+          "kr": "Acrylates/C10-30 Alkyl Acrylate Crosspolymer"
+        },
+        {
+          "inci": "Acrylates/ Dimethicone Copolymer",
+          "kr": "Acrylates/ Dimethicone Copolymer"
+        },
+        {
+          "inci": "BHT",
+          "kr": "BHT"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "비에이치티 [제한:유럽]",
+        "클로페네신 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/006/260/095/3674/front_en.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0062600953674/ultra-sheer-dry-touch-sunscreen-with-helioplex-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P083",
+      "name_kr": "Neutrogena Hydro Boost Water Gel Lotion SPF 30",
+      "name_en": "Neutrogena Hydro Boost Water Gel Lotion SPF 30",
+      "brand": "Neutrogena",
+      "barcode": "70501100073",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Água",
+          "kr": "Água"
+        },
+        {
+          "inci": "Álcool desnaturado",
+          "kr": "Álcool desnaturado"
+        },
+        {
+          "inci": "Glicerina",
+          "kr": "Glicerina"
+        },
+        {
+          "inci": "Dimeticona",
+          "kr": "Dimeticona"
+        },
+        {
+          "inci": "Óxido de zinco",
+          "kr": "Óxido de zinco"
+        },
+        {
+          "inci": "Poliacrilato de sódio",
+          "kr": "Poliacrilato de sódio"
+        },
+        {
+          "inci": "Ácido esteárico",
+          "kr": "Ácido esteárico"
+        },
+        {
+          "inci": "Álcool cetoestearílico",
+          "kr": "Álcool cetoestearílico"
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0070501100073/neutrogena-hydro-boost-water-gel-lotion-spf-30",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P084",
+      "name_kr": "Visibly Clear Correct & Perfect CC Crème Claire",
+      "name_en": "Visibly Clear Correct & Perfect CC Crème Claire",
+      "brand": "Neutrogena",
+      "barcode": "3574661239279",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "CI 77891",
+          "kr": "CI 77891"
+        },
+        {
+          "inci": "Dicaprylyl Ether",
+          "kr": "Dicaprylyl Ether"
+        },
+        {
+          "inci": "Dimethicone",
+          "kr": "Dimethicone"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "C12-15 Alkyl Benzoate",
+          "kr": "C12-15 Alkyl Benzoate"
+        },
+        {
+          "inci": "Phenyl Trimethicone",
+          "kr": "Phenyl Trimethicone"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "CI 77891 [제한:대만,브라질,아르헨티나]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "벤조에이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/123/9279/front_fr.7.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661239279/visibly-clear-correct-perfect-cc-creme-claire-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P085",
+      "name_kr": "Visibly Clear crème nettoyante pamplemousse rose",
+      "name_en": "Visibly Clear crème nettoyante pamplemousse rose",
+      "brand": "Neutrogena, Visibly Clear",
+      "barcode": "3574660621822",
+      "category": [
+        "보습",
+        "진정",
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Cetyl Alcohol",
+          "kr": "세틸알코올"
+        },
+        {
+          "inci": "PPG-15 Stearyl Ether",
+          "kr": "PPG-15 Stearyl Ether"
+        },
+        {
+          "inci": "Polysorbate 60",
+          "kr": "폴리소르베이트60"
+        },
+        {
+          "inci": "Steareth-21",
+          "kr": "Steareth-21"
+        },
+        {
+          "inci": "Salicylic Acid",
+          "kr": "살리실릭애씨드"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "C12-15 Alkyl Lactate",
+          "kr": "C12-15 Alkyl Lactate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "솔베이트 [제한:일본]",
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "세틸락테이트 [제한:대만]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660621822/visibly-clear-creme-nettoyante-pamplemousse-rose-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P086",
+      "name_kr": "Cetaphil PRO Oil Control Moisturizer with SPF 30",
+      "name_en": "Cetaphil PRO Oil Control Moisturizer with SPF 30",
+      "brand": "Cetaphil",
+      "barcode": "4362963313044",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA",
+          "kr": "정제수"
+        },
+        {
+          "inci": "OCTOCRYLENE",
+          "kr": "옥토크릴렌"
+        },
+        {
+          "inci": "ISOPROPYL LAUROYL SARCOSINATE",
+          "kr": "ISOPROPYL LAUROYL SARCOSINATE"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "ETHYLHEXYL SALICYLATE",
+          "kr": "ETHYLHEXYL SALICYLATE"
+        },
+        {
+          "inci": "DIMETHICONE",
+          "kr": "DIMETHICONE"
+        },
+        {
+          "inci": "BUTYL METHOXYDIBENZO - YLMETHANE",
+          "kr": "BUTYL METHOXYDIBENZO - YLMETHANE"
+        },
+        {
+          "inci": "DIISOPROPYL SEBACATE",
+          "kr": "DIISOPROPYL SEBACATE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "에칠헥실살리실레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "티이에이-다이메티콘피이지-7포스페이트 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "트라이하이드로젠 하이드록시비스[오르쏘실리케토]트라이니켈레이트 [금지:EU,아세안]",
+        "에틸메타크릴레이트 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/436/296/331/3044/front_en.8.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/4362963313044/cetaphil-pro-oil-control-moisturizer-with-spf-30",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P087",
+      "name_kr": "Sabonete Líquido Pele Mista e Oleosa Cetaphil 300ml",
+      "name_en": "Sabonete Líquido Pele Mista e Oleosa Cetaphil 300ml",
+      "brand": "Cetaphil",
+      "barcode": "7897930761575",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "ÁGUA",
+          "kr": "ÁGUA"
+        },
+        {
+          "inci": "GLICERINA",
+          "kr": "GLICERINA"
+        },
+        {
+          "inci": "COCOAMIDOPROPILBETAÍNA",
+          "kr": "COCOAMIDOPROPILBETAÍNA"
+        },
+        {
+          "inci": "LAURETE SULFOSSUCCINATO DISSÓDICO",
+          "kr": "LAURETE SULFOSSUCCINATO DISSÓDICO"
+        },
+        {
+          "inci": "COCOANFOACETATO DE SÓDIO",
+          "kr": "COCOANFOACETATO DE SÓDIO"
+        },
+        {
+          "inci": "CROSPOLÍMERO DE ACRILATOS/ACRILATO DE ALQUILA C10-30",
+          "kr": "CROSPOLÍMERO DE ACRILATOS/ACRILATO DE ALQUILA C10-30"
+        },
+        {
+          "inci": "CLORETO DE SÓDIO",
+          "kr": "CLORETO DE SÓDIO"
+        },
+        {
+          "inci": "BENZOATO DE SÓDIO",
+          "kr": "BENZOATO DE SÓDIO"
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/7897930761575/sabonete-liquido-pele-mista-e-oleosa-cetaphil-300ml",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P088",
+      "name_kr": "Protetor Solar Facial Neutrogena Sun Fresh FPS30 40g",
+      "name_en": "Protetor Solar Facial Neutrogena Sun Fresh FPS30 40g",
+      "brand": "Neutrogena",
+      "barcode": "7891010250980",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Homosalate",
+          "kr": "호모살레이트"
+        },
+        {
+          "inci": "Octocrylene",
+          "kr": "옥토크릴렌"
+        },
+        {
+          "inci": "Butyl Methoxydibenzoylmethane",
+          "kr": "Butyl Methoxydibenzoylmethane"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Methylene Bis-Benzotriazolyl Tetramethylbutylphenol",
+          "kr": "Methylene Bis-Benzotriazolyl Tetramethylbutylphenol"
+        },
+        {
+          "inci": "Aluminum Starch Octenylsuccinate",
+          "kr": "Aluminum Starch Octenylsuccinate"
+        },
+        {
+          "inci": "Ethylhexyl Triazone",
+          "kr": "Ethylhexyl Triazone"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "부틸메톡시디벤조일메탄 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "메칠렌비스-벤조트리아졸릴테트라메칠부틸페놀 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "알루미늄 [제한:한국]",
+        "에칠헥실트리아존 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "트라이하이드로젠 하이드록시비스[오르쏘실리케토]트라이니켈레이트 [금지:EU,아세안]",
+        "페녹시에탄올 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/7891010250980/protetor-solar-facial-neutrogena-sun-fresh-fps30-40g",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P089",
+      "name_kr": "Crème mains hydratante concentrée Formule Norvégienne",
+      "name_en": "Crème mains hydratante concentrée Formule Norvégienne",
+      "brand": "Neutrogena",
+      "barcode": "4012273123009",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Stearic Acid",
+          "kr": "Stearic Acid"
+        },
+        {
+          "inci": "Palmitic Acid",
+          "kr": "Palmitic Acid"
+        },
+        {
+          "inci": "Sodium Cetearyl Sulfate",
+          "kr": "Sodium Cetearyl Sulfate"
+        },
+        {
+          "inci": "Dilauryl Thiodipropionate",
+          "kr": "Dilauryl Thiodipropionate"
+        },
+        {
+          "inci": "Sodium Sulfate",
+          "kr": "Sodium Sulfate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "메틸파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "프로필파라벤 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/401/227/312/3009/front_fr.32.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/4012273123009/creme-mains-hydratante-concentree-formule-norvegienne-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P090",
+      "name_kr": "CeraVe Moisturising Lotion 1L, for dry to very dry skin",
+      "name_en": "CeraVe Moisturising Lotion 1L, for dry to very dry skin",
+      "brand": "CeraVe",
+      "barcode": "3337875598750",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "2021502 3 - INGREDIENTS: AQUA / WATER • GLYCERIN • CAPRYLIC/CAPRIC TRIGLYCERIDE • CETEARYL ALCOHOL • CETYL ALCOHOL • DIMETHICONE • PHENOXYETHANOL • POLYSORBATE 20 • CETEARETH-20 • BEHENTRIMONIUM METHOSULFATE • POLYGLYCERYL-3 DIISOSTEARATE • SODIUM LAUROYL LACTYLATE • ETHYLHEXYLGLYCERIN • POTASSIUM PHOSPHATE • DISODIUM EDTA • DIPOTASSIUM PHOSPHATE • CERAMIDE NP • CERAMIDE AP • PHYTOSPHINGOSINE • CHOLESTEROL • XANTHAN GUM • CARBOMER • SODIUM HYALURONATE • TOCOPHEROL • CERAMIDE EOP .",
+          "kr": "2021502 3 - INGREDIENTS: AQUA / WATER • GLYCERIN • CAPRYLIC/CAPRIC TRIGLYCERIDE • CETEARYL ALCOHOL • CETYL ALCOHOL • DIMETHICONE • PHENOXYETHANOL • POLYSORBATE 20 • CETEARETH-20 • BEHENTRIMONIUM METHOSULFATE • POLYGLYCERYL-3 DIISOSTEARATE • SODIUM LAUROYL LACTYLATE • ETHYLHEXYLGLYCERIN • POTASSIUM PHOSPHATE • DISODIUM EDTA • DIPOTASSIUM PHOSPHATE • CERAMIDE NP • CERAMIDE AP • PHYTOSPHINGOSINE • CHOLESTEROL • XANTHAN GUM • CARBOMER • SODIUM HYALURONATE • TOCOPHEROL • CERAMIDE EOP ."
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "솔베이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/559/8750/front_en.20.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875598750/cerave-moisturising-lotion-1l-for-dry-to-very-dry-skin",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P091",
+      "name_kr": "Norwegische Formal Handcreme Konzentriert + Unparfümiert",
+      "name_en": "Norwegische Formal Handcreme Konzentriert + Unparfümiert",
+      "brand": "Neutrogena",
+      "barcode": "3574661685960",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Cetearylalkohol",
+          "kr": "Cetearylalkohol"
+        },
+        {
+          "inci": "Natriumcetearylsulfat",
+          "kr": "Natriumcetearylsulfat"
+        },
+        {
+          "inci": "Ethylhexylglycerin",
+          "kr": "Ethylhexylglycerin"
+        },
+        {
+          "inci": "Caprylylglykol",
+          "kr": "Caprylylglykol"
+        },
+        {
+          "inci": "Palmitinsäure",
+          "kr": "Palmitinsäure"
+        },
+        {
+          "inci": "Stearinsäure",
+          "kr": "Stearinsäure"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/168/5960/front_de.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574661685960/norwegische-formal-handcreme-konzentriert-unparfumiert-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P092",
+      "name_kr": "Natural Perfection Double Shield Sun Stick 50+ SPF PA++++",
+      "name_en": "Natural Perfection Double Shield Sun Stick 50+ SPF PA++++",
+      "brand": "AHC",
+      "barcode": "761571362200",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Effective ingredients: Ethylhexyl methoxycinnamate",
+          "kr": "Effective ingredients: Ethylhexyl methoxycinnamate"
+        },
+        {
+          "inci": "titanium dioxide",
+          "kr": "티타늄다이옥사이드"
+        },
+        {
+          "inci": "diethyl aminohydroxybenzoylhexyl benzoate",
+          "kr": "diethyl aminohydroxybenzoylhexyl benzoate"
+        },
+        {
+          "inci": "bis-ethylhexyloxyphenol methoxyphenyl triazine",
+          "kr": "bis-ethylhexyloxyphenol methoxyphenyl triazine"
+        },
+        {
+          "inci": "alpha-bisabolol",
+          "kr": "alpha-bisabolol"
+        },
+        {
+          "inci": "tocopheryl acetate.",
+          "kr": "tocopheryl acetate."
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "에칠헥실메톡시신나메이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "티타늄디옥사이드 [제한:EU,대만,미국,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "벤조에이트 [제한:일본]",
+        "비스-에칠헥실옥시페놀메톡시페닐트리아진 [제한:EU,대만,브라질,아르헨티나,일본,중국,한국]",
+        "비사보롤 [제한:일본]",
+        "토코페릴아세테이트 [제한:일본]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/076/157/136/2200/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0761571362200/natural-perfection-double-shield-sun-stick-50-spf-pa-ahc",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P093",
+      "name_kr": "Cetaphil Oil-Free Facial Moisturizer with Sunscreen SPF 35",
+      "name_en": "Cetaphil Oil-Free Facial Moisturizer with Sunscreen SPF 35",
+      "brand": "Cetaphil",
+      "barcode": "302994113002",
+      "category": [
+        "보습",
+        "미백",
+        "진정",
+        "탄력"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Avobenzone 2.8%",
+          "kr": "Avobenzone 2.8%"
+        },
+        {
+          "inci": "Homosalate 9.5%",
+          "kr": "Homosalate 9.5%"
+        },
+        {
+          "inci": "Octisalate 4.8%",
+          "kr": "Octisalate 4.8%"
+        },
+        {
+          "inci": "Octocrylene 7% Inactive ingredients: Water",
+          "kr": "Octocrylene 7% Inactive ingredients: Water"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Dipropylene Glycol",
+          "kr": "Dipropylene Glycol"
+        },
+        {
+          "inci": "Panthenol",
+          "kr": "판테놀"
+        },
+        {
+          "inci": "Ethylhexyl Methoxycrylene",
+          "kr": "Ethylhexyl Methoxycrylene"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "글리세린 [제한:캐나다]",
+        "판테놀 [제한:일본]",
+        "트라이하이드로젠 하이드록시비스[오르쏘실리케토]트라이니켈레이트 [금지:EU,아세안]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/030/299/411/3002/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0302994113002/cetaphil-oil-free-facial-moisturizer-with-sunscreen-spf-35",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P094",
+      "name_kr": "Visibly Clear Désincrustant points noirs lotion nettoyante",
+      "name_en": "Visibly Clear Désincrustant points noirs lotion nettoyante",
+      "brand": "Neutrogena",
+      "barcode": "3574660282719",
+      "category": [
+        "보습",
+        "모공"
+      ],
+      "subcategory": "로션",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Alcohol Denat.",
+          "kr": "Alcohol Denat."
+        },
+        {
+          "inci": "PPG-5-Ceteth-20",
+          "kr": "PPG-5-Ceteth-20"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Salicylic Acid",
+          "kr": "살리실릭애씨드"
+        },
+        {
+          "inci": "Menthyl Lactate",
+          "kr": "Menthyl Lactate"
+        },
+        {
+          "inci": "Potassium Lactate",
+          "kr": "Potassium Lactate"
+        },
+        {
+          "inci": "Sodium Citrate",
+          "kr": "Sodium Citrate"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]",
+        "살리실릭애씨드 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "포타슘락테이트 [제한:대만]",
+        "소듐시트레이트 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/357/466/028/2719/front_fr.6.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3574660282719/visibly-clear-desincrustant-points-noirs-lotion-nettoyante-neutrogena",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P095",
+      "name_kr": "LOçãO HIDRATANTE FACIAL CETAPHIL PRO AC CONTROL PELE OLEOSA A ACNEICA 118ML",
+      "name_en": "LOçãO HIDRATANTE FACIAL CETAPHIL PRO AC CONTROL PELE OLEOSA A ACNEICA 118ML",
+      "brand": "Cetaphil",
+      "barcode": "3499320004473",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "ÁGUA",
+          "kr": "ÁGUA"
+        },
+        {
+          "inci": "OCTOCRILENO",
+          "kr": "OCTOCRILENO"
+        },
+        {
+          "inci": "LAUROIL SARCOSINATO DE ISOPROPILA",
+          "kr": "LAUROIL SARCOSINATO DE ISOPROPILA"
+        },
+        {
+          "inci": "OCTISSALATO",
+          "kr": "OCTISSALATO"
+        },
+        {
+          "inci": "GLICERINA",
+          "kr": "GLICERINA"
+        },
+        {
+          "inci": "DIMETICONA",
+          "kr": "DIMETICONA"
+        },
+        {
+          "inci": "AVOBENZONA",
+          "kr": "AVOBENZONA"
+        },
+        {
+          "inci": "SEBACATO DE DIISOPROPILA",
+          "kr": "SEBACATO DE DIISOPROPILA"
+        }
+      ],
+      "tags": [
+        "저자극"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "risky_ingredients": [],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/349/932/000/4473/front_pt.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3499320004473/locao-hidratante-facial-cetaphil-pro-ac-control-pele-oleosa-a-acneica-118ml",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P096",
+      "name_kr": "The Ordinary Glycolic Acid 7% Toning Solution (Solução tonificante de ácido glicólico 7%)",
+      "name_en": "The Ordinary Glycolic Acid 7% Toning Solution (Solução tonificante de ácido glicólico 7%)",
+      "brand": "The Ordinary",
+      "barcode": "769915190977",
+      "category": [
+        "보습",
+        "진정",
+        "모공"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Aqua",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycolic Acid",
+          "kr": "글리콜릭애씨드"
+        },
+        {
+          "inci": "Rosa Damascena Flower Water",
+          "kr": "Rosa Damascena Flower Water"
+        },
+        {
+          "inci": "Centaurea Cyanus Flower Water",
+          "kr": "Centaurea Cyanus Flower Water"
+        },
+        {
+          "inci": "Aloe Barbadensis Leaf Water",
+          "kr": "Aloe Barbadensis Leaf Water"
+        },
+        {
+          "inci": "Propanediol",
+          "kr": "Propanediol"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Triethanolamine",
+          "kr": "Triethanolamine"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글라이콜릭애씨드 [제한:대만,아세안,캐나다]",
+        "우레아 [금지:EU,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "3-[[4-[메틸아미노]-2-니트로페닐]아미노]-1,2-프로판다이올 및 그 염류 [금지:아세안,중국,한국]",
+        "글리세린 [제한:캐나다]",
+        "트라이에탄올아민 [제한:EU,브라질,아르헨티나,아세안,중국,한국]",
+        "아미노메틸프로판올 [금지:한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/076/991/519/0977/front_en.21.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/0769915190977/the-ordinary-glycolic-acid-7-toning-solution-solucao-tonificante-de-acido-glicolico-7",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P097",
+      "name_kr": "Aromatic Bath Cream",
+      "name_en": "Aromatic Bath Cream",
+      "brand": "Tesori d'Oriente",
+      "barcode": "8008970002859",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA",
+          "kr": "정제수"
+        },
+        {
+          "inci": "SODIUM LAURETH SULFATE",
+          "kr": "SODIUM LAURETH SULFATE"
+        },
+        {
+          "inci": "COCAMIDOPROPYL BETAINE",
+          "kr": "COCAMIDOPROPYL BETAINE"
+        },
+        {
+          "inci": "PARFUM",
+          "kr": "향료"
+        },
+        {
+          "inci": "LILIUM CANDIDUM BULB EXTRACT",
+          "kr": "LILIUM CANDIDUM BULB EXTRACT"
+        },
+        {
+          "inci": "CYPERUS ESCULENTUS ROOT OIL",
+          "kr": "CYPERUS ESCULENTUS ROOT OIL"
+        },
+        {
+          "inci": "GLYCERIN",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "GLYCERYL OLEATE",
+          "kr": "GLYCERYL OLEATE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "파라콰트 염류[Paraquat, salts] 및 이를 1%이상 함유한 혼합물 [금지:한국]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/800/897/000/2859/front_en.4.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8008970002859/aromatic-bath-cream-tesori-d-oriente",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P098",
+      "name_kr": "Dry Essence Foot Pack",
+      "name_en": "Dry Essence Foot Pack",
+      "brand": "Petitfee",
+      "barcode": "8809239800441",
+      "category": [
+        "보습",
+        "진정",
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "Water",
+          "kr": "정제수"
+        },
+        {
+          "inci": "Glycerin",
+          "kr": "글리세린"
+        },
+        {
+          "inci": "Butylene Glycol",
+          "kr": "부틸렌글라이콜"
+        },
+        {
+          "inci": "Helianthus Annuus  Seed Oil",
+          "kr": "Helianthus Annuus  Seed Oil"
+        },
+        {
+          "inci": "Cetearyl Alcohol",
+          "kr": "세테아릴알코올"
+        },
+        {
+          "inci": "Butyrospermum Parkii  Butter",
+          "kr": "Butyrospermum Parkii  Butter"
+        },
+        {
+          "inci": "Isopropyl Myristate",
+          "kr": "Isopropyl Myristate"
+        },
+        {
+          "inci": "Urea",
+          "kr": "요소"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "risky_ingredients": [
+        "수용성유황 [제한:일본]",
+        "글리세린 [제한:캐나다]",
+        "우레아 [금지:EU,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "베타인살리실레이트 [제한:한국]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/880/923/980/0441/front_en.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/8809239800441/dry-essence-foot-pack-petitfee",
+      "source": "OBF + auto",
+      "note": ""
+    },
+    {
+      "id": "P099",
+      "name_kr": "Lait solaire anthelios XL 50+",
+      "name_en": "Lait solaire anthelios XL 50+",
+      "brand": "La Roche-Posay",
+      "barcode": "3337875550611",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "?",
+      "for_skin": [
+        "중성",
+        "건성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "inci": "AQUA / WATER",
+          "kr": "AQUA / WATER"
+        },
+        {
+          "inci": "HOMOSALATE",
+          "kr": "호모살레이트"
+        },
+        {
+          "inci": "OCTOCRYLENE",
+          "kr": "옥토크릴렌"
+        },
+        {
+          "inci": "ETHYLHEXYL SALICYLATE",
+          "kr": "ETHYLHEXYL SALICYLATE"
+        },
+        {
+          "inci": "BUTYL METHOXYDIBENZOYLMETHANE",
+          "kr": "BUTYL METHOXYDIBENZOYLMETHANE"
+        },
+        {
+          "inci": "ALCOHOL DENAT.",
+          "kr": "ALCOHOL DENAT."
+        },
+        {
+          "inci": "TITANIUM DIOXIDE",
+          "kr": "티타늄다이옥사이드"
+        },
+        {
+          "inci": "ETHYLHEXYL TRIAZONE",
+          "kr": "ETHYLHEXYL TRIAZONE"
+        }
+      ],
+      "tags": [
+        "주의성분포함"
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "risky_ingredients": [
+        "호모살레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "옥토크릴렌 [제한:EU,대만,미국,브라질,아르헨티나,아세안,유럽,일본,중국,캐나다,한국]",
+        "에칠헥실살리실레이트 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "부틸메톡시디벤조일메탄 [제한:EU,대만,미국,브라질,아르헨티나,아세안,일본,중국,캐나다,한국]",
+        "티타늄디옥사이드 [제한:EU,대만,미국,브라질,아르헨티나,아세안,중국,캐나다,한국]",
+        "에칠헥실트리아존 [제한:EU,대만,브라질,아르헨티나,아세안,일본,중국,한국]",
+        "글리세린 [제한:캐나다]"
+      ],
+      "price_range": "?",
+      "image_url": "https://images.openbeautyfacts.org/images/products/333/787/555/0611/front_fr.3.400.jpg",
+      "obf_url": "http://world-en.openbeautyfacts.org/product/3337875550611/lait-solaire-anthelios-xl-50-la-roche-posay",
+      "source": "OBF + auto",
+      "note": ""
+    }
+  ]
+}
