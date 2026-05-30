@@ -1,12 +1,23 @@
-# BE/ 의존성 — AI/ 와 별도 venv 권장 (또는 같은 venv 에 추가 설치)
+# BE/ 의존성
+# 새 venv 에서: pip install -r requirements.txt 하나로 끝나야 함.
+# CPU 추론 기준. GPU 쓰려면 torch/torchvision 은 https://pytorch.org/get-started 참고해서 별도 설치.
+
+# --- 웹 서버 ---
 fastapi>=0.110.0
 uvicorn[standard]>=0.27.0
 python-multipart>=0.0.6     # UploadFile 처리용
 pydantic>=2.0.0
+
+# --- 이미지/설정 ---
 Pillow>=10.0.0
 PyYAML>=6.0
-httpx>=0.27.0               # ESP32-CAM HTTP 호출용 (/api/measure)
-requests>=2.31.0            # 식약처 API 호출용 (scripts/products/2_enrich_kfda.py)
 
-# AI 모듈 (src.infer) 도 import 되므로 torch 도 필요
-# AI/requirements.txt 의 torch, torchvision, numpy, pandas 가 같이 설치되어야 함
+# --- 외부 HTTP ---
+httpx>=0.27.0               # ESP32-CAM HTTP 호출용 (/api/measure)
+requests>=2.31.0            # 식약처 API 호출용 (scripts/products/2a_fetch_kfda_all.py)
+
+# --- AI 추론 (src.infer import 됨) ---
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+pandas>=2.0.0               # scripts/products/ 파이프라인용
