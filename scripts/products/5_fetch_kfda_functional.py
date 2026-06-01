@@ -30,6 +30,7 @@ import argparse
 import json
 import os
 import re
+import sys
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -37,11 +38,18 @@ from typing import Dict, List, Optional, Tuple
 
 import requests
 
+# Windows cp949 콘솔에서도 한글/유니코드 출력 안전하게
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 
 # 데이터포털에서 발급 후 정확한 URL 은 마이페이지 → API 신청 내역에서 확인
 # 보통 다음 패턴 중 하나:
 URL_CANDIDATES = [
-    # 가장 흔한 패턴 — 사용자가 실제 URL 로 교체할 것
+    # 가장 흔한 패턴 - 사용자가 실제 URL 로 교체할 것
     "https://apis.data.go.kr/1471000/MdcinPrdtPrmsnInfoService06/getMdcinPrdtItem01",
     "https://apis.data.go.kr/1471000/CsmtcsItemRptInfoService02/getCsmtcsItemRptInfo",
 ]
@@ -201,10 +209,10 @@ def normalize_one(raw: dict, next_id: int) -> Optional[dict]:
 
     cats = derive_categories_from_raw(raw)
     if not cats:
-        # 카테고리 매핑 실패하면 스킵 (보습 fallback 안 함 — 다양성 위해)
+        # 카테고리 매핑 실패하면 스킵 (보습 fallback 안 함 - 다양성 위해)
         return None
 
-    # 효능 플래그 / SPF / PA — 디버그 및 functional_desc 재구성용
+    # 효능 플래그 / SPF / PA - 디버그 및 functional_desc 재구성용
     flag_summary = []
     if raw.get("EFFECT_YN1") == "Y": flag_summary.append("미백")
     if raw.get("EFFECT_YN2") == "Y": flag_summary.append("주름개선")
@@ -265,7 +273,7 @@ def main():
     out_path = args.output
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # 재개 모드 — 체크포인트에서 이어받음
+    # 재개 모드 - 체크포인트에서 이어받음
     start_page = 1
     all_items: List[dict] = []
     if args.resume:
@@ -273,7 +281,7 @@ def main():
         if last_page > 0:
             start_page = last_page + 1
             all_items = prev_items
-            print(f"[*] 체크포인트 발견 — page {last_page} 까지 {len(prev_items)}건 받음, page {start_page} 부터 이어 받기")
+            print(f"[*] 체크포인트 발견 - page {last_page} 까지 {len(prev_items)}건 받음, page {start_page} 부터 이어 받기")
 
     print(f"[1] 페이지 1 받아서 totalCount 확인...")
     first_items, total = fetch_page(api_key, 1)
@@ -291,7 +299,7 @@ def main():
         try:
             items, _ = fetch_page(api_key, page)
         except Exception as e:
-            print(f"    [page {page}] 실패: {e} — 스킵")
+            print(f"    [page {page}] 실패: {e} - 스킵")
             time.sleep(2)
             continue
         all_items.extend(items)
