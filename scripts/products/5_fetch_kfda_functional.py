@@ -85,6 +85,13 @@ def parse_args():
     ap.add_argument("--max-pages", type=int, default=None)
     ap.add_argument("--output", type=Path,
                     default=Path(__file__).resolve().parents[2] / "data" / "products_kfda_functional.json")
+    ap.add_argument("--checkpoint", type=Path,
+                    default=Path(__file__).resolve().parents[2] / "data" / "_kfda_fetch_checkpoint.json",
+                    help="중간 저장 파일 (페이지 X마다 저장, 끊겨도 재개 가능)")
+    ap.add_argument("--save-every", type=int, default=50,
+                    help="N 페이지마다 체크포인트 저장")
+    ap.add_argument("--resume", action="store_true",
+                    help="체크포인트 있으면 거기서 이어 받음")
     return ap.parse_args()
 
 
@@ -193,6 +200,26 @@ def normalize_one(raw: dict, next_id: int) -> Optional[dict]:
     }
 
 
+def save_checkpoint(path: Path, last_page: int, all_items: List[dict]):
+    """페이지 N까지 받은 raw item 들을 저장."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps({"last_page": last_page, "items": all_items}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+def load_checkpoint(path: Path):
+    if not path.exists():
+        return 0, []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return int(data.get("last_page", 0)), data.get("items", [])
+    except Exception as e:
+        print(f"    체크포인트 로드 실패 (무시): {e}")
+        return 0, []
+
+
 def main():
     args = parse_args()
     api_key = os.getenv("KFDA_API_KEY")
@@ -202,17 +229,29 @@ def main():
     out_path = args.output
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # 재개 모드 — 체크포인트에서 이어받음
+    start_page = 1
+    all_items: List[dict] = []
+    if args.resume:
+        last_page, prev_items = load_checkpoint(args.checkpoint)
+        if last_page > 0:
+            start_page = last_page + 1
+            all_items = prev_items
+            print(f"[*] 체크포인트 발견 — page {last_page} 까지 {len(prev_items)}건 받음, page {start_page} 부터 이어 받기")
+
     print(f"[1] 페이지 1 받아서 totalCount 확인...")
-    items, total = fetch_page(api_key, 1)
-    print(f"    totalCount: {total}, 첫 페이지: {len(items)}건")
+    first_items, total = fetch_page(api_key, 1)
+    print(f"    totalCount: {total}, 첫 페이지: {len(first_items)}건")
+
+    if not all_items:
+        all_items = list(first_items)
 
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE
     if args.max_pages:
         total_pages = min(total_pages, args.max_pages)
-    print(f"    총 {total_pages} 페이지 수집 예정")
+    print(f"    총 {total_pages} 페이지 수집 예정 (start: {start_page})")
 
-    all_items: List[dict] = list(items)
-    for page in range(2, total_pages + 1):
+    for page in range(max(start_page, 2), total_pages + 1):
         try:
             items, _ = fetch_page(api_key, page)
         except Exception as e:
@@ -222,7 +261,12 @@ def main():
         all_items.extend(items)
         if page % 10 == 0:
             print(f"    page {page}/{total_pages} 누적 {len(all_items)}건")
+        # 중간 저장
+        if page % args.save_every == 0:
+            save_checkpoint(args.checkpoint, page, all_items)
         time.sleep(0.3)  # rate limit 매너
+    # 끝나면 마지막 체크포인트
+    save_checkpoint(args.checkpoint, total_pages, all_items)
 
     print(f"[2] 원본 {len(all_items)}건 정규화 + 한국 책임판매업자 필터")
     products: List[dict] = []
