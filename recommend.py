@@ -287,20 +287,41 @@ def _age_bias_categories(age: Optional[int]) -> Dict[str, float]:
         return {"탄력": 2.0, "미백": 0.5}
 
 
-# 제품 DB 로드 (한 번만)
-PRODUCT_DB_PATH = Path(__file__).parent / "data" / "products.json"
+# 제품 DB — 여러 소스 머지
+DATA_DIR = Path(__file__).parent / "data"
+PRODUCT_DB_SOURCES = [
+    DATA_DIR / "products_curated.json",         # K-beauty 골든 시드 (우선)
+    DATA_DIR / "products.json",                  # 기존 (OBF 등)
+    DATA_DIR / "products_kfda_functional.json", # 식약처 기능성 (양)
+]
 _PRODUCT_DB: Optional[List[dict]] = None
 
 
 def get_product_db() -> List[dict]:
-    """제품 DB lazy load."""
+    """제품 DB lazy load — 여러 소스 머지.
+    같은 id 면 우선순위 높은 소스가 이김 (curated > products > kfda).
+    """
     global _PRODUCT_DB
     if _PRODUCT_DB is None:
-        if not PRODUCT_DB_PATH.exists():
-            _PRODUCT_DB = []
-        else:
-            data = json.loads(PRODUCT_DB_PATH.read_text(encoding="utf-8"))
-            _PRODUCT_DB = data.get("products", [])
+        merged: List[dict] = []
+        seen_ids = set()
+        for src in PRODUCT_DB_SOURCES:
+            if not src.exists():
+                continue
+            try:
+                data = json.loads(src.read_text(encoding="utf-8"))
+                products = data.get("products", []) if isinstance(data, dict) else data
+                for p in products:
+                    pid = p.get("id")
+                    if pid and pid in seen_ids:
+                        continue
+                    if pid:
+                        seen_ids.add(pid)
+                    merged.append(p)
+            except Exception as e:
+                print(f"[product DB] {src.name} 로드 실패: {e}")
+        _PRODUCT_DB = merged
+        print(f"[product DB] 총 {len(merged)}건 로드 (sources: {[s.name for s in PRODUCT_DB_SOURCES if s.exists()]})")
     return _PRODUCT_DB
 
 
