@@ -196,6 +196,97 @@ TRULY_RISKY_KEYWORDS: Dict[str, str] = {
 # 카테고리 → 이모지/아이콘은 FE 에서 처리. BE 는 문자열만.
 
 
+# ============================================================
+# 서브라벨 — 성분 기반 작은 chip ("세라마이드 보습" / "비타민C 톤업" 등)
+# ============================================================
+# (매칭 키워드 lower, sub_label, 우선순위) — 우선순위 높은 게 카드에 먼저 노출
+SUB_LABELS: List[Tuple[str, str, int]] = [
+    # 보습 계열 — 핵심 성분별 세분화
+    ("ceramid", "세라마이드 장벽 보습", 10),
+    ("세라마이드", "세라마이드 장벽 보습", 10),
+    ("hyaluron", "히알루론 수분 충전", 10),
+    ("hialuron", "히알루론 수분 충전", 10),
+    ("히알루론", "히알루론 수분 충전", 10),
+    ("squalan", "스쿠알란 유분 보호", 8),
+    ("스쿠알란", "스쿠알란 유분 보호", 8),
+    ("shea butter", "쉐어버터 영양 보습", 7),
+    ("butyrospermum", "쉐어버터 영양 보습", 7),
+    ("쉐어버터", "쉐어버터 영양 보습", 7),
+    ("trehalose", "트레할로스 수분 보존", 6),
+    ("트레할로스", "트레할로스 수분 보존", 6),
+    # 진정 계열
+    ("madecass", "마데카쇼사이드 진정", 10),
+    ("마데카", "마데카쇼사이드 진정", 10),
+    ("centella", "시카 진정", 10),
+    ("cica", "시카 진정", 10),
+    ("병풀", "시카 진정", 10),
+    ("판테놀", "판테놀 진정 보습", 9),
+    ("panthenol", "판테놀 진정 보습", 9),
+    ("aloe", "알로에 시원 진정", 8),
+    ("알로에", "알로에 시원 진정", 8),
+    ("camellia", "녹차 항산화", 7),
+    ("녹차", "녹차 항산화", 7),
+    ("allantoin", "알란토인 진정", 6),
+    ("알란토인", "알란토인 진정", 6),
+    ("propolis", "프로폴리스 영양 진정", 7),
+    ("프로폴리스", "프로폴리스 영양 진정", 7),
+    # 미백 / 톤업
+    ("niacinamid", "나이아신아마이드 톤업", 10),
+    ("nicotinamid", "나이아신아마이드 톤업", 10),
+    ("나이아신아마이드", "나이아신아마이드 톤업", 10),
+    ("ascorbic", "비타민C 브라이트닝", 10),
+    ("비타민c", "비타민C 브라이트닝", 10),
+    ("ascorbyl", "비타민C 유도체 톤업", 9),
+    ("arbutin", "알부틴 색소 완화", 8),
+    ("알부틴", "알부틴 색소 완화", 8),
+    ("tranexamic", "트라넥삼산 잡티 케어", 8),
+    ("트라넥삼산", "트라넥삼산 잡티 케어", 8),
+    ("licorice", "감초 미백 진정", 7),
+    ("감초", "감초 미백 진정", 7),
+    # 모공 / 각질
+    ("salicylic", "BHA 모공 클렌징", 10),
+    ("살리실산", "BHA 모공 클렌징", 10),
+    ("glycolic", "AHA 각질 정돈", 9),
+    ("글리콜산", "AHA 각질 정돈", 9),
+    ("lactic", "락트산 부드러운 각질", 7),
+    ("락트산", "락트산 부드러운 각질", 7),
+    ("zinc oxide", "산화아연 피지 케어", 7),
+    ("산화아연", "산화아연 피지 케어", 7),
+    ("kaolin", "카올린 클레이 케어", 6),
+    ("카올린", "카올린 클레이 케어", 6),
+    # 탄력 / 항노화
+    ("retinol", "레티놀 주름 케어", 10),
+    ("retinal", "레티날 항노화", 10),
+    ("retinyl", "레티닐 항노화", 9),
+    ("레티놀", "레티놀 주름 케어", 10),
+    ("peptide", "펩타이드 탄력 부스팅", 9),
+    ("펩타이드", "펩타이드 탄력 부스팅", 9),
+    ("adenosine", "아데노신 주름 개선", 8),
+    ("아데노신", "아데노신 주름 개선", 8),
+    ("collagen", "콜라겐 결 케어", 6),
+    ("콜라겐", "콜라겐 결 케어", 6),
+    ("tocopherol", "비타민E 항산화", 5),
+    ("토코페롤", "비타민E 항산화", 5),
+]
+
+
+# ============================================================
+# 개인화 가중치 — 나이 / 피부타입 × 민감도 / 라이프스타일
+# ============================================================
+def _age_bias_categories(age: Optional[int]) -> Dict[str, float]:
+    """나이대별 카테고리 가산점."""
+    if not age:
+        return {}
+    if age < 25:
+        return {"보습": 1.0, "진정": 0.5}
+    elif age < 35:
+        return {"미백": 1.0, "모공": 0.5}
+    elif age < 45:
+        return {"탄력": 1.0, "미백": 0.5}
+    else:
+        return {"탄력": 2.0, "미백": 0.5}
+
+
 # 제품 DB 로드 (한 번만)
 PRODUCT_DB_PATH = Path(__file__).parent / "data" / "products.json"
 _PRODUCT_DB: Optional[List[dict]] = None
@@ -275,6 +366,7 @@ def _score(product: dict, measurement: dict, user_inputs: dict, weather: Optiona
     score = 0.0
     # 성분 기반 카테고리 보강
     cats = set(_enrich_categories(product))
+    ings_lower = _ingredient_strings(product)
 
     # 측정값 기반 — 약한 헤드일수록 해당 카테고리 가산
     # 회귀 (denormalized): moisture < 40 = 건조, pore_value > 300 = 모공 많음 등
@@ -354,6 +446,56 @@ def _score(product: dict, measurement: dict, user_inputs: dict, weather: Optiona
         if uv_index >= 7 and product.get("subcategory") == "선크림":
             score += 3
 
+    # ===== 개인화 — 나이대 카테고리 가산 =====
+    age = user_inputs.get("age")
+    age_bias = _age_bias_categories(age)
+    for cat, bonus in age_bias.items():
+        if cat in cats:
+            score += bonus
+
+    # ===== 개인화 — 피부타입 × 민감도 조합 =====
+    skin = user_inputs.get("skin_type", "")
+    if skin == "건성" and sensitivity >= 3:
+        # 세라마이드/판테놀 함유 강한 가산
+        if any(kw in s for s in ings_lower for kw in ("ceramid", "세라마이드", "panthenol", "판테놀")):
+            score += 2
+    if skin == "지성":
+        # 가벼운 텍스처 선호 — 토너/세럼/젤
+        sub = (product.get("subcategory") or "").lower()
+        if any(t in sub for t in ("토너", "세럼", "젤", "lotion", "로션")):
+            score += 1
+        # 모공/피지 케어 보너스
+        if any(kw in s for s in ings_lower for kw in ("salicylic", "살리실산", "zinc oxide", "산화아연", "niacinamid")):
+            score += 1
+    if skin == "복합성":
+        # 균형 — 멀티 카테고리에 약하게 가산
+        if len(cats) >= 2:
+            score += 0.5
+    if skin == "민감성":
+        # 진정 강한 가산
+        if "진정" in cats:
+            score += 2
+
+    # ===== 개인화 — 라이프스타일 플래그 =====
+    lf = user_inputs.get("lifestyle_flags") or {}
+    if isinstance(lf, dict):
+        sleep = lf.get("sleep")
+        if sleep in ("poor", "bad"):
+            # 수면 부족 → 진정 + 다크서클 케어
+            if "진정" in cats:
+                score += 1
+            if (product.get("subcategory") or "") in ("아이크림", "eye cream"):
+                score += 2
+        sunscreen = lf.get("sunscreen")
+        if sunscreen in ("never", "rarely"):
+            # 자외선 노출 多 → 미백 + 항노화 + 선크림
+            if "미백" in cats:
+                score += 1
+            if "탄력" in cats:
+                score += 1
+            if (product.get("subcategory") or "") == "선크림":
+                score += 3
+
     return score
 
 
@@ -368,8 +510,10 @@ def recommend(
     top_k: int = 5,
     diversify_by_category: bool = True,
     filter_category: Optional[str] = None,
+    filter_categories: Optional[List[str]] = None,
     seed: Optional[int] = None,
     max_per_brand: int = 2,
+    exclude_ids: Optional[List[str]] = None,
 ) -> List[Dict]:
     """제품 추천 메인 함수.
 
@@ -391,15 +535,37 @@ def recommend(
         return []
 
     rng = random.Random(seed) if seed is not None else None
+    excluded = set(exclude_ids or [])
 
     # Hard filter
     candidates = [p for p in db if _passes_hard_filter(p, user_inputs)]
 
-    # 카테고리 필터 (성분 기반 보강된 카테고리 기준)
-    if filter_category:
+    # 이미 본 제품 제외 (재추천 용)
+    if excluded:
+        candidates = [p for p in candidates if p.get("id") not in excluded]
+
+    # 중복 제품 제거 (같은 브랜드+유사 이름 → 1개만)
+    seen_dedup = set()
+    unique_candidates = []
+    for p in candidates:
+        k = _dedup_key(p)
+        if k in seen_dedup:
+            continue
+        seen_dedup.add(k)
+        unique_candidates.append(p)
+    candidates = unique_candidates
+
+    # 카테고리 필터 — 여러 개 선택 시 OR 매칭 (어느 하나라도 매칭되면 통과)
+    # filter_categories (배열) 우선, 없으면 filter_category (단일) 사용
+    active_filters = set()
+    if filter_categories:
+        active_filters = {c for c in filter_categories if c}
+    elif filter_category:
+        active_filters = {filter_category}
+    if active_filters:
         candidates = [
             p for p in candidates
-            if filter_category in _enrich_categories(p)
+            if active_filters & set(_enrich_categories(p))
         ]
 
     # Soft score (+ jitter if seed)
@@ -484,6 +650,7 @@ def recommend(
             "score": round(s, 2),
             "reason": _generate_reason(p, measurement, user_inputs, weather),
             "effect": _generate_effect(p, measurement, user_inputs),
+            "sub_labels": _generate_sublabels(p),
             "purchase_url": _purchase_link(p),
             "warnings": _warning_badges(p),
         }
@@ -530,6 +697,35 @@ def _enrich_categories(product: dict) -> List[str]:
         if any(kw_lower in s for s in ings):
             cats.update(added)
     return sorted(cats)
+
+
+def _generate_sublabels(product: dict, max_n: int = 2) -> List[str]:
+    """제품 성분 기반 sub-label chip 생성. 우선순위 높은 것부터 max_n 개."""
+    ings = _ingredient_strings(product)
+    matched: List[Tuple[str, int]] = []
+    seen = set()
+    for kw, label, prio in SUB_LABELS:
+        if label in seen:
+            continue
+        kw_lower = kw.lower()
+        if any(kw_lower in s for s in ings):
+            matched.append((label, prio))
+            seen.add(label)
+    matched.sort(key=lambda x: -x[1])
+    return [m for m, _ in matched[:max_n]]
+
+
+def _dedup_key(product: dict) -> str:
+    """제품 중복 판별 키 — 브랜드 + 정규화된 짧은 이름."""
+    import re
+    brand = (product.get("brand") or "?").strip().lower()
+    name = (product.get("name_kr") or product.get("name_en") or "").lower()
+    # 숫자/괄호 안/특수문자 제거하고 첫 4단어
+    name = re.sub(r"\(.*?\)", " ", name)
+    name = re.sub(r"[^a-zA-Z가-힣\s]", " ", name)
+    tokens = [t for t in name.split() if t and t not in ("hand", "cream", "lotion", "creme", "crème", "mains")]
+    short = " ".join(sorted(tokens[:3]))
+    return f"{brand}|{short}"
 
 
 def _generate_effect(product: dict, measurement: dict, user_inputs: dict) -> str:

@@ -635,9 +635,11 @@ class RecommendRequest(BaseModel):
     measurement: Dict = Field(default_factory=dict, description="회귀+분류 결과 dict")
     user_inputs: Dict = Field(default_factory=dict, description="자가진단 결과")
     weather: Optional[Dict] = Field(default=None, description="습도/UV")
-    filter_category: Optional[str] = Field(default=None, description="보습/미백/진정/모공/탄력")
+    filter_category: Optional[str] = Field(default=None, description="단일 카테고리 (legacy)")
+    filter_categories: Optional[List[str]] = Field(default=None, description="다중 카테고리 (OR 매칭)")
     seed: Optional[int] = Field(default=None, description="랜덤 시드 (새로고침용)")
     top_k: int = Field(default=5, ge=1, le=20)
+    exclude_ids: Optional[List[str]] = Field(default=None, description="이미 본 제품 ID (재추천 시 제외)")
 
 
 @app.post(
@@ -658,7 +660,9 @@ async def api_recommend(req: RecommendRequest) -> Dict:
             weather=req.weather,
             top_k=req.top_k,
             filter_category=req.filter_category,
+            filter_categories=req.filter_categories,
             seed=req.seed,
+            exclude_ids=req.exclude_ids,
         )
     except Exception as e:
         print(f"[/api/recommend] 실패: {e}")
