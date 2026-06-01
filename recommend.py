@@ -537,12 +537,26 @@ def recommend(
     rng = random.Random(seed) if seed is not None else None
     excluded = set(exclude_ids or [])
 
-    # Hard filter
+    # Hard filter — 0건이면 단계적으로 완화
     candidates = [p for p in db if _passes_hard_filter(p, user_inputs)]
+    if len(candidates) == 0:
+        # 1차 완화: skin_type 매칭 무시 (민감도만 체크)
+        relaxed_inputs = {**user_inputs}
+        relaxed_inputs.pop("skin_type", None)
+        candidates = [p for p in db if _passes_hard_filter(p, relaxed_inputs)]
+        print(f"[recommend] hard filter 0건 → skin_type 무시로 완화: {len(candidates)}건")
+    if len(candidates) == 0:
+        # 2차 완화: 민감도도 무시 (전체 제품)
+        candidates = list(db)
+        print(f"[recommend] 여전히 0건 → 전체 제품으로 fallback: {len(candidates)}건")
 
     # 이미 본 제품 제외 (재추천 용)
     if excluded:
+        before = len(candidates)
         candidates = [p for p in candidates if p.get("id") not in excluded]
+        if before > 0 and len(candidates) == 0:
+            print(f"[recommend] exclude_ids 로 모두 제외됨 — exclude 무시로 fallback")
+            candidates = [p for p in db if _passes_hard_filter(p, user_inputs)]
 
     # 중복 제품 제거 (같은 브랜드+유사 이름 → 1개만)
     seen_dedup = set()
@@ -568,16 +582,19 @@ def recommend(
             if active_filters & set(_enrich_categories(p))
         ]
 
-    # Soft score (+ jitter if seed)
-    scored: List[Tuple[dict, float]] = []
+    # Soft score
+    scored_all: List[Tuple[dict, float]] = []
     for p in candidates:
         s = _score(p, measurement, user_inputs, weather)
-        if s <= 0:
-            continue
         if rng is not None:
-            # 같은 점수 제품들 사이에 약한 흔들기 (점수 자체 순위는 유지)
             s += rng.uniform(-0.5, 0.5)
-        scored.append((p, s))
+        scored_all.append((p, s))
+
+    # 0 초과 우선, 부족하면 0 이하라도 채움
+    scored = [(p, s) for p, s in scored_all if s > 0]
+    if len(scored) < top_k:
+        rest = [(p, s) for p, s in scored_all if s <= 0]
+        scored = scored + rest
     scored.sort(key=lambda x: -x[1])
 
     # 다양성: 카테고리 + 서브카테고리 + 브랜드 분산
