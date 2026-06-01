@@ -47,7 +47,10 @@ def parse_args():
     ap.add_argument("--input", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--max-items", type=int, default=None)
-    ap.add_argument("--skip-priced", action="store_true")
+    ap.add_argument("--skip-priced", action="store_true",
+                    help="이미 image_url 이 있는 거 스킵 (이어 처리)")
+    ap.add_argument("--retry-failed", action="store_true",
+                    help="image_url 없는 것만 재시도 (1차 실패한 것만)")
     ap.add_argument("--rate-per-sec", type=float, default=3.0)
     ap.add_argument("--display", type=int, default=3, help="제품당 검색 결과 개수")
     return ap.parse_args()
@@ -108,20 +111,44 @@ def best_match(items: List[dict], brand_lower: str, name_lower: str) -> Optional
 
 
 def enrich_product(p: dict, client_id: str, client_secret: str, display: int) -> bool:
-    """제품 1개 보강. 채워졌으면 True."""
+    """제품 1개 보강. 채워졌으면 True.
+    1차: "brand name_kr" 풀텍스트
+    2차 (실패시): "name_kr 의 앞 3토큰" 만
+    3차 (실패시): "brand" 만 + 카테고리 키워드
+    """
     brand = (p.get("brand") or "").strip()
     name = (p.get("name_kr") or p.get("name_en") or "").strip()
     if not name:
         return False
-    query = f"{brand} {name}".strip()
 
-    items = search_one(query, client_id, client_secret, display=display)
+    queries: List[str] = []
+    queries.append(f"{brand} {name}".strip())
+    # fallback 1: 이름 앞 3토큰 (브랜드 빼고)
+    tokens = [t for t in name.split() if len(t) > 1]
+    if len(tokens) > 3:
+        queries.append(" ".join(tokens[:3]))
+    # fallback 2: 브랜드 + 카테고리 (첫번째) + 서브카테고리
+    cats = p.get("category", [])
+    sub = p.get("subcategory", "")
+    if brand and (cats or sub):
+        kw = (cats[0] if cats else "") + " " + (sub if sub and sub != "?" else "")
+        queries.append(f"{brand} {kw.strip()}".strip())
+
+    items = []
+    used_query = ""
+    for q in queries:
+        items = search_one(q, client_id, client_secret, display=display)
+        if items:
+            used_query = q
+            break
     if not items:
         return False
 
     pick = best_match(items, brand.lower(), name.lower())
     if not pick:
         return False
+    if used_query != queries[0]:
+        p["naver_query_used"] = used_query  # 디버그용 — 어떤 쿼리로 매칭됐는지
 
     # 가격 — 검색 결과 평균
     prices = []
@@ -163,6 +190,9 @@ def main():
     targets = products
     if args.skip_priced:
         targets = [p for p in products if not p.get("naver_avg_price") and p.get("price_range") in (None, "", "?")]
+    if args.retry_failed:
+        targets = [p for p in products if not p.get("image_url")]
+        print(f"    재시도 모드: image_url 비어있는 {len(targets)}건만 처리")
     if args.max_items:
         targets = targets[: args.max_items]
     print(f"[1] 입력 {len(products)}건 중 보강 대상: {len(targets)}")
