@@ -56,7 +56,7 @@ from recommend import recommend as recommend_products  # noqa: E402
 
 CHECKPOINT_PATH = os.getenv(
     "DAMDA_CHECKPOINT",
-    str(PROJECT_ROOT / "AI" / "checkpoints" / "epoch045.pt"),
+    str(PROJECT_ROOT / "AI" / "checkpoints" / "epoch048.pt"),
 )
 CONFIG_PATH = os.getenv(
     "DAMDA_CONFIG",
