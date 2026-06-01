@@ -49,18 +49,18 @@ URL = os.getenv("KFDA_FUNCTIONAL_URL", URL_CANDIDATES[0])
 PAGE_SIZE = 100
 
 
-# 기능성 표시 문구 → category 매핑
-FUNCTIONAL_TO_CATEGORY: Dict[str, List[str]] = {
-    "미백": ["미백"],
-    "주름": ["탄력"],
-    "탄력": ["탄력"],
-    "자외선차단": ["모공"],  # 선크림 — UV
-    "자외선 차단": ["모공"],
-    "여드름": ["모공", "진정"],
+# 텍스트 (EE_NAME / 제품명) → category 키워드 매핑
+TEXT_TO_CATEGORY: Dict[str, List[str]] = {
+    "미백": ["미백"], "화이트": ["미백"], "톤업": ["미백"], "브라이트": ["미백"],
+    "주름": ["탄력"], "탄력": ["탄력"], "안티에이징": ["탄력"], "리프팅": ["탄력"],
+    "자외선": ["모공"], "선크림": ["모공"], "썬": ["모공"], "sun ": ["모공"],
+    "여드름": ["모공", "진정"], "트러블": ["진정", "모공"],
     "아토피": ["보습", "진정"],
     "튼살": ["탄력"],
-    "보습": ["보습"],
-    "안티에이징": ["탄력"],
+    "보습": ["보습"], "수분": ["보습"], "하이드라": ["보습"], "워터": ["보습"],
+    "시카": ["진정"], "센텔라": ["진정"], "병풀": ["진정"], "cica": ["진정"],
+    "진정": ["진정"], "민감": ["진정"],
+    "모공": ["모공"], "포어": ["모공"],
 }
 
 # 기능성 표시 문구 → subcategory 추정
@@ -124,27 +124,55 @@ def fetch_page(api_key: str, page_no: int) -> Tuple[List[dict], int]:
 
 
 def is_korean_manufacturer(raw: dict) -> bool:
-    """책임판매업자가 한국인지 휴리스틱 판단.
-    국문 한자 자가 들어있고 명백한 해외 패턴 없으면 True.
-    """
+    """책임판매업자가 한국인지 휴리스틱 판단."""
     seller = raw.get("ENTP_NAME", "") or raw.get("ITEM_PRDC_BIZ_NAME", "") or raw.get("BIZRNO_NM", "")
     if not seller:
         return False
-    # 한글 포함
     if re.search(r"[가-힣]", seller):
         return True
-    # 영문이지만 흔한 한국 브랜드 영문명 패턴
     KR_BRAND_EN = ("amorepacific", "lg h&h", "missha", "innisfree", "laneige",
                    "etude", "tonymoly", "cosrx", "torriden", "dr.jart", "dr. jart",
                    "ahc", "the face shop", "iope", "sulwhasoo", "the history of whoo")
     return any(b in seller.lower() for b in KR_BRAND_EN)
 
 
-def derive_categories(functional_desc: str) -> List[str]:
+def derive_categories_from_raw(raw: dict) -> List[str]:
+    """실제 API 응답 기준 카테고리 도출.
+
+    우선순위:
+      1) EFFECT_YN1/2/3 boolean 플래그
+      2) SPF / PA 값 있음 → 모공 (선크림)
+      3) EE_NAME 텍스트 매칭
+      4) ITEM_NAME 키워드 매칭
+    """
     cats = set()
-    for kw, mapped in FUNCTIONAL_TO_CATEGORY.items():
-        if kw in functional_desc:
+
+    # 1) 효능 플래그
+    if raw.get("EFFECT_YN1", "").strip() == "Y":
+        cats.add("미백")
+    if raw.get("EFFECT_YN2", "").strip() == "Y":
+        cats.add("탄력")
+    if raw.get("EFFECT_YN3", "").strip() == "Y":
+        cats.add("모공")
+
+    # 2) SPF/PA 값 있음 → 선크림
+    spf = (raw.get("SPF") or "").strip()
+    pa = (raw.get("PA") or "").strip()
+    if spf or pa:
+        cats.add("모공")
+
+    # 3) EE_NAME (효능명 텍스트)
+    ee_name = (raw.get("EE_NAME") or "").lower()
+    for kw, mapped in TEXT_TO_CATEGORY.items():
+        if kw.lower() in ee_name:
             cats.update(mapped)
+
+    # 4) ITEM_NAME 키워드
+    item_name = (raw.get("ITEM_NAME") or "").lower()
+    for kw, mapped in TEXT_TO_CATEGORY.items():
+        if kw.lower() in item_name:
+            cats.update(mapped)
+
     return sorted(cats) if cats else []
 
 
@@ -157,36 +185,44 @@ def derive_subcategory(name: str) -> str:
 
 
 def normalize_one(raw: dict, next_id: int) -> Optional[dict]:
-    """원본 → 우리 스키마. 못 쓸 거면 None."""
-    # 필드명은 API spec 에 따라 다름 — 실제 응답 확인 후 매핑
-    name = raw.get("ITEM_NAME", "") or raw.get("CSMR_ENG_NAME", "") or raw.get("PRDLST_NM", "")
-    brand = raw.get("ENTP_NAME", "") or raw.get("ITEM_PRDC_BIZ_NAME", "") or "?"
-    functional = raw.get("EFCY_QESITM", "") or raw.get("FUNC_KIND", "") or raw.get("DOC_TEXT", "")
-    report_no = raw.get("ITEM_SEQ", "") or raw.get("DOC_NUM", "")
+    """원본 → 우리 스키마. 카테고리 매핑 실패하면 None (스킵)."""
+    name = (raw.get("ITEM_NAME") or "").strip()
+    brand = (raw.get("ENTP_NAME") or "?").strip()
+    report_no = (raw.get("COSMETIC_REPORT_SEQ") or raw.get("DEPT_RECEIPT_NO") or "").strip()
+    ee_name = (raw.get("EE_NAME") or "").strip()
 
-    if not name or not brand:
+    if not name:
         return None
 
-    # 기능성 표시 문구에 헤어/탈모 등 제외 키워드 있으면 스킵
-    if any(ex in functional for ex in EXCLUDE_FUNCTIONAL):
-        return None
-    if any(ex in name for ex in EXCLUDE_FUNCTIONAL):
-        return None
+    # 모발/탈모 등 명백한 제외
+    for ex in EXCLUDE_FUNCTIONAL:
+        if ex in name or ex in ee_name:
+            return None
 
-    cats = derive_categories(functional)
+    cats = derive_categories_from_raw(raw)
     if not cats:
-        # 카테고리 추정 안 되면 기본 보습으로
-        cats = ["보습"]
+        # 카테고리 매핑 실패하면 스킵 (보습 fallback 안 함 — 다양성 위해)
+        return None
+
+    # 효능 플래그 / SPF / PA — 디버그 및 functional_desc 재구성용
+    flag_summary = []
+    if raw.get("EFFECT_YN1") == "Y": flag_summary.append("미백")
+    if raw.get("EFFECT_YN2") == "Y": flag_summary.append("주름개선")
+    if raw.get("EFFECT_YN3") == "Y": flag_summary.append("자외선차단")
+    spf = (raw.get("SPF") or "").strip()
+    pa = (raw.get("PA") or "").strip()
+    if spf: flag_summary.append(f"SPF{spf}")
+    if pa: flag_summary.append(f"PA{pa}")
 
     return {
-        "id": f"KF{next_id:04d}",
+        "id": f"KF{next_id:05d}",
         "name_kr": name,
         "name_en": "",
         "brand": brand,
         "category": cats,
         "subcategory": derive_subcategory(name),
-        "for_skin": [],  # 식약처엔 없음 — Phase 4 (성분 룰) 로 추후 보강
-        "main_ingredients": [],  # 식약처엔 없음 — 라벨 OCR 단계에서 보강
+        "for_skin": [],
+        "main_ingredients": [],
         "fragrance_free": None,
         "alcohol_free": None,
         "tags": [],
@@ -194,7 +230,7 @@ def normalize_one(raw: dict, next_id: int) -> Optional[dict]:
         "price_range": "?",
         "image_url": "",
         "report_no": report_no,
-        "functional_desc": functional[:200],
+        "functional_desc": " · ".join(flag_summary + [ee_name]) if (flag_summary or ee_name) else "",
         "source": "KFDA_functional",
         "note": "",
     }
