@@ -21,3 +21,11 @@ torch>=2.0.0
 torchvision>=0.15.0
 numpy>=1.24.0
 pandas>=2.0.0               # scripts/products/ 파이프라인용
+
+# --- DB / 웹 백엔드 (담다 API) ---
+sqlalchemy>=2.0.0
+alembic>=1.13.0
+pymysql>=1.1.0              # MySQL 드라이버
+cryptography>=42.0.0        # pymysql 인증(caching_sha2)용
+pydantic-settings>=2.0.0   # .env 로드
+python-dotenv>=1.0.0

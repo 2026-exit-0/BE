@@ -1,0 +1,17 @@
+# 로컬에 MySQL 없으면: docker compose up -d 로 띄우기
+services:
+  db:
+    image: mysql:8.0
+    container_name: damda-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: damda
+      TZ: Asia/Seoul
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3307:3306"   # 호스트 3306이 로컬 MySQL과 충돌 → 3307로 노출
+    volumes:
+      - damda_mysql:/var/lib/mysql
+
+volumes:
+  damda_mysql:
