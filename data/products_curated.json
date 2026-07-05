@@ -3,1205 +3,3539 @@
   "note": "K-beauty 골든 시드 — 카테고리/브랜드 균형 잡힌 큐레이션. Phase 3 (네이버 쇼핑) 으로 image_url/price 보강 권장.",
   "products": [
     {
-      "id": "K001", "name_kr": "COSRX 어드밴스드 스네일 96 뮤신 파워 에센스", "name_en": "COSRX Advanced Snail 96 Mucin Power Essence",
-      "brand": "COSRX", "category": ["보습", "진정"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성", "민감성", "지성"],
-      "main_ingredients": [
-        {"kr": "달팽이점액여과물", "inci": "Snail Secretion Filtrate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "부틸렌글라이콜", "inci": "Butylene Glycol"},
-        {"kr": "알란토인", "inci": "Allantoin"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true,
-      "tags": ["저자극"], "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K002", "name_kr": "COSRX BHA 블랙헤드 파워 리퀴드", "name_en": "COSRX BHA Blackhead Power Liquid",
-      "brand": "COSRX", "category": ["모공"], "subcategory": "토너",
-      "for_skin": ["지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "버드나무껍질추출물", "inci": "Salix Alba Bark Extract"},
-        {"kr": "베타인살리실레이트", "inci": "Betaine Salicylate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["BHA"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K003", "name_kr": "COSRX 시카 카밍 시카 크림", "name_en": "COSRX Centella Blemish Cream",
-      "brand": "COSRX", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "알란토인", "inci": "Allantoin"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K004", "name_kr": "COSRX 비타민C 23% 세럼", "name_en": "COSRX The Vitamin C 23 Serum",
-      "brand": "COSRX", "category": ["미백"], "subcategory": "세럼",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": false, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K005", "name_kr": "COSRX 알로에 수딩 선크림 SPF50+ PA+++", "name_en": "COSRX Aloe Soothing Sun Cream SPF50+",
-      "brand": "COSRX", "category": ["모공", "진정"], "subcategory": "선크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "에칠헥실메톡시신나메이트", "inci": "Ethylhexyl Methoxycinnamate"},
-        {"kr": "알로에베라잎즙", "inci": "Aloe Barbadensis Leaf Juice"},
-        {"kr": "산화아연", "inci": "Zinc Oxide"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K006", "name_kr": "토리든 다이브인 저분자 히알루론산 세럼", "name_en": "Torriden DIVE-IN Low Molecular Hyaluronic Acid Serum",
-      "brand": "Torriden", "category": ["보습"], "subcategory": "세럼",
-      "for_skin": ["건성", "민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "아세틸히알루로네이트", "inci": "Acetyl Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K007", "name_kr": "토리든 다이브인 저분자 히알루론산 토너", "name_en": "Torriden DIVE-IN Low Molecular Hyaluronic Acid Toner",
-      "brand": "Torriden", "category": ["보습"], "subcategory": "토너",
-      "for_skin": ["건성", "민감성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K008", "name_kr": "토리든 셀메이저 토너", "name_en": "Torriden Cellmazing Toner",
-      "brand": "Torriden", "category": ["진정", "보습"], "subcategory": "토너",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K009", "name_kr": "라네즈 워터뱅크 블루 하이알루로닉 크림", "name_en": "Laneige Water Bank Blue Hyaluronic Cream",
-      "brand": "Laneige", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["건성", "복합성", "민감성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "스쿠알란", "inci": "Squalane"},
-        {"kr": "트레할로스", "inci": "Trehalose"},
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K010", "name_kr": "라네즈 크림스킨 토너 앤 모이스처라이저", "name_en": "Laneige Cream Skin Toner & Moisturizer",
-      "brand": "Laneige", "category": ["보습"], "subcategory": "토너",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "백차잎수", "inci": "Camellia Sinensis Leaf Water"},
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "베타인", "inci": "Betaine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K011", "name_kr": "라네즈 립 슬리핑 마스크", "name_en": "Laneige Lip Sleeping Mask",
-      "brand": "Laneige", "category": ["보습"], "subcategory": "립케어",
-      "for_skin": ["건성", "복합성", "지성", "민감성"],
-      "main_ingredients": [
-        {"kr": "쉐어버터", "inci": "Butyrospermum Parkii Butter"},
-        {"kr": "코코아씨버터", "inci": "Theobroma Cacao Seed Butter"},
-        {"kr": "산자나무열매오일", "inci": "Hippophae Rhamnoides Fruit Oil"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K012", "name_kr": "닥터자르트 시카페어 크림", "name_en": "Dr.Jart+ Cicapair Cream",
-      "brand": "Dr.Jart+", "category": ["진정"], "subcategory": "크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "마데카씨산", "inci": "Madecassic Acid"},
-        {"kr": "아시아티코사이드", "inci": "Asiaticoside"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K013", "name_kr": "닥터자르트 세라마이딘 크림", "name_en": "Dr.Jart+ Ceramidin Cream",
-      "brand": "Dr.Jart+", "category": ["보습", "진정"], "subcategory": "크림",
-      "for_skin": ["건성", "민감성"],
-      "main_ingredients": [
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"},
-        {"kr": "콜레스테롤", "inci": "Cholesterol"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K014", "name_kr": "닥터자르트 V7 토닝 라이트", "name_en": "Dr.Jart+ V7 Toning Light",
-      "brand": "Dr.Jart+", "category": ["미백"], "subcategory": "크림",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "토코페롤", "inci": "Tocopherol"},
-        {"kr": "비오틴", "inci": "Biotin"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K015", "name_kr": "닥터자르트 바이탈 하이드라 솔루션 마스크", "name_en": "Dr.Jart+ Vital Hydra Solution Mask",
-      "brand": "Dr.Jart+", "category": ["보습"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K016", "name_kr": "이니스프리 그린티 씨드 세럼", "name_en": "Innisfree Green Tea Seed Serum",
-      "brand": "Innisfree", "category": ["보습", "진정"], "subcategory": "세럼",
-      "for_skin": ["복합성", "지성", "민감성"],
-      "main_ingredients": [
-        {"kr": "녹차잎수", "inci": "Camellia Sinensis Leaf Water"},
-        {"kr": "녹차씨오일", "inci": "Camellia Sinensis Seed Oil"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K017", "name_kr": "이니스프리 화산송이 모공 마스크", "name_en": "Innisfree Volcanic Pore Clay Mask",
-      "brand": "Innisfree", "category": ["모공"], "subcategory": "팩",
-      "for_skin": ["지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "화산송이", "inci": "Volcanic Ash"},
-        {"kr": "카올린", "inci": "Kaolin"},
-        {"kr": "벤토나이트", "inci": "Bentonite"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K018", "name_kr": "이니스프리 레티놀 사이카 리페어 앰플", "name_en": "Innisfree Retinol Cica Repair Ampoule",
-      "brand": "Innisfree", "category": ["탄력", "진정"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "레티놀", "inci": "Retinol"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K019", "name_kr": "이니스프리 비파 비타민C 세럼", "name_en": "Innisfree Vitamin C Brightening Serum",
-      "brand": "Innisfree", "category": ["미백"], "subcategory": "세럼",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "감귤추출물", "inci": "Citrus Junos Fruit Extract"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K020", "name_kr": "이니스프리 더모 시카 카밍 젤 크림", "name_en": "Innisfree Derma Cica Calming Gel Cream",
-      "brand": "Innisfree", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "지성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K021", "name_kr": "Dr.G 레드 블레미쉬 클리어 수딩 크림", "name_en": "Dr.G Red Blemish Clear Soothing Cream",
-      "brand": "Dr.G", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "알란토인", "inci": "Allantoin"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K022", "name_kr": "Dr.G 브라이트닝 화이트닝 앰플", "name_en": "Dr.G Brightening Whitening Ampoule",
-      "brand": "Dr.G", "category": ["미백"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "알부틴", "inci": "Arbutin"},
-        {"kr": "트라넥삼산", "inci": "Tranexamic Acid"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K023", "name_kr": "Dr.G 시카 수딩 선크림 SPF50+", "name_en": "Dr.G Green Mild Up Sun Plus SPF50+",
-      "brand": "Dr.G", "category": ["진정", "모공"], "subcategory": "선크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "산화아연", "inci": "Zinc Oxide"},
-        {"kr": "이산화티타늄", "inci": "Titanium Dioxide"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K024", "name_kr": "메디힐 N.M.F 아쿠아 마스크", "name_en": "Mediheal N.M.F Aquaring Ampoule Mask",
-      "brand": "Mediheal", "category": ["보습"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "트레할로스", "inci": "Trehalose"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K025", "name_kr": "메디힐 티트리 케어 솔루션 마스크", "name_en": "Mediheal Tea Tree Care Solution Mask",
-      "brand": "Mediheal", "category": ["진정", "모공"], "subcategory": "팩",
-      "for_skin": ["지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "티트리잎오일", "inci": "Melaleuca Alternifolia Leaf Oil"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K026", "name_kr": "메디힐 콜라겐 임팩트 에센셜 마스크", "name_en": "Mediheal Collagen Impact Essential Mask",
-      "brand": "Mediheal", "category": ["탄력", "보습"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "가수분해콜라겐", "inci": "Hydrolyzed Collagen"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "토코페롤", "inci": "Tocopherol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K027", "name_kr": "AHC 시그니처 리얼 아이크림", "name_en": "AHC Signature Real Eye Cream For Face",
-      "brand": "AHC", "category": ["탄력", "보습"], "subcategory": "아이크림",
-      "for_skin": ["건성", "복합성", "민감성"],
-      "main_ingredients": [
-        {"kr": "가수분해콜라겐", "inci": "Hydrolyzed Collagen"},
-        {"kr": "카퍼트리펩타이드-1", "inci": "Copper Tripeptide-1"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K028", "name_kr": "AHC 프리미엄 비타민C 24 앰플", "name_en": "AHC Premium Vitamin C 24 Ampoule",
-      "brand": "AHC", "category": ["미백"], "subcategory": "세럼",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"},
-        {"kr": "에칠아스코빌에텔", "inci": "Ethyl Ascorbyl Ether"},
-        {"kr": "토코페롤", "inci": "Tocopherol"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K029", "name_kr": "AHC 콜라겐 비욘드 7 아이크림", "name_en": "AHC Collagen Beyond 7 Eye Cream",
-      "brand": "AHC", "category": ["탄력"], "subcategory": "아이크림",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "가수분해콜라겐", "inci": "Hydrolyzed Collagen"},
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "5-10만원", "source": "manual_curated"
-    },
-    {
-      "id": "K030", "name_kr": "미샤 타임 레볼루션 나이트 리페어 앰플", "name_en": "Missha Time Revolution Night Repair Ampoule",
-      "brand": "Missha", "category": ["탄력", "보습"], "subcategory": "세럼",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "비피다발효용해물", "inci": "Bifida Ferment Lysate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K031", "name_kr": "미샤 차차 진주 토너", "name_en": "Missha Cho Bo Yang BB Pearl Toner",
-      "brand": "Missha", "category": ["미백", "보습"], "subcategory": "토너",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "트루진주추출물", "inci": "Pearl Extract"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K032", "name_kr": "어글리브이 AHA-BHA-PHA 30 데이즈 미라클 토너", "name_en": "Some By Mi AHA-BHA-PHA 30 Days Miracle Toner",
-      "brand": "Some By Mi", "category": ["모공"], "subcategory": "토너",
-      "for_skin": ["지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "락트산", "inci": "Lactic Acid"},
-        {"kr": "살리실산", "inci": "Salicylic Acid"},
-        {"kr": "글루코노락톤", "inci": "Gluconolactone"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"}
-      ],
-      "fragrance_free": true, "alcohol_free": false, "tags": ["AHA", "BHA"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K033", "name_kr": "어글리브이 갈락토미 미라클 토너", "name_en": "Some By Mi Galactomyces Pure Vitamin C Glow Toner",
-      "brand": "Some By Mi", "category": ["미백"], "subcategory": "토너",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "갈락토미세스발효여과물", "inci": "Galactomyces Ferment Filtrate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K034", "name_kr": "어글리브이 시카 세럼", "name_en": "Some By Mi Super Matcha Pore Care Serum",
-      "brand": "Some By Mi", "category": ["진정", "모공"], "subcategory": "세럼",
-      "for_skin": ["민감성", "지성"],
-      "main_ingredients": [
-        {"kr": "녹차잎추출물", "inci": "Camellia Sinensis Leaf Extract"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "산화아연", "inci": "Zinc Oxide"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K035", "name_kr": "셀퓨전씨 레이저 선크림 100", "name_en": "Cell Fusion C Laser Sunscreen 100 SPF50+",
-      "brand": "Cell Fusion C", "category": ["모공", "진정"], "subcategory": "선크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "산화아연", "inci": "Zinc Oxide"},
-        {"kr": "이산화티타늄", "inci": "Titanium Dioxide"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K036", "name_kr": "셀퓨전씨 익스퍼트 어드밴스드 셀팜 RX 토너", "name_en": "Cell Fusion C Expert Cellfarm RX Toner",
-      "brand": "Cell Fusion C", "category": ["탄력", "진정"], "subcategory": "토너",
-      "for_skin": ["복합성", "민감성"],
-      "main_ingredients": [
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K037", "name_kr": "디알이쥬 부스터 세럼", "name_en": "Dr.Different Booster Serum",
-      "brand": "Dr.Different", "category": ["보습", "탄력"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K038", "name_kr": "빌리프 더 트루 크림 모이스처라이징 밤", "name_en": "Belif The True Cream Moisturizing Bomb",
-      "brand": "Belif", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "레이디스맨틀추출물", "inci": "Alchemilla Vulgaris Extract"},
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "콜레스테롤", "inci": "Cholesterol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K039", "name_kr": "빌리프 아쿠아밤 젤 크림", "name_en": "Belif Aqua Bomb Jelly Cream",
-      "brand": "Belif", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "오트밀추출물", "inci": "Avena Sativa Extract"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K040", "name_kr": "마녀공장 비피다 바이옴 콤플렉스 앰플", "name_en": "Manyo Bifida Biome Complex Ampoule",
-      "brand": "Manyo", "category": ["보습", "탄력"], "subcategory": "세럼",
-      "for_skin": ["건성", "복합성", "민감성"],
-      "main_ingredients": [
-        {"kr": "비피다발효용해물", "inci": "Bifida Ferment Lysate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K041", "name_kr": "마녀공장 갈락 나이아신 2.0 에센스", "name_en": "Manyo Galac Niacin 2.0 Essence",
-      "brand": "Manyo", "category": ["미백", "보습"], "subcategory": "에센스",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "갈락토미세스발효여과물", "inci": "Galactomyces Ferment Filtrate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K042", "name_kr": "라운드랩 1025 독도 토너", "name_en": "Round Lab 1025 Dokdo Toner",
-      "brand": "Round Lab", "category": ["보습", "진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "심해수", "inci": "Sea Water"},
-        {"kr": "트레할로스", "inci": "Trehalose"},
-        {"kr": "베타인", "inci": "Betaine"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K043", "name_kr": "라운드랩 자작나무 수분 크림", "name_en": "Round Lab Birch Juice Moisturizing Cream",
-      "brand": "Round Lab", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["건성", "민감성"],
-      "main_ingredients": [
-        {"kr": "자작나무수액", "inci": "Betula Platyphylla Japonica Juice"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K044", "name_kr": "라운드랩 약산성 토너 (1025 독도 약산성)", "name_en": "Round Lab Mugwort Calming Toner",
-      "brand": "Round Lab", "category": ["진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "쑥추출물", "inci": "Artemisia Vulgaris Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "알란토인", "inci": "Allantoin"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K045", "name_kr": "메이크프렘 세이프 미 릴리프 모이스처 크림", "name_en": "Make P:rem Safe Me Relief Moisture Cream",
-      "brand": "Make P:rem", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K046", "name_kr": "메이크프렘 시카 토너", "name_en": "Make P:rem Hydrate Me Micro Tension Toner",
-      "brand": "Make P:rem", "category": ["보습", "진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K047", "name_kr": "솔티드 비타민C 23 세럼", "name_en": "Salted Vitamin C 23 Serum",
-      "brand": "Salted", "category": ["미백"], "subcategory": "세럼",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"},
-        {"kr": "비타민E", "inci": "Tocopherol"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": false, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K048", "name_kr": "페이퍼파파 살리실릭 토너", "name_en": "Paperpapa Salicylic Acid Toner",
-      "brand": "Paperpapa", "category": ["모공"], "subcategory": "토너",
-      "for_skin": ["지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "살리실산", "inci": "Salicylic Acid"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"}
-      ],
-      "fragrance_free": true, "alcohol_free": false, "tags": ["BHA"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K049", "name_kr": "헤라 블랙 라이프 에센스", "name_en": "Hera Black Cushion Essence",
-      "brand": "Hera", "category": ["탄력", "보습"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "아데노신", "inci": "Adenosine"},
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "검은콩추출물", "inci": "Black Soybean Extract"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "10만원+", "source": "manual_curated"
-    },
-    {
-      "id": "K050", "name_kr": "아이오페 바이오 에센스 인텐시브 컨디셔닝", "name_en": "IOPE Bio Essence Intensive Conditioning",
-      "brand": "IOPE", "category": ["보습", "탄력"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성", "민감성"],
-      "main_ingredients": [
-        {"kr": "바이오 컨버전 콤플렉스", "inci": "Bifida Ferment Lysate"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "5-10만원", "source": "manual_curated"
-    },
-    {
-      "id": "K051", "name_kr": "설화수 자음생 에센스", "name_en": "Sulwhasoo Concentrated Ginseng Renewing Essential Oil",
-      "brand": "Sulwhasoo", "category": ["탄력"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "인삼추출물", "inci": "Panax Ginseng Root Extract"},
-        {"kr": "사포닌", "inci": "Saponin"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "10만원+", "source": "manual_curated"
-    },
-    {
-      "id": "K052", "name_kr": "설화수 윤조에센스", "name_en": "Sulwhasoo First Care Activating Serum",
-      "brand": "Sulwhasoo", "category": ["보습", "탄력"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "JAUM 밸런싱 콤플렉스", "inci": "JAUM Balancing Complex"},
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "10만원+", "source": "manual_curated"
-    },
-    {
-      "id": "K053", "name_kr": "후 천기단 화현 밸런서", "name_en": "The History of Whoo Hwa Hyun Balancer",
-      "brand": "The History of Whoo", "category": ["보습", "탄력"], "subcategory": "토너",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "산수유추출물", "inci": "Cornus Officinalis Fruit Extract"},
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "10만원+", "source": "manual_curated"
-    },
-    {
-      "id": "K054", "name_kr": "후 비첩 자생 에센스", "name_en": "The History of Whoo Bichup Self-Generating Anti-Aging Essence",
-      "brand": "The History of Whoo", "category": ["탄력"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "인삼추출물", "inci": "Panax Ginseng Root Extract"},
-        {"kr": "녹용추출물", "inci": "Deer Antler Extract"},
-        {"kr": "아데노신", "inci": "Adenosine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "10만원+", "source": "manual_curated"
-    },
-    {
-      "id": "K055", "name_kr": "라로슈포제 톨러리안 더블 리페어 모이스처라이저", "name_en": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
-      "brand": "La Roche-Posay", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "세라마이드3", "inci": "Ceramide 3"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K056", "name_kr": "라로슈포제 시카플라스트 밤 B5+", "name_en": "La Roche-Posay Cicaplast Baume B5+",
-      "brand": "La Roche-Posay", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "쉐어버터", "inci": "Butyrospermum Parkii Butter"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K057", "name_kr": "라로슈포제 안티헬리오스 인비저블 플루이드 SPF50+", "name_en": "La Roche-Posay Anthelios Invisible Fluid SPF50+",
-      "brand": "La Roche-Posay", "category": ["모공", "진정"], "subcategory": "선크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "산화아연", "inci": "Zinc Oxide"},
-        {"kr": "셀룰로오스", "inci": "Cellulose"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": false, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K058", "name_kr": "비욘드 페이셜 클리닉 모이스처 크림", "name_en": "Beyond Phyto Moisture Cream",
-      "brand": "Beyond", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "쉐어버터", "inci": "Butyrospermum Parkii Butter"},
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K059", "name_kr": "클리오 킬커버 다이아몬드 베이스", "name_en": "Clio Kill Cover Pink Glow Cream Concealer",
-      "brand": "Clio", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["복합성"],
-      "main_ingredients": [
-        {"kr": "글리세린", "inci": "Glycerin"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K060", "name_kr": "페리페라 캘리퍼스 크림 토너", "name_en": "Peripera Inkdew Velvet Wear",
-      "brand": "Peripera", "category": ["보습"], "subcategory": "토너",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K061", "name_kr": "에뛰드 수분 가득 모이스처 토너", "name_en": "Etude Soonjung pH 5.5 Relief Toner",
-      "brand": "Etude", "category": ["보습", "진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K062", "name_kr": "에뛰드 수분필 1+1+1 마스크", "name_en": "Etude 0.2 Therapy Air Mask",
-      "brand": "Etude", "category": ["보습"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K063", "name_kr": "토니모리 더 촉촉 그린티 수분 토너", "name_en": "Tony Moly The Chok Chok Green Tea Hydration Toner",
-      "brand": "Tony Moly", "category": ["보습", "진정"], "subcategory": "토너",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "녹차잎수", "inci": "Camellia Sinensis Leaf Water"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K064", "name_kr": "네이처리퍼블릭 알로에 베라 수딩 젤", "name_en": "Nature Republic Aloe Vera 92% Soothing Gel",
-      "brand": "Nature Republic", "category": ["진정", "보습"], "subcategory": "젤",
-      "for_skin": ["민감성", "지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "알로에베라잎즙", "inci": "Aloe Barbadensis Leaf Juice"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K065", "name_kr": "더페이스샵 라이스 워터 브라이트닝 클렌징 폼", "name_en": "The Face Shop Rice Water Bright Cleansing Foam",
-      "brand": "The Face Shop", "category": ["미백"], "subcategory": "클렌저",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "쌀발효추출물", "inci": "Oryza Sativa Extract"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K066", "name_kr": "어퓨 마데카소사이드 크림", "name_en": "A'pieu Madecassoside Cream",
-      "brand": "A'pieu", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K067", "name_kr": "아누아 어성초 77% 수딩 토너", "name_en": "Anua Heartleaf 77% Toner",
-      "brand": "Anua", "category": ["진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "지성", "복합성"],
-      "main_ingredients": [
-        {"kr": "어성초추출물", "inci": "Houttuynia Cordata Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K068", "name_kr": "아누아 어성초 80% 수딩 앰플", "name_en": "Anua Heartleaf 80% Soothing Ampoule",
-      "brand": "Anua", "category": ["진정", "보습"], "subcategory": "세럼",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "어성초추출물", "inci": "Houttuynia Cordata Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K069", "name_kr": "스킨푸드 캐롯 카로틴 카밍 워터 패드", "name_en": "Skinfood Carrot Carotene Calming Water Pad",
-      "brand": "Skinfood", "category": ["진정", "보습"], "subcategory": "팩",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "당근뿌리추출물", "inci": "Daucus Carota Sativa Root Extract"},
-        {"kr": "베타카로틴", "inci": "Beta-Carotene"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K070", "name_kr": "닥터지 그린마일드업 선크림 SPF50+ PA++++", "name_en": "Dr.G Green Mild Up Sun Plus",
-      "brand": "Dr.G", "category": ["모공", "진정"], "subcategory": "선크림",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "산화아연", "inci": "Zinc Oxide"},
-        {"kr": "이산화티타늄", "inci": "Titanium Dioxide"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K071", "name_kr": "셀퓨전씨 익스퍼트 닥터 세럼", "name_en": "Cell Fusion C Expert Dr. Serum",
-      "brand": "Cell Fusion C", "category": ["탄력", "보습"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "5-10만원", "source": "manual_curated"
-    },
-    {
-      "id": "K072", "name_kr": "닥터자르트 시카페어 인텐시브 수딩 마스크", "name_en": "Dr.Jart+ Cicapair Tiger Grass Calming Mask",
-      "brand": "Dr.Jart+", "category": ["진정"], "subcategory": "팩",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K073", "name_kr": "이니스프리 한란 인텐스 크림", "name_en": "Innisfree Jeju Orchid Enriched Cream",
-      "brand": "Innisfree", "category": ["탄력", "보습"], "subcategory": "크림",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "한란꽃추출물", "inci": "Cymbidium Goeringii Flower Extract"},
-        {"kr": "아데노신", "inci": "Adenosine"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K074", "name_kr": "라네즈 워터뱅크 모이스처 에센스", "name_en": "Laneige Water Bank Moisture Essence",
-      "brand": "Laneige", "category": ["보습"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "스쿠알란", "inci": "Squalane"},
-        {"kr": "베타인", "inci": "Betaine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K075", "name_kr": "COSRX 갈락토미세스 95 톤 밸런싱 에센스", "name_en": "COSRX Galactomyces 95 Tone Balancing Essence",
-      "brand": "COSRX", "category": ["미백", "보습"], "subcategory": "에센스",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "갈락토미세스발효여과물", "inci": "Galactomyces Ferment Filtrate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K076", "name_kr": "토리든 셀메이저 펩타이드 세럼", "name_en": "Torriden Cellmazing Peptide Serum",
-      "brand": "Torriden", "category": ["탄력"], "subcategory": "세럼",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "아데노신", "inci": "Adenosine"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K077", "name_kr": "어글리브이 갈락 나이아신 토너", "name_en": "Some By Mi Galactomyces Pure Vitamin C Glow Toner 2.0",
-      "brand": "Some By Mi", "category": ["미백"], "subcategory": "토너",
-      "for_skin": ["복합성", "지성"],
-      "main_ingredients": [
-        {"kr": "갈락토미세스발효여과물", "inci": "Galactomyces Ferment Filtrate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K078", "name_kr": "디알이쥬 시카 부스터 크림", "name_en": "Dr.Different Cica Booster Cream",
-      "brand": "Dr.Different", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K079", "name_kr": "메디힐 N.M.F 인텐시브 모이스처라이징 크림", "name_en": "Mediheal N.M.F Aquaring Intensive Cream",
-      "brand": "Mediheal", "category": ["보습"], "subcategory": "크림",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "트레할로스", "inci": "Trehalose"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K080", "name_kr": "더후 천기단 화현 자음 발란서", "name_en": "The History of Whoo Hwa Hyun Jaeum Balancer",
-      "brand": "The History of Whoo", "category": ["보습", "탄력"], "subcategory": "토너",
-      "for_skin": ["건성"],
-      "main_ingredients": [
-        {"kr": "산수유추출물", "inci": "Cornus Officinalis Fruit Extract"},
-        {"kr": "백자인추출물", "inci": "Biota Orientalis Seed Extract"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "10만원+", "source": "manual_curated"
-    },
-    {
-      "id": "K081", "name_kr": "라네즈 워터 슬리핑 마스크 EX", "name_en": "Laneige Water Sleeping Mask EX",
-      "brand": "Laneige", "category": ["보습"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "수분활력 콤플렉스", "inci": "Hydro Ionized Mineral Water"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K082", "name_kr": "닥터자르트 더마스크 워터 젯 비타민 마스크", "name_en": "Dr.Jart+ Dermask Water Jet Vital Hydra Solution",
-      "brand": "Dr.Jart+", "category": ["보습"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K083", "name_kr": "닥터지 RED 블레미쉬 세럼", "name_en": "Dr.G Red Blemish Clear Soothing Active Serum",
-      "brand": "Dr.G", "category": ["진정"], "subcategory": "세럼",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K084", "name_kr": "이니스프리 시카 밤 인텐시브", "name_en": "Innisfree Cica Balm Intensive",
-      "brand": "Innisfree", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성", "건성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "쉐어버터", "inci": "Butyrospermum Parkii Butter"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K085", "name_kr": "AHC 콜라겐 비욘드 7 토너", "name_en": "AHC Collagen Beyond 7 Toner",
-      "brand": "AHC", "category": ["탄력", "보습"], "subcategory": "토너",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "가수분해콜라겐", "inci": "Hydrolyzed Collagen"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K086", "name_kr": "스킨1004 마다가스카르 센텔라 앰플", "name_en": "Skin1004 Madagascar Centella Ampoule",
-      "brand": "Skin1004", "category": ["진정", "보습"], "subcategory": "세럼",
-      "for_skin": ["민감성", "복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "글리세린", "inci": "Glycerin"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K087", "name_kr": "스킨1004 마다가스카르 센텔라 토너", "name_en": "Skin1004 Madagascar Centella Toning Toner",
-      "brand": "Skin1004", "category": ["진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K088", "name_kr": "이지피지 케어 솔루션 펩타이드 앰플", "name_en": "Esfolio Peptide Solution Ampoule",
-      "brand": "Esfolio", "category": ["탄력"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "아데노신", "inci": "Adenosine"},
-        {"kr": "콜라겐", "inci": "Collagen"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K089", "name_kr": "닥터지 화이트 인 모이스처 크림", "name_en": "Dr.G White in Moisture Cream",
-      "brand": "Dr.G", "category": ["미백", "보습"], "subcategory": "크림",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "알부틴", "inci": "Arbutin"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K090", "name_kr": "메디힐 콜라겐 솔루션 마스크 N", "name_en": "Mediheal Collagen Solution Mask",
-      "brand": "Mediheal", "category": ["탄력"], "subcategory": "팩",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "가수분해콜라겐", "inci": "Hydrolyzed Collagen"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1만원 미만", "source": "manual_curated"
-    },
-    {
-      "id": "K091", "name_kr": "어니스트 비건 카밍 토너", "name_en": "Earnest Vegan Calming Toner",
-      "brand": "Earnest", "category": ["진정"], "subcategory": "토너",
-      "for_skin": ["민감성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "녹차잎추출물", "inci": "Camellia Sinensis Leaf Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["비건", "저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K092", "name_kr": "코스알엑스 알파-아르부틴 화이트닝 크림", "name_en": "COSRX Alpha-Arbutin Hyaluronic Cream",
-      "brand": "COSRX", "category": ["미백", "보습"], "subcategory": "크림",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "알부틴", "inci": "Alpha-Arbutin"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K093", "name_kr": "라네즈 퍼펙트 리뉴 영 레티놀 세럼", "name_en": "Laneige Perfect Renew Young Retinol Serum",
-      "brand": "Laneige", "category": ["탄력"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "레티놀", "inci": "Retinol"},
-        {"kr": "비사보롤", "inci": "Bisabolol"},
-        {"kr": "토코페롤", "inci": "Tocopherol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "5-10만원", "source": "manual_curated"
-    },
-    {
-      "id": "K094", "name_kr": "닥터자르트 시카페어 인텐시브 카밍 토너", "name_en": "Dr.Jart+ Cicapair Calming Toner",
-      "brand": "Dr.Jart+", "category": ["진정"], "subcategory": "토너",
-      "for_skin": ["민감성", "복합성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K095", "name_kr": "비욘드 데일리 하이드 멀티 부스터", "name_en": "Beyond Daily Hyde Multi Booster",
-      "brand": "Beyond", "category": ["보습"], "subcategory": "에센스",
-      "for_skin": ["건성", "복합성"],
-      "main_ingredients": [
-        {"kr": "히알루론산나트륨", "inci": "Sodium Hyaluronate"},
-        {"kr": "베타인", "inci": "Betaine"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": false, "alcohol_free": true, "tags": [],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K096", "name_kr": "넘버즈인 1번 시카 토너", "name_en": "Numbuzin No.1 Cica Toner",
-      "brand": "Numbuzin", "category": ["진정"], "subcategory": "토너",
-      "for_skin": ["민감성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "마데카쇼사이드", "inci": "Madecassoside"},
-        {"kr": "판테놀", "inci": "Panthenol"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K097", "name_kr": "넘버즈인 3번 갈락토미세스 글로우 세럼", "name_en": "Numbuzin No.3 Glow Galactomyces Serum",
-      "brand": "Numbuzin", "category": ["미백"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "갈락토미세스발효여과물", "inci": "Galactomyces Ferment Filtrate"},
-        {"kr": "나이아신아마이드", "inci": "Niacinamide"},
-        {"kr": "비타민C유도체", "inci": "Ascorbyl Glucoside"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K098", "name_kr": "넘버즈인 5번 펩타이드 노화 케어 세럼", "name_en": "Numbuzin No.5 Skin Vitamin Serum",
-      "brand": "Numbuzin", "category": ["탄력"], "subcategory": "세럼",
-      "for_skin": ["복합성", "건성"],
-      "main_ingredients": [
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"},
-        {"kr": "아데노신", "inci": "Adenosine"},
-        {"kr": "비타민복합체", "inci": "Vitamin Complex"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": [],
-      "price_range": "3-5만원", "source": "manual_curated"
-    },
-    {
-      "id": "K099", "name_kr": "라이트브링거 더마 시카 모이스처 크림", "name_en": "Light Bringer Derma Cica Moisture Cream",
-      "brand": "Light Bringer", "category": ["진정", "보습"], "subcategory": "크림",
-      "for_skin": ["민감성"],
-      "main_ingredients": [
-        {"kr": "병풀추출물", "inci": "Centella Asiatica Extract"},
-        {"kr": "판테놀", "inci": "Panthenol"},
-        {"kr": "세라마이드NP", "inci": "Ceramide NP"}
-      ],
-      "fragrance_free": true, "alcohol_free": true, "tags": ["저자극"],
-      "price_range": "1-3만원", "source": "manual_curated"
-    },
-    {
-      "id": "K100", "name_kr": "아베다 보태니컬 카인드시스 비타민C 세럼", "name_en": "Aveda Botanical Kinesis Vitamin C Serum",
-      "brand": "Aveda", "category": ["미백", "탄력"], "subcategory": "세럼",
-      "for_skin": ["복합성"],
-      "main_ingredients": [
-        {"kr": "아스코빅애시드", "inci": "Ascorbic Acid"},
-        {"kr": "토코페롤", "inci": "Tocopherol"},
-        {"kr": "펩타이드복합체", "inci": "Peptide Complex"}
-      ],
-      "fragrance_free": false, "alcohol_free": false, "tags": [],
-      "price_range": "5-10만원", "source": "manual_curated"
+      "id": "K001",
+      "name_kr": "COSRX 어드밴스드 스네일 96 뮤신 파워 에센스",
+      "name_en": "COSRX Advanced Snail 96 Mucin Power Essence",
+      "brand": "COSRX",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성",
+        "민감성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "달팽이점액여과물",
+          "inci": "Snail Secretion Filtrate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "부틸렌글라이콜",
+          "inci": "Butylene Glycol"
+        },
+        {
+          "kr": "알란토인",
+          "inci": "Allantoin"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K002",
+      "name_kr": "COSRX BHA 블랙헤드 파워 리퀴드",
+      "name_en": "COSRX BHA Blackhead Power Liquid",
+      "brand": "COSRX",
+      "category": [
+        "모공"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "버드나무껍질추출물",
+          "inci": "Salix Alba Bark Extract"
+        },
+        {
+          "kr": "베타인살리실레이트",
+          "inci": "Betaine Salicylate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "BHA"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K003",
+      "name_kr": "COSRX 시카 카밍 시카 크림",
+      "name_en": "COSRX Centella Blemish Cream",
+      "brand": "COSRX",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "알란토인",
+          "inci": "Allantoin"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K004",
+      "name_kr": "COSRX 비타민C 23% 세럼",
+      "name_en": "COSRX The Vitamin C 23 Serum",
+      "brand": "COSRX",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K005",
+      "name_kr": "COSRX 알로에 수딩 선크림 SPF50+ PA+++",
+      "name_en": "COSRX Aloe Soothing Sun Cream SPF50+",
+      "brand": "COSRX",
+      "category": [
+        "모공",
+        "진정"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "에칠헥실메톡시신나메이트",
+          "inci": "Ethylhexyl Methoxycinnamate"
+        },
+        {
+          "kr": "알로에베라잎즙",
+          "inci": "Aloe Barbadensis Leaf Juice"
+        },
+        {
+          "kr": "산화아연",
+          "inci": "Zinc Oxide"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K006",
+      "name_kr": "토리든 다이브인 저분자 히알루론산 세럼",
+      "name_en": "Torriden DIVE-IN Low Molecular Hyaluronic Acid Serum",
+      "brand": "Torriden",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "건성",
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "아세틸히알루로네이트",
+          "inci": "Acetyl Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K007",
+      "name_kr": "토리든 다이브인 저분자 히알루론산 토너",
+      "name_en": "Torriden DIVE-IN Low Molecular Hyaluronic Acid Toner",
+      "brand": "Torriden",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "건성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K008",
+      "name_kr": "토리든 셀메이저 토너",
+      "name_en": "Torriden Cellmazing Toner",
+      "brand": "Torriden",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K009",
+      "name_kr": "라네즈 워터뱅크 블루 하이알루로닉 크림",
+      "name_en": "Laneige Water Bank Blue Hyaluronic Cream",
+      "brand": "Laneige",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "복합성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "스쿠알란",
+          "inci": "Squalane"
+        },
+        {
+          "kr": "트레할로스",
+          "inci": "Trehalose"
+        },
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K010",
+      "name_kr": "라네즈 크림스킨 토너 앤 모이스처라이저",
+      "name_en": "Laneige Cream Skin Toner & Moisturizer",
+      "brand": "Laneige",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "백차잎수",
+          "inci": "Camellia Sinensis Leaf Water"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K011",
+      "name_kr": "라네즈 립 슬리핑 마스크",
+      "name_en": "Laneige Lip Sleeping Mask",
+      "brand": "Laneige",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "립케어",
+      "for_skin": [
+        "건성",
+        "복합성",
+        "지성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "쉐어버터",
+          "inci": "Butyrospermum Parkii Butter"
+        },
+        {
+          "kr": "코코아씨버터",
+          "inci": "Theobroma Cacao Seed Butter"
+        },
+        {
+          "kr": "산자나무열매오일",
+          "inci": "Hippophae Rhamnoides Fruit Oil"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K012",
+      "name_kr": "닥터자르트 시카페어 크림",
+      "name_en": "Dr.Jart+ Cicapair Cream",
+      "brand": "Dr.Jart+",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "마데카씨산",
+          "inci": "Madecassic Acid"
+        },
+        {
+          "kr": "아시아티코사이드",
+          "inci": "Asiaticoside"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K013",
+      "name_kr": "닥터자르트 세라마이딘 크림",
+      "name_en": "Dr.Jart+ Ceramidin Cream",
+      "brand": "Dr.Jart+",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        },
+        {
+          "kr": "콜레스테롤",
+          "inci": "Cholesterol"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K014",
+      "name_kr": "닥터자르트 V7 토닝 라이트",
+      "name_en": "Dr.Jart+ V7 Toning Light",
+      "brand": "Dr.Jart+",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "토코페롤",
+          "inci": "Tocopherol"
+        },
+        {
+          "kr": "비오틴",
+          "inci": "Biotin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K015",
+      "name_kr": "닥터자르트 바이탈 하이드라 솔루션 마스크",
+      "name_en": "Dr.Jart+ Vital Hydra Solution Mask",
+      "brand": "Dr.Jart+",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K016",
+      "name_kr": "이니스프리 그린티 씨드 세럼",
+      "name_en": "Innisfree Green Tea Seed Serum",
+      "brand": "Innisfree",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "지성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "녹차잎수",
+          "inci": "Camellia Sinensis Leaf Water"
+        },
+        {
+          "kr": "녹차씨오일",
+          "inci": "Camellia Sinensis Seed Oil"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K017",
+      "name_kr": "이니스프리 화산송이 모공 마스크",
+      "name_en": "Innisfree Volcanic Pore Clay Mask",
+      "brand": "Innisfree",
+      "category": [
+        "모공"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "화산송이",
+          "inci": "Volcanic Ash"
+        },
+        {
+          "kr": "카올린",
+          "inci": "Kaolin"
+        },
+        {
+          "kr": "벤토나이트",
+          "inci": "Bentonite"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K018",
+      "name_kr": "이니스프리 레티놀 사이카 리페어 앰플",
+      "name_en": "Innisfree Retinol Cica Repair Ampoule",
+      "brand": "Innisfree",
+      "category": [
+        "탄력",
+        "진정"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "레티놀",
+          "inci": "Retinol"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K019",
+      "name_kr": "이니스프리 비파 비타민C 세럼",
+      "name_en": "Innisfree Vitamin C Brightening Serum",
+      "brand": "Innisfree",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "감귤추출물",
+          "inci": "Citrus Junos Fruit Extract"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K020",
+      "name_kr": "이니스프리 더모 시카 카밍 젤 크림",
+      "name_en": "Innisfree Derma Cica Calming Gel Cream",
+      "brand": "Innisfree",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K021",
+      "name_kr": "Dr.G 레드 블레미쉬 클리어 수딩 크림",
+      "name_en": "Dr.G Red Blemish Clear Soothing Cream",
+      "brand": "Dr.G",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "알란토인",
+          "inci": "Allantoin"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K022",
+      "name_kr": "Dr.G 브라이트닝 화이트닝 앰플",
+      "name_en": "Dr.G Brightening Whitening Ampoule",
+      "brand": "Dr.G",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "알부틴",
+          "inci": "Arbutin"
+        },
+        {
+          "kr": "트라넥삼산",
+          "inci": "Tranexamic Acid"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K023",
+      "name_kr": "Dr.G 시카 수딩 선크림 SPF50+",
+      "name_en": "Dr.G Green Mild Up Sun Plus SPF50+",
+      "brand": "Dr.G",
+      "category": [
+        "진정",
+        "모공"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "산화아연",
+          "inci": "Zinc Oxide"
+        },
+        {
+          "kr": "이산화티타늄",
+          "inci": "Titanium Dioxide"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K024",
+      "name_kr": "메디힐 N.M.F 아쿠아 마스크",
+      "name_en": "Mediheal N.M.F Aquaring Ampoule Mask",
+      "brand": "Mediheal",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "트레할로스",
+          "inci": "Trehalose"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K025",
+      "name_kr": "메디힐 티트리 케어 솔루션 마스크",
+      "name_en": "Mediheal Tea Tree Care Solution Mask",
+      "brand": "Mediheal",
+      "category": [
+        "진정",
+        "모공"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "티트리잎오일",
+          "inci": "Melaleuca Alternifolia Leaf Oil"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K026",
+      "name_kr": "메디힐 콜라겐 임팩트 에센셜 마스크",
+      "name_en": "Mediheal Collagen Impact Essential Mask",
+      "brand": "Mediheal",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "가수분해콜라겐",
+          "inci": "Hydrolyzed Collagen"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "토코페롤",
+          "inci": "Tocopherol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K027",
+      "name_kr": "AHC 시그니처 리얼 아이크림",
+      "name_en": "AHC Signature Real Eye Cream For Face",
+      "brand": "AHC",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "아이크림",
+      "for_skin": [
+        "건성",
+        "복합성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "가수분해콜라겐",
+          "inci": "Hydrolyzed Collagen"
+        },
+        {
+          "kr": "카퍼트리펩타이드-1",
+          "inci": "Copper Tripeptide-1"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K028",
+      "name_kr": "AHC 프리미엄 비타민C 24 앰플",
+      "name_en": "AHC Premium Vitamin C 24 Ampoule",
+      "brand": "AHC",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        },
+        {
+          "kr": "에칠아스코빌에텔",
+          "inci": "Ethyl Ascorbyl Ether"
+        },
+        {
+          "kr": "토코페롤",
+          "inci": "Tocopherol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K029",
+      "name_kr": "AHC 콜라겐 비욘드 7 아이크림",
+      "name_en": "AHC Collagen Beyond 7 Eye Cream",
+      "brand": "AHC",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "아이크림",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "가수분해콜라겐",
+          "inci": "Hydrolyzed Collagen"
+        },
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "5-10만원",
+      "source": "manual_curated",
+      "price": 75000
+    },
+    {
+      "id": "K030",
+      "name_kr": "미샤 타임 레볼루션 나이트 리페어 앰플",
+      "name_en": "Missha Time Revolution Night Repair Ampoule",
+      "brand": "Missha",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "비피다발효용해물",
+          "inci": "Bifida Ferment Lysate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K031",
+      "name_kr": "미샤 차차 진주 토너",
+      "name_en": "Missha Cho Bo Yang BB Pearl Toner",
+      "brand": "Missha",
+      "category": [
+        "미백",
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "트루진주추출물",
+          "inci": "Pearl Extract"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K032",
+      "name_kr": "어글리브이 AHA-BHA-PHA 30 데이즈 미라클 토너",
+      "name_en": "Some By Mi AHA-BHA-PHA 30 Days Miracle Toner",
+      "brand": "Some By Mi",
+      "category": [
+        "모공"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "락트산",
+          "inci": "Lactic Acid"
+        },
+        {
+          "kr": "살리실산",
+          "inci": "Salicylic Acid"
+        },
+        {
+          "kr": "글루코노락톤",
+          "inci": "Gluconolactone"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "tags": [
+        "AHA",
+        "BHA"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K033",
+      "name_kr": "어글리브이 갈락토미 미라클 토너",
+      "name_en": "Some By Mi Galactomyces Pure Vitamin C Glow Toner",
+      "brand": "Some By Mi",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "갈락토미세스발효여과물",
+          "inci": "Galactomyces Ferment Filtrate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K034",
+      "name_kr": "어글리브이 시카 세럼",
+      "name_en": "Some By Mi Super Matcha Pore Care Serum",
+      "brand": "Some By Mi",
+      "category": [
+        "진정",
+        "모공"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "민감성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "녹차잎추출물",
+          "inci": "Camellia Sinensis Leaf Extract"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "산화아연",
+          "inci": "Zinc Oxide"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K035",
+      "name_kr": "셀퓨전씨 레이저 선크림 100",
+      "name_en": "Cell Fusion C Laser Sunscreen 100 SPF50+",
+      "brand": "Cell Fusion C",
+      "category": [
+        "모공",
+        "진정"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "산화아연",
+          "inci": "Zinc Oxide"
+        },
+        {
+          "kr": "이산화티타늄",
+          "inci": "Titanium Dioxide"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K036",
+      "name_kr": "셀퓨전씨 익스퍼트 어드밴스드 셀팜 RX 토너",
+      "name_en": "Cell Fusion C Expert Cellfarm RX Toner",
+      "brand": "Cell Fusion C",
+      "category": [
+        "탄력",
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "복합성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K037",
+      "name_kr": "디알이쥬 부스터 세럼",
+      "name_en": "Dr.Different Booster Serum",
+      "brand": "Dr.Different",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K038",
+      "name_kr": "빌리프 더 트루 크림 모이스처라이징 밤",
+      "name_en": "Belif The True Cream Moisturizing Bomb",
+      "brand": "Belif",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "레이디스맨틀추출물",
+          "inci": "Alchemilla Vulgaris Extract"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "콜레스테롤",
+          "inci": "Cholesterol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K039",
+      "name_kr": "빌리프 아쿠아밤 젤 크림",
+      "name_en": "Belif Aqua Bomb Jelly Cream",
+      "brand": "Belif",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "오트밀추출물",
+          "inci": "Avena Sativa Extract"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K040",
+      "name_kr": "마녀공장 비피다 바이옴 콤플렉스 앰플",
+      "name_en": "Manyo Bifida Biome Complex Ampoule",
+      "brand": "Manyo",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "건성",
+        "복합성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "비피다발효용해물",
+          "inci": "Bifida Ferment Lysate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K041",
+      "name_kr": "마녀공장 갈락 나이아신 2.0 에센스",
+      "name_en": "Manyo Galac Niacin 2.0 Essence",
+      "brand": "Manyo",
+      "category": [
+        "미백",
+        "보습"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "갈락토미세스발효여과물",
+          "inci": "Galactomyces Ferment Filtrate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K042",
+      "name_kr": "라운드랩 1025 독도 토너",
+      "name_en": "Round Lab 1025 Dokdo Toner",
+      "brand": "Round Lab",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "심해수",
+          "inci": "Sea Water"
+        },
+        {
+          "kr": "트레할로스",
+          "inci": "Trehalose"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K043",
+      "name_kr": "라운드랩 자작나무 수분 크림",
+      "name_en": "Round Lab Birch Juice Moisturizing Cream",
+      "brand": "Round Lab",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "자작나무수액",
+          "inci": "Betula Platyphylla Japonica Juice"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K044",
+      "name_kr": "라운드랩 약산성 토너 (1025 독도 약산성)",
+      "name_en": "Round Lab Mugwort Calming Toner",
+      "brand": "Round Lab",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "쑥추출물",
+          "inci": "Artemisia Vulgaris Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "알란토인",
+          "inci": "Allantoin"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K045",
+      "name_kr": "메이크프렘 세이프 미 릴리프 모이스처 크림",
+      "name_en": "Make P:rem Safe Me Relief Moisture Cream",
+      "brand": "Make P:rem",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K046",
+      "name_kr": "메이크프렘 시카 토너",
+      "name_en": "Make P:rem Hydrate Me Micro Tension Toner",
+      "brand": "Make P:rem",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K047",
+      "name_kr": "솔티드 비타민C 23 세럼",
+      "name_en": "Salted Vitamin C 23 Serum",
+      "brand": "Salted",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        },
+        {
+          "kr": "비타민E",
+          "inci": "Tocopherol"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K048",
+      "name_kr": "페이퍼파파 살리실릭 토너",
+      "name_en": "Paperpapa Salicylic Acid Toner",
+      "brand": "Paperpapa",
+      "category": [
+        "모공"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "살리실산",
+          "inci": "Salicylic Acid"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "tags": [
+        "BHA"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K049",
+      "name_kr": "헤라 블랙 라이프 에센스",
+      "name_en": "Hera Black Cushion Essence",
+      "brand": "Hera",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        },
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "검은콩추출물",
+          "inci": "Black Soybean Extract"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "10만원+",
+      "source": "manual_curated",
+      "price": 120000
+    },
+    {
+      "id": "K050",
+      "name_kr": "아이오페 바이오 에센스 인텐시브 컨디셔닝",
+      "name_en": "IOPE Bio Essence Intensive Conditioning",
+      "brand": "IOPE",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성",
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "바이오 컨버전 콤플렉스",
+          "inci": "Bifida Ferment Lysate"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "5-10만원",
+      "source": "manual_curated",
+      "price": 75000
+    },
+    {
+      "id": "K051",
+      "name_kr": "설화수 자음생 에센스",
+      "name_en": "Sulwhasoo Concentrated Ginseng Renewing Essential Oil",
+      "brand": "Sulwhasoo",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "인삼추출물",
+          "inci": "Panax Ginseng Root Extract"
+        },
+        {
+          "kr": "사포닌",
+          "inci": "Saponin"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "10만원+",
+      "source": "manual_curated",
+      "price": 120000
+    },
+    {
+      "id": "K052",
+      "name_kr": "설화수 윤조에센스",
+      "name_en": "Sulwhasoo First Care Activating Serum",
+      "brand": "Sulwhasoo",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "JAUM 밸런싱 콤플렉스",
+          "inci": "JAUM Balancing Complex"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "10만원+",
+      "source": "manual_curated",
+      "price": 120000
+    },
+    {
+      "id": "K053",
+      "name_kr": "후 천기단 화현 밸런서",
+      "name_en": "The History of Whoo Hwa Hyun Balancer",
+      "brand": "The History of Whoo",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "산수유추출물",
+          "inci": "Cornus Officinalis Fruit Extract"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "10만원+",
+      "source": "manual_curated",
+      "price": 120000
+    },
+    {
+      "id": "K054",
+      "name_kr": "후 비첩 자생 에센스",
+      "name_en": "The History of Whoo Bichup Self-Generating Anti-Aging Essence",
+      "brand": "The History of Whoo",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "인삼추출물",
+          "inci": "Panax Ginseng Root Extract"
+        },
+        {
+          "kr": "녹용추출물",
+          "inci": "Deer Antler Extract"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "10만원+",
+      "source": "manual_curated",
+      "price": 120000
+    },
+    {
+      "id": "K055",
+      "name_kr": "라로슈포제 톨러리안 더블 리페어 모이스처라이저",
+      "name_en": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
+      "brand": "La Roche-Posay",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "세라마이드3",
+          "inci": "Ceramide 3"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K056",
+      "name_kr": "라로슈포제 시카플라스트 밤 B5+",
+      "name_en": "La Roche-Posay Cicaplast Baume B5+",
+      "brand": "La Roche-Posay",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "쉐어버터",
+          "inci": "Butyrospermum Parkii Butter"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K057",
+      "name_kr": "라로슈포제 안티헬리오스 인비저블 플루이드 SPF50+",
+      "name_en": "La Roche-Posay Anthelios Invisible Fluid SPF50+",
+      "brand": "La Roche-Posay",
+      "category": [
+        "모공",
+        "진정"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "산화아연",
+          "inci": "Zinc Oxide"
+        },
+        {
+          "kr": "셀룰로오스",
+          "inci": "Cellulose"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": false,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K058",
+      "name_kr": "비욘드 페이셜 클리닉 모이스처 크림",
+      "name_en": "Beyond Phyto Moisture Cream",
+      "brand": "Beyond",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "쉐어버터",
+          "inci": "Butyrospermum Parkii Butter"
+        },
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K059",
+      "name_kr": "클리오 킬커버 다이아몬드 베이스",
+      "name_en": "Clio Kill Cover Pink Glow Cream Concealer",
+      "brand": "Clio",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K060",
+      "name_kr": "페리페라 캘리퍼스 크림 토너",
+      "name_en": "Peripera Inkdew Velvet Wear",
+      "brand": "Peripera",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K061",
+      "name_kr": "에뛰드 수분 가득 모이스처 토너",
+      "name_en": "Etude Soonjung pH 5.5 Relief Toner",
+      "brand": "Etude",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K062",
+      "name_kr": "에뛰드 수분필 1+1+1 마스크",
+      "name_en": "Etude 0.2 Therapy Air Mask",
+      "brand": "Etude",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K063",
+      "name_kr": "토니모리 더 촉촉 그린티 수분 토너",
+      "name_en": "Tony Moly The Chok Chok Green Tea Hydration Toner",
+      "brand": "Tony Moly",
+      "category": [
+        "보습",
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "녹차잎수",
+          "inci": "Camellia Sinensis Leaf Water"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K064",
+      "name_kr": "네이처리퍼블릭 알로에 베라 수딩 젤",
+      "name_en": "Nature Republic Aloe Vera 92% Soothing Gel",
+      "brand": "Nature Republic",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "젤",
+      "for_skin": [
+        "민감성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "알로에베라잎즙",
+          "inci": "Aloe Barbadensis Leaf Juice"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K065",
+      "name_kr": "더페이스샵 라이스 워터 브라이트닝 클렌징 폼",
+      "name_en": "The Face Shop Rice Water Bright Cleansing Foam",
+      "brand": "The Face Shop",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "클렌저",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "쌀발효추출물",
+          "inci": "Oryza Sativa Extract"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K066",
+      "name_kr": "어퓨 마데카소사이드 크림",
+      "name_en": "A'pieu Madecassoside Cream",
+      "brand": "A'pieu",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K067",
+      "name_kr": "아누아 어성초 77% 수딩 토너",
+      "name_en": "Anua Heartleaf 77% Toner",
+      "brand": "Anua",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "지성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "어성초추출물",
+          "inci": "Houttuynia Cordata Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K068",
+      "name_kr": "아누아 어성초 80% 수딩 앰플",
+      "name_en": "Anua Heartleaf 80% Soothing Ampoule",
+      "brand": "Anua",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "어성초추출물",
+          "inci": "Houttuynia Cordata Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K069",
+      "name_kr": "스킨푸드 캐롯 카로틴 카밍 워터 패드",
+      "name_en": "Skinfood Carrot Carotene Calming Water Pad",
+      "brand": "Skinfood",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "당근뿌리추출물",
+          "inci": "Daucus Carota Sativa Root Extract"
+        },
+        {
+          "kr": "베타카로틴",
+          "inci": "Beta-Carotene"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K070",
+      "name_kr": "닥터지 그린마일드업 선크림 SPF50+ PA++++",
+      "name_en": "Dr.G Green Mild Up Sun Plus",
+      "brand": "Dr.G",
+      "category": [
+        "모공",
+        "진정"
+      ],
+      "subcategory": "선크림",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "산화아연",
+          "inci": "Zinc Oxide"
+        },
+        {
+          "kr": "이산화티타늄",
+          "inci": "Titanium Dioxide"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K071",
+      "name_kr": "셀퓨전씨 익스퍼트 닥터 세럼",
+      "name_en": "Cell Fusion C Expert Dr. Serum",
+      "brand": "Cell Fusion C",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "5-10만원",
+      "source": "manual_curated",
+      "price": 75000
+    },
+    {
+      "id": "K072",
+      "name_kr": "닥터자르트 시카페어 인텐시브 수딩 마스크",
+      "name_en": "Dr.Jart+ Cicapair Tiger Grass Calming Mask",
+      "brand": "Dr.Jart+",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K073",
+      "name_kr": "이니스프리 한란 인텐스 크림",
+      "name_en": "Innisfree Jeju Orchid Enriched Cream",
+      "brand": "Innisfree",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "한란꽃추출물",
+          "inci": "Cymbidium Goeringii Flower Extract"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K074",
+      "name_kr": "라네즈 워터뱅크 모이스처 에센스",
+      "name_en": "Laneige Water Bank Moisture Essence",
+      "brand": "Laneige",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "스쿠알란",
+          "inci": "Squalane"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K075",
+      "name_kr": "COSRX 갈락토미세스 95 톤 밸런싱 에센스",
+      "name_en": "COSRX Galactomyces 95 Tone Balancing Essence",
+      "brand": "COSRX",
+      "category": [
+        "미백",
+        "보습"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "갈락토미세스발효여과물",
+          "inci": "Galactomyces Ferment Filtrate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K076",
+      "name_kr": "토리든 셀메이저 펩타이드 세럼",
+      "name_en": "Torriden Cellmazing Peptide Serum",
+      "brand": "Torriden",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K077",
+      "name_kr": "어글리브이 갈락 나이아신 토너",
+      "name_en": "Some By Mi Galactomyces Pure Vitamin C Glow Toner 2.0",
+      "brand": "Some By Mi",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "복합성",
+        "지성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "갈락토미세스발효여과물",
+          "inci": "Galactomyces Ferment Filtrate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K078",
+      "name_kr": "디알이쥬 시카 부스터 크림",
+      "name_en": "Dr.Different Cica Booster Cream",
+      "brand": "Dr.Different",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K079",
+      "name_kr": "메디힐 N.M.F 인텐시브 모이스처라이징 크림",
+      "name_en": "Mediheal N.M.F Aquaring Intensive Cream",
+      "brand": "Mediheal",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "트레할로스",
+          "inci": "Trehalose"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K080",
+      "name_kr": "더후 천기단 화현 자음 발란서",
+      "name_en": "The History of Whoo Hwa Hyun Jaeum Balancer",
+      "brand": "The History of Whoo",
+      "category": [
+        "보습",
+        "탄력"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "산수유추출물",
+          "inci": "Cornus Officinalis Fruit Extract"
+        },
+        {
+          "kr": "백자인추출물",
+          "inci": "Biota Orientalis Seed Extract"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "10만원+",
+      "source": "manual_curated",
+      "price": 120000
+    },
+    {
+      "id": "K081",
+      "name_kr": "라네즈 워터 슬리핑 마스크 EX",
+      "name_en": "Laneige Water Sleeping Mask EX",
+      "brand": "Laneige",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "수분활력 콤플렉스",
+          "inci": "Hydro Ionized Mineral Water"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K082",
+      "name_kr": "닥터자르트 더마스크 워터 젯 비타민 마스크",
+      "name_en": "Dr.Jart+ Dermask Water Jet Vital Hydra Solution",
+      "brand": "Dr.Jart+",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K083",
+      "name_kr": "닥터지 RED 블레미쉬 세럼",
+      "name_en": "Dr.G Red Blemish Clear Soothing Active Serum",
+      "brand": "Dr.G",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K084",
+      "name_kr": "이니스프리 시카 밤 인텐시브",
+      "name_en": "Innisfree Cica Balm Intensive",
+      "brand": "Innisfree",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "쉐어버터",
+          "inci": "Butyrospermum Parkii Butter"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K085",
+      "name_kr": "AHC 콜라겐 비욘드 7 토너",
+      "name_en": "AHC Collagen Beyond 7 Toner",
+      "brand": "AHC",
+      "category": [
+        "탄력",
+        "보습"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "가수분해콜라겐",
+          "inci": "Hydrolyzed Collagen"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K086",
+      "name_kr": "스킨1004 마다가스카르 센텔라 앰플",
+      "name_en": "Skin1004 Madagascar Centella Ampoule",
+      "brand": "Skin1004",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "민감성",
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "글리세린",
+          "inci": "Glycerin"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K087",
+      "name_kr": "스킨1004 마다가스카르 센텔라 토너",
+      "name_en": "Skin1004 Madagascar Centella Toning Toner",
+      "brand": "Skin1004",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K088",
+      "name_kr": "이지피지 케어 솔루션 펩타이드 앰플",
+      "name_en": "Esfolio Peptide Solution Ampoule",
+      "brand": "Esfolio",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        },
+        {
+          "kr": "콜라겐",
+          "inci": "Collagen"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K089",
+      "name_kr": "닥터지 화이트 인 모이스처 크림",
+      "name_en": "Dr.G White in Moisture Cream",
+      "brand": "Dr.G",
+      "category": [
+        "미백",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "알부틴",
+          "inci": "Arbutin"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K090",
+      "name_kr": "메디힐 콜라겐 솔루션 마스크 N",
+      "name_en": "Mediheal Collagen Solution Mask",
+      "brand": "Mediheal",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "팩",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "가수분해콜라겐",
+          "inci": "Hydrolyzed Collagen"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1만원 미만",
+      "source": "manual_curated",
+      "price": 8000
+    },
+    {
+      "id": "K091",
+      "name_kr": "어니스트 비건 카밍 토너",
+      "name_en": "Earnest Vegan Calming Toner",
+      "brand": "Earnest",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "녹차잎추출물",
+          "inci": "Camellia Sinensis Leaf Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "비건",
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K092",
+      "name_kr": "코스알엑스 알파-아르부틴 화이트닝 크림",
+      "name_en": "COSRX Alpha-Arbutin Hyaluronic Cream",
+      "brand": "COSRX",
+      "category": [
+        "미백",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "알부틴",
+          "inci": "Alpha-Arbutin"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K093",
+      "name_kr": "라네즈 퍼펙트 리뉴 영 레티놀 세럼",
+      "name_en": "Laneige Perfect Renew Young Retinol Serum",
+      "brand": "Laneige",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "레티놀",
+          "inci": "Retinol"
+        },
+        {
+          "kr": "비사보롤",
+          "inci": "Bisabolol"
+        },
+        {
+          "kr": "토코페롤",
+          "inci": "Tocopherol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "5-10만원",
+      "source": "manual_curated",
+      "price": 75000
+    },
+    {
+      "id": "K094",
+      "name_kr": "닥터자르트 시카페어 인텐시브 카밍 토너",
+      "name_en": "Dr.Jart+ Cicapair Calming Toner",
+      "brand": "Dr.Jart+",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K095",
+      "name_kr": "비욘드 데일리 하이드 멀티 부스터",
+      "name_en": "Beyond Daily Hyde Multi Booster",
+      "brand": "Beyond",
+      "category": [
+        "보습"
+      ],
+      "subcategory": "에센스",
+      "for_skin": [
+        "건성",
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "히알루론산나트륨",
+          "inci": "Sodium Hyaluronate"
+        },
+        {
+          "kr": "베타인",
+          "inci": "Betaine"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K096",
+      "name_kr": "넘버즈인 1번 시카 토너",
+      "name_en": "Numbuzin No.1 Cica Toner",
+      "brand": "Numbuzin",
+      "category": [
+        "진정"
+      ],
+      "subcategory": "토너",
+      "for_skin": [
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "마데카쇼사이드",
+          "inci": "Madecassoside"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K097",
+      "name_kr": "넘버즈인 3번 갈락토미세스 글로우 세럼",
+      "name_en": "Numbuzin No.3 Glow Galactomyces Serum",
+      "brand": "Numbuzin",
+      "category": [
+        "미백"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "갈락토미세스발효여과물",
+          "inci": "Galactomyces Ferment Filtrate"
+        },
+        {
+          "kr": "나이아신아마이드",
+          "inci": "Niacinamide"
+        },
+        {
+          "kr": "비타민C유도체",
+          "inci": "Ascorbyl Glucoside"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K098",
+      "name_kr": "넘버즈인 5번 펩타이드 노화 케어 세럼",
+      "name_en": "Numbuzin No.5 Skin Vitamin Serum",
+      "brand": "Numbuzin",
+      "category": [
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성",
+        "건성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        },
+        {
+          "kr": "아데노신",
+          "inci": "Adenosine"
+        },
+        {
+          "kr": "비타민복합체",
+          "inci": "Vitamin Complex"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [],
+      "price_range": "3-5만원",
+      "source": "manual_curated",
+      "price": 40000
+    },
+    {
+      "id": "K099",
+      "name_kr": "라이트브링거 더마 시카 모이스처 크림",
+      "name_en": "Light Bringer Derma Cica Moisture Cream",
+      "brand": "Light Bringer",
+      "category": [
+        "진정",
+        "보습"
+      ],
+      "subcategory": "크림",
+      "for_skin": [
+        "민감성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "병풀추출물",
+          "inci": "Centella Asiatica Extract"
+        },
+        {
+          "kr": "판테놀",
+          "inci": "Panthenol"
+        },
+        {
+          "kr": "세라마이드NP",
+          "inci": "Ceramide NP"
+        }
+      ],
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "tags": [
+        "저자극"
+      ],
+      "price_range": "1-3만원",
+      "source": "manual_curated",
+      "price": 20000
+    },
+    {
+      "id": "K100",
+      "name_kr": "아베다 보태니컬 카인드시스 비타민C 세럼",
+      "name_en": "Aveda Botanical Kinesis Vitamin C Serum",
+      "brand": "Aveda",
+      "category": [
+        "미백",
+        "탄력"
+      ],
+      "subcategory": "세럼",
+      "for_skin": [
+        "복합성"
+      ],
+      "main_ingredients": [
+        {
+          "kr": "아스코빅애시드",
+          "inci": "Ascorbic Acid"
+        },
+        {
+          "kr": "토코페롤",
+          "inci": "Tocopherol"
+        },
+        {
+          "kr": "펩타이드복합체",
+          "inci": "Peptide Complex"
+        }
+      ],
+      "fragrance_free": false,
+      "alcohol_free": false,
+      "tags": [],
+      "price_range": "5-10만원",
+      "source": "manual_curated",
+      "price": 75000
     }
   ]
 }
