@@ -15,5 +15,11 @@ class Settings(BaseSettings):
     JWT_SECRET: str = "change-me"
     JWT_EXPIRE_DAYS: int = 7
 
+    # 날씨 외부 API (없으면 목업 fallback)
+    WEATHER_API_KEY: str = ""
+    WEATHER_DEFAULT_LAT: float = 37.5665   # 서울
+    WEATHER_DEFAULT_LON: float = 126.9780
+    WEATHER_CACHE_TTL: int = 1800          # 캐시 30분(초)
+
 
 settings = Settings()
