@@ -11,6 +11,7 @@ tags_metadata = [
     {"name": "mypage", "description": "J. 마이페이지"},
     {"name": "care", "description": "K. 케어 가이드"},
     {"name": "report", "description": "L. 분석 리포트"},
+    {"name": "weather", "description": "E.2/F.3 날씨·환경"},
 ]
 
 app = FastAPI(title="담다 API", version="0.1.0", openapi_tags=tags_metadata)
@@ -29,7 +30,7 @@ def health():
 #   app.include_router(survey.router)
 # ────────────────────────────────────────────────────────────────
 
-from app.routers import survey, scan, mypage, recommend, product
+from app.routers import survey, scan, mypage, recommend, product, weather
 
 app.include_router(survey.router)
 app.include_router(scan.router)
@@ -37,3 +38,4 @@ app.include_router(mypage.router)
 app.include_router(recommend.router)
 app.include_router(product.router)
 app.include_router(product.wishlist_router)
+app.include_router(weather.router)
