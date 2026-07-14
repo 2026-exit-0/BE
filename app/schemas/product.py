@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 
 
@@ -16,6 +18,18 @@ class ProductOut(BaseModel):        # 출력값 (명세 I)
     purchase_url: str | None = None
     alcohol_free: bool
     fragrance_free: bool
+
+    class Config:
+        from_attributes = True
+
+
+class WishlistOut(BaseModel):       # 출력값 (명세 I.4) — 제품 정보 + 찜한 시각
+    product_id: str
+    name_kr: str
+    brand: str | None = None
+    price: int | None = None
+    image_url: str | None = None
+    created_at: datetime
 
     class Config:
         from_attributes = True
