@@ -1,7 +1,3 @@
-"""분석 결과 조회 (명세 H.1) — 스캔 결과 단건 조회.
-
-생성(분석)은 app/routers/scan.py 담당. 여기선 "조회"만 담당한다.
-"""
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
@@ -13,7 +9,7 @@ from app.schemas.result import ResultOut
 router = APIRouter(prefix="/result", tags=["result"])
 
 
-@router.get("/{session_id}", response_model=ResultOut, summary="[H.1] 분석 결과 조회")
+@router.get("/{session_id}", response_model=ResultOut, summary="[H] 분석 결과 조회")
 def get_result(session_id: str, db: Session = Depends(get_db),
                user=Depends(get_current_user)):
     # session 소유자 조인 필터 — 남의 세션이면 존재 여부와 무관하게 동일한 404
