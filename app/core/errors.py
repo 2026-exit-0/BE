@@ -14,7 +14,7 @@ import logging
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 
 logger = logging.getLogger("damda")
 
@@ -58,6 +58,12 @@ def register_exception_handlers(app: FastAPI) -> None:
             for e in exc.errors()
         ]
         return _error(422, "입력값이 올바르지 않습니다", "VALIDATION_ERROR", errors=errors)
+
+    @app.exception_handler(IntegrityError)
+    async def _integrity(request: Request, exc: IntegrityError):
+        # 중복(unique)·외래키 등 DB 제약 위반 → 409
+        logger.warning("Integrity error at %s %s: %s", request.method, request.url.path, exc.orig)
+        return _error(409, "이미 존재하거나 제약 조건을 위반한 요청입니다", "CONFLICT")
 
     @app.exception_handler(SQLAlchemyError)
     async def _db(request: Request, exc: SQLAlchemyError):
