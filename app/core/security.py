@@ -1,29 +1,32 @@
-"""인증 유틸 — 비밀번호 해싱 + JWT 발급/검증 (명세 C)."""
+"""인증 유틸 — 비밀번호 해싱 + JWT 발급/검증 (명세 C).
+
+해싱은 bcrypt 를 직접 사용한다. (passlib 은 유지보수 중단 + 최신 bcrypt 와
+호환성 문제가 있어 사용하지 않음.) bcrypt 는 72바이트까지만 처리하므로
+초과 입력은 바이트 단위로 절단한다.
+"""
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 
+import bcrypt
 from jose import JWTError, jwt
-from passlib.context import CryptContext
 
 from app.core.config import settings
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 ALGORITHM = "HS256"
 
 
-def _bcrypt_safe(password: str) -> str:
-    """bcrypt는 72바이트까지만 사용 → 초과분을 멀티바이트 경계 안전하게 절단.
-    (해싱·검증에 동일 적용해 일관성 유지)"""
-    return password.encode("utf-8")[:72].decode("utf-8", "ignore")
-
-
 def hash_password(password: str) -> str:
-    return pwd_context.hash(_bcrypt_safe(password))
+    pw = password.encode("utf-8")[:72]              # bcrypt 72바이트 제한
+    return bcrypt.hashpw(pw, bcrypt.gensalt()).decode("utf-8")
 
 
 def verify_password(password: str, hashed: str) -> bool:
-    return pwd_context.verify(_bcrypt_safe(password), hashed)
+    pw = password.encode("utf-8")[:72]
+    try:
+        return bcrypt.checkpw(pw, hashed.encode("utf-8"))
+    except ValueError:
+        return False
 
 
 def create_access_token(sub: str) -> str:
