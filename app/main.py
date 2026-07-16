@@ -35,8 +35,9 @@ def health():
 #   app.include_router(survey.router)
 # ────────────────────────────────────────────────────────────────
 
-from app.routers import survey, scan, mypage, recommend, product, weather, result, history, report
+from app.routers import survey, scan, mypage, recommend, product, weather, result, history, report, auth
 
+app.include_router(auth.router)
 app.include_router(survey.router)
 app.include_router(scan.router)
 app.include_router(mypage.router)

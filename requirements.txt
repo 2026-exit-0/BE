@@ -29,3 +29,8 @@ pymysql>=1.1.0              # MySQL 드라이버
 cryptography>=42.0.0        # pymysql 인증(caching_sha2)용
 pydantic-settings>=2.0.0   # .env 로드
 python-dotenv>=1.0.0
+
+# --- 인증 (JWT + 해싱 + 소셜) ---
+passlib[bcrypt]>=1.7.4
+python-jose[cryptography]>=3.3.0
+email-validator>=2.0.0
