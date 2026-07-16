@@ -12,12 +12,18 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 ALGORITHM = "HS256"
 
 
+def _bcrypt_safe(password: str) -> str:
+    """bcrypt는 72바이트까지만 사용 → 초과분을 멀티바이트 경계 안전하게 절단.
+    (해싱·검증에 동일 적용해 일관성 유지)"""
+    return password.encode("utf-8")[:72].decode("utf-8", "ignore")
+
+
 def hash_password(password: str) -> str:
-    return pwd_context.hash(password)
+    return pwd_context.hash(_bcrypt_safe(password))
 
 
 def verify_password(password: str, hashed: str) -> bool:
-    return pwd_context.verify(password, hashed)
+    return pwd_context.verify(_bcrypt_safe(password), hashed)
 
 
 def create_access_token(sub: str) -> str:

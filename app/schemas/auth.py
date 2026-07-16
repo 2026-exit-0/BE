@@ -1,10 +1,10 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 
 
 class SignupIn(BaseModel):
     email: EmailStr
-    password: str
-    nickname: str
+    password: str = Field(min_length=8, max_length=72)   # 정책: 8자 이상 (C.3.2)
+    nickname: str = Field(min_length=1, max_length=20)   # 닉네임 최대 20자 (C.3.3)
 
 
 class LoginIn(BaseModel):
@@ -14,7 +14,7 @@ class LoginIn(BaseModel):
 
 class ChangePasswordIn(BaseModel):
     current_password: str
-    new_password: str
+    new_password: str = Field(min_length=8, max_length=72)
 
 
 class TokenOut(BaseModel):
