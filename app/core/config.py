@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     # 개발용 더미 유저 (로그인 붙기 전까지 사용)
     DEV_USER_ID: str = "00000000-0000-0000-0000-000000000001"
 
-    # 인증(추후 사용)
+    # 인증
     JWT_SECRET: str = "change-me"
     JWT_EXPIRE_DAYS: int = 7
 
