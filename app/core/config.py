@@ -15,6 +15,12 @@ class Settings(BaseSettings):
     JWT_SECRET: str = "change-me"
     JWT_EXPIRE_DAYS: int = 7
 
+    # 소셜 로그인 (provider 앱 등록 후 .env 로 주입)
+    KAKAO_CLIENT_ID: str = ""
+    KAKAO_CLIENT_SECRET: str = ""
+    GOOGLE_CLIENT_ID: str = ""
+    GOOGLE_CLIENT_SECRET: str = ""
+
     # 날씨 외부 API (없으면 목업 fallback)
     WEATHER_API_KEY: str = ""
     WEATHER_DEFAULT_LAT: float = 37.5665   # 서울
