@@ -1,8 +1,9 @@
-"""스캔 세션 조회 공용 쿼리 — history(J.3)/report(L.1·L.2) 가 공유한다."""
+"""스캔 세션 조회 공용 쿼리 — history(J.3)/report(L.1·L.2)/care(K.1) 가 공유한다."""
 from datetime import datetime
 
 from sqlalchemy.orm import Session, joinedload
 
+from app.models.advice import AiAdvice
 from app.models.scan import ScanSession
 
 
@@ -21,6 +22,14 @@ def get_user_session(db: Session, user_id: str, session_id: str) -> ScanSession 
     return (db.query(ScanSession)
            .options(joinedload(ScanSession.result))
            .filter(ScanSession.session_id == session_id, ScanSession.user_id == user_id)
+           .first())
+
+
+def get_advice_by_session(db: Session, user_id: str, session_id: str) -> AiAdvice | None:
+    """세션 소유자 확인 후 AiAdvice 조회. 소유 아니거나 세션/조언이 없으면 None."""
+    return (db.query(AiAdvice)
+           .join(ScanSession, AiAdvice.session_id == ScanSession.session_id)
+           .filter(AiAdvice.session_id == session_id, ScanSession.user_id == user_id)
            .first())
 
 
