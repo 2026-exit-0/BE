@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.git/
+.github/
+.env
+.env.*
+*.log
+.pytest_cache/
+.vscode/
+.idea/
+node_modules/
+# AI/데모 관련 무거운 산출물 (웹 배포 불필요)
+*.pt
+*.pth
