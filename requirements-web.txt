@@ -18,3 +18,6 @@ httpx>=0.27.0
 # 인증
 bcrypt>=4.0.0
 python-jose[cryptography]>=3.3.0
+
+# PDF 리포트 생성 (H.7.1) — 시스템 패키지(Pango/Cairo/GDK-Pixbuf)는 Dockerfile 참고
+weasyprint>=69.0

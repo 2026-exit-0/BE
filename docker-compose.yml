@@ -25,11 +25,12 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    env_file:
+      - .env
     environment:
-      # 컨테이너끼리는 서비스명(db)로 접속 → 내부 포트 3306
+      # .env 의 DATABASE_URL 은 localhost:3307(호스트 기준) 이라 컨테이너 안에선 못 씀.
+      # 같은 compose 네트워크에서는 서비스명(db) + 컨테이너 내부 포트(3306)로 접근.
       DATABASE_URL: mysql+pymysql://root:password@db:3306/damda?charset=utf8mb4
-      JWT_SECRET: local-dev-secret
-      # 소셜/날씨 키는 로컬 테스트 시 필요하면 여기에 추가
     ports:
       - "8000:8000"
 
