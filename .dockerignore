@@ -1,0 +1,48 @@
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+
+# 환경변수 / 비밀
+.env
+.env.local
+*.secret
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# git / IDE / OS
+.git/
+.gitignore
+.github/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 로그
+*.log
+logs/
+uvicorn.log
+
+# 업로드 / 임시 파일
+uploads/
+tmp/
+*.tmp
+
+# 모델 파일 (AI repo 가 관리)
+*.pt
+*.pth
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 문서
+README.md
+SETUP.md

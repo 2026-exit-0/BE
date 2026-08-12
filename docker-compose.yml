@@ -1,4 +1,5 @@
-# 로컬에 MySQL 없으면: docker compose up -d 로 띄우기
+# 로컬 전체 실행:  docker compose up --build   → http://localhost:8000/docs
+# DB만 띄우기:     docker compose up -d db
 services:
   db:
     image: mysql:8.0
@@ -12,6 +13,26 @@ services:
       - "3307:3306"   # 호스트 3306이 로컬 MySQL과 충돌 → 3307로 노출
     volumes:
       - damda_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-ppassword"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    container_name: damda-api
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      # .env 의 DATABASE_URL 은 localhost:3307(호스트 기준) 이라 컨테이너 안에선 못 씀.
+      # 같은 compose 네트워크에서는 서비스명(db) + 컨테이너 내부 포트(3306)로 접근.
+      DATABASE_URL: mysql+pymysql://root:password@db:3306/damda?charset=utf8mb4
+    ports:
+      - "8000:8000"
 
 volumes:
   damda_mysql:
