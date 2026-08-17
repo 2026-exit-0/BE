@@ -27,5 +27,8 @@ class Settings(BaseSettings):
     WEATHER_DEFAULT_LON: float = 126.9780
     WEATHER_CACHE_TTL: int = 1800          # 캐시 30분(초)
 
+    # CORS 허용 origin (FE 배포 도메인 + 로컬 개발 서버)
+    CORS_ORIGINS: list[str] = ["http://localhost:5173", "https://damdads.netlify.app"]
+
 
 settings = Settings()
