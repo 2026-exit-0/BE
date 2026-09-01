@@ -16,6 +16,19 @@ tags_metadata = [
 
 app = FastAPI(title="담다 API", version="0.1.0", openapi_tags=tags_metadata)
 
+# CORS — FE(브라우저)에서 API 호출 허용. 허용 오리진은 config/.env 로 관리.
+from fastapi.middleware.cors import CORSMiddleware
+
+from app.core.config import settings
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_origins_list,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # 전역 에러 핸들러 등록 (응답 포맷 통일 + 내부 정보 노출 방지)
 from app.core.errors import register_exception_handlers
 

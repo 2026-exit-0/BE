@@ -21,11 +21,21 @@ class Settings(BaseSettings):
     GOOGLE_CLIENT_ID: str = ""
     GOOGLE_CLIENT_SECRET: str = ""
 
+    # AI 추론 서비스 (비어있으면 실제 분석 불가 → mock 엔드포인트 사용)
+    AI_SERVICE_URL: str = ""   # 예: http://ai-server:9000
+
     # 날씨 외부 API (없으면 목업 fallback)
     WEATHER_API_KEY: str = ""
     WEATHER_DEFAULT_LAT: float = 37.5665   # 서울
     WEATHER_DEFAULT_LON: float = 126.9780
     WEATHER_CACHE_TTL: int = 1800          # 캐시 30분(초)
+
+    # CORS 허용 오리진 (콤마 구분). 배포 FE + 로컬 개발 서버. .env 로 덮어쓰기 가능.
+    CORS_ORIGINS: str = "https://damdads.netlify.app,http://localhost:3000,http://localhost:5173,http://127.0.0.1:5173"
+
+    @property
+    def cors_origins_list(self) -> list[str]:
+        return [o.strip() for o in self.CORS_ORIGINS.split(",") if o.strip()]
 
 
 settings = Settings()
