@@ -21,3 +21,22 @@ torch>=2.0.0
 torchvision>=0.15.0
 numpy>=1.24.0
 pandas>=2.0.0               # scripts/products/ 파이프라인용
+
+# --- DB / 웹 백엔드 (담다 API) ---
+sqlalchemy>=2.0.0
+alembic>=1.13.0
+pymysql>=1.1.0              # MySQL 드라이버
+cryptography>=42.0.0        # pymysql 인증(caching_sha2)용
+pydantic-settings>=2.0.0   # .env 로드
+python-dotenv>=1.0.0
+
+# --- 인증 (JWT + 해싱 + 소셜) ---
+bcrypt>=4.0.0
+python-jose[cryptography]>=3.3.0
+email-validator>=2.0.0
+
+# --- PDF 리포트 생성 (H.7.1) ---
+# WeasyPrint 는 Pango/Cairo/GDK-Pixbuf 네이티브 라이브러리가 필요.
+# Linux: apt install libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libcairo2
+# Windows(로컬 개발): GTK3 런타임 설치 필요 — https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows
+weasyprint>=69.0

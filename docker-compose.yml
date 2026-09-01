@@ -1,0 +1,37 @@
+# 로컬 전체 실행:  docker compose up --build   → http://localhost:8000/docs
+# DB만 띄우기:     docker compose up -d db
+services:
+  db:
+    image: mysql:8.0
+    container_name: damda-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: damda
+      TZ: Asia/Seoul
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3307:3306"   # 호스트 3306이 로컬 MySQL과 충돌 → 3307로 노출
+    volumes:
+      - damda_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-ppassword"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    container_name: damda-api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # 컨테이너끼리는 서비스명(db)로 접속 → 내부 포트 3306
+      DATABASE_URL: mysql+pymysql://root:password@db:3306/damda?charset=utf8mb4
+      JWT_SECRET: local-dev-secret
+      # 소셜/날씨 키는 로컬 테스트 시 필요하면 여기에 추가
+    ports:
+      - "8000:8000"
+
+volumes:
+  damda_mysql:
