@@ -15,6 +15,7 @@ from app.models.advice import AiAdvice
 from app.models.scan import ScanResult, ScanSession
 from app.schemas.scan import AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut, ScanSessionOut
 from app.services.ai import run_inference
+from app.services.scanner import fetch_scanner_image
 
 router = APIRouter(prefix="/scans", tags=["scan"])
 
@@ -133,58 +134,41 @@ def analyze_mock(session_id: str, db: Session = Depends(get_db),
     )
 
 
-@router.post("/{session_id}/analyze", response_model=AnalyzeOut,
-             summary="[G.4] 실제 AI 분석 (이미지 업로드)")
-async def analyze(session_id: str,
-                  image: UploadFile = File(...),
-                  region: str = Form("PART_0"),
-                  db: Session = Depends(get_db), user=Depends(get_current_user)):
-    """업로드 이미지를 AI 추론 서버로 보내 실제 분석 결과를 저장한다.
+def _owned_session(db: Session, session_id: str, user_id: str) -> ScanSession | None:
+    return (db.query(ScanSession)
+            .filter(ScanSession.session_id == session_id, ScanSession.user_id == user_id)
+            .first())
 
-    현재 모델(v6-macro)은 모공/색소침착/주름만 제공 → 수분/유분/탄력은 None.
-    AI 서버 미설정/실패 시 503 (그럴 땐 /analyze-mock 사용).
+
+def _apply_ai_result(db: Session, session: ScanSession, ai: dict) -> AnalyzeOut:
+    """AI 추론 결과(dict)를 ScanResult/AiAdvice 로 저장하고 응답 생성.
+
+    push(이미지 업로드)·pull(스캐너) 공통 로직.
+    현재 모델(v6-macro)은 모공/색소침착만 실측 → 나머지 지표는 목업으로 보완.
     """
-    session = (db.query(ScanSession)
-               .filter(ScanSession.session_id == session_id,
-                       ScanSession.user_id == user.user_id)
-               .first())
-    if not session:
-        raise HTTPException(status_code=404, detail="스캔 세션을 찾을 수 없습니다")
-
-    session.status = "processing"
-    db.commit()
-
-    ai = run_inference(await image.read(), image.filename or "scan.jpg", region)
-    if ai is None:
-        session.status = "failed"
-        db.commit()
-        raise HTTPException(status_code=503, detail="AI 분석 서버에 연결할 수 없습니다")
-
     reg = ai.get("regression", {})
 
     def _clamp(v):
         return None if v is None else max(0.0, min(100.0, round(float(v), 1)))
 
-    # AI 실측: pore/pigmentation. 안 나오는 지표는 목업으로 채움(화면 완성도).
+    # AI 실측: pore/pigmentation. 안 나오는 지표는 목업으로 채움.
     pore = _clamp(reg.get("pore_value"))
     pore = pore if pore is not None else _rand_score()
     pigmentation = _clamp(reg.get("pigmentation_value"))
     pigmentation = pigmentation if pigmentation is not None else _rand_score()
-    # v6-macro 미제공 지표 → 목업
     moisture = _rand_score()
     sebum = _rand_score()
     elasticity = _rand_score()
 
-    # 피부 타입도 모델 미제공 → 목업 판정
     skin_type = "복합성"
     if moisture < 55 and sebum < 55:
         skin_type = "건성"
     elif sebum >= 70:
         skin_type = "지성"
 
-    result = db.query(ScanResult).filter(ScanResult.session_id == session_id).first()
+    result = db.query(ScanResult).filter(ScanResult.session_id == session.session_id).first()
     if not result:
-        result = ScanResult(session_id=session_id)
+        result = ScanResult(session_id=session.session_id)
         db.add(result)
     result.moisture = moisture
     result.sebum = sebum
@@ -192,16 +176,14 @@ async def analyze(session_id: str,
     result.elasticity = elasticity
     result.pigmentation = pigmentation
 
-    measured = [v for v in [moisture, sebum, pore, elasticity, pigmentation] if v is not None]
-    total_score = round(sum(measured) / len(measured)) if measured else None
+    total_score = round((moisture + sebum + pore + elasticity + pigmentation) / 5)
 
     scored = {"모공": pore, "색소침착": pigmentation}
-    worst = max((k for k, v in scored.items() if v is not None),
-                key=lambda k: scored[k], default="피부")
+    worst = max(scored, key=lambda k: scored[k])
 
-    advice = db.query(AiAdvice).filter(AiAdvice.session_id == session_id).first()
+    advice = db.query(AiAdvice).filter(AiAdvice.session_id == session.session_id).first()
     if not advice:
-        advice = AiAdvice(session_id=session_id)
+        advice = AiAdvice(session_id=session.session_id)
         db.add(advice)
     advice.summary = f"AI 분석 결과 {worst} 관리가 필요합니다."
     advice.morning_routine = "약산성 클렌저 → 토너 → 수분 세럼 → SPF50+ 선크림"
@@ -225,3 +207,54 @@ async def analyze(session_id: str,
         result=ScanResultOut.model_validate(result),
         advice=AdviceOut.model_validate(advice),
     )
+
+
+@router.post("/{session_id}/analyze", response_model=AnalyzeOut,
+             summary="[G.4] 실제 AI 분석 (이미지 업로드 · push)")
+async def analyze(session_id: str,
+                  image: UploadFile = File(...),
+                  region: str = Form("PART_0"),
+                  db: Session = Depends(get_db), user=Depends(get_current_user)):
+    """업로드 이미지를 AI 추론 서버로 보내 실제 분석. (AI 실패 시 503)"""
+    session = _owned_session(db, session_id, user.user_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="스캔 세션을 찾을 수 없습니다")
+
+    session.status = "processing"
+    db.commit()
+
+    ai = run_inference(await image.read(), image.filename or "scan.jpg", region)
+    if ai is None:
+        session.status = "failed"
+        db.commit()
+        raise HTTPException(status_code=503, detail="AI 분석 서버에 연결할 수 없습니다")
+    return _apply_ai_result(db, session, ai)
+
+
+@router.post("/{session_id}/analyze-scan", response_model=AnalyzeOut,
+             summary="[G.4] 실제 AI 분석 (스캐너 pull) — FE 스캔 버튼용")
+def analyze_scan(session_id: str, region: str = "PART_0",
+                 db: Session = Depends(get_db), user=Depends(get_current_user)):
+    """스캐너(ESP32)에서 이미지를 가져와(pull) AI 분석.
+
+    스캐너 미연결 → 503(스캐너) / AI 미설정·실패 → 503(AI). 그럴 땐 /analyze-mock 사용.
+    """
+    session = _owned_session(db, session_id, user.user_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="스캔 세션을 찾을 수 없습니다")
+
+    session.status = "processing"
+    db.commit()
+
+    image_bytes = fetch_scanner_image()
+    if image_bytes is None:
+        session.status = "failed"
+        db.commit()
+        raise HTTPException(status_code=503, detail="스캐너에 연결할 수 없습니다")
+
+    ai = run_inference(image_bytes, "scan.jpg", region)
+    if ai is None:
+        session.status = "failed"
+        db.commit()
+        raise HTTPException(status_code=503, detail="AI 분석 서버에 연결할 수 없습니다")
+    return _apply_ai_result(db, session, ai)

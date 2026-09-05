@@ -24,6 +24,9 @@ class Settings(BaseSettings):
     # AI 추론 서비스 (비어있으면 실제 분석 불가 → mock 엔드포인트 사용)
     AI_SERVICE_URL: str = ""   # 예: http://ai-server:9000
 
+    # 스캐너(ESP32-CAM) 주소 — /capture(이미지), /status(상태) 제공. 비면 미연결.
+    SCANNER_URL: str = ""      # 예: http://192.168.0.30
+
     # 날씨 외부 API (없으면 목업 fallback)
     WEATHER_API_KEY: str = ""
     WEATHER_DEFAULT_LAT: float = 37.5665   # 서울
