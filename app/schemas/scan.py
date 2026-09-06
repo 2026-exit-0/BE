@@ -53,10 +53,14 @@ class AdviceOut(BaseModel):
 
 
 class AnalyzeOut(BaseModel):
-    """목업 분석 결과 응답 (분석 직후 상태 + 결과 + 조언)"""
+    """분석 결과 응답 (분석 직후 상태 + 결과 + 조언).
+
+    is_mock=True 면 예시(데모) 데이터 → FE는 '데모(예시 데이터)' 배지를 표시해야 한다.
+    """
     session_id: str
     status: str
     total_score: int | None = None
     skin_type_result: str | None = None
     result: ScanResultOut
     advice: AdviceOut
+    is_mock: bool = False   # True=시연용 예시데이터(배지 표시), False=실제 AI 분석
