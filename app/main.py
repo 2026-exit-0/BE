@@ -19,10 +19,11 @@ tags_metadata = [
 
 app = FastAPI(title="담다 API", version="0.1.0", openapi_tags=tags_metadata)
 
-# CORS — FE 배포 도메인 + 로컬 개발 서버만 허용 (CORS_ORIGINS, .env 로 관리)
+# CORS — FE(브라우저)에서 API 호출 허용. 허용 오리진은 config/.env 로 관리.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=settings.cors_origins_list,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -46,7 +47,7 @@ def health():
 #   app.include_router(survey.router)
 # ────────────────────────────────────────────────────────────────
 
-from app.routers import survey, scan, mypage, recommend, product, weather, result, history, report, auth, care
+from app.routers import survey, scan, mypage, recommend, product, weather, result, history, report, auth, care, scanner
 
 app.include_router(auth.router)
 app.include_router(survey.router)
@@ -60,3 +61,4 @@ app.include_router(result.router)
 app.include_router(history.router)
 app.include_router(report.router)
 app.include_router(care.router)
+app.include_router(scanner.router)
