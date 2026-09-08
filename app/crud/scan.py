@@ -17,6 +17,14 @@ def list_user_sessions(db: Session, user_id: str, since: datetime | None = None)
     return query.order_by(ScanSession.created_at.desc()).all()
 
 
+def get_latest_session(db: Session, user_id: str) -> ScanSession | None:
+    """유저의 가장 최근 스캔 세션 조회 (생성일 최신순 1건). 없으면 None."""
+    return (db.query(ScanSession)
+           .filter(ScanSession.user_id == user_id)
+           .order_by(ScanSession.created_at.desc())
+           .first())
+
+
 def get_user_session(db: Session, user_id: str, session_id: str) -> ScanSession | None:
     """유저 소유의 스캔 세션 단건 조회 (result 즉시로딩). 없거나 소유자가 아니면 None."""
     return (db.query(ScanSession)

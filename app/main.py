@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from app.core.config import settings
 
 # 명세 A~L 구조를 Swagger(/docs) 에 그대로 그룹핑
 tags_metadata = [
@@ -17,10 +20,6 @@ tags_metadata = [
 app = FastAPI(title="담다 API", version="0.1.0", openapi_tags=tags_metadata)
 
 # CORS — FE(브라우저)에서 API 호출 허용. 허용 오리진은 config/.env 로 관리.
-from fastapi.middleware.cors import CORSMiddleware
-
-from app.core.config import settings
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins_list,

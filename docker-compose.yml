@@ -25,11 +25,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    environment:
-      # 컨테이너끼리는 서비스명(db)로 접속 → 내부 포트 3306
-      DATABASE_URL: mysql+pymysql://root:password@db:3306/damda?charset=utf8mb4
-      JWT_SECRET: local-dev-secret
-      # 소셜/날씨 키는 로컬 테스트 시 필요하면 여기에 추가
+    env_file:
+      - .env
     ports:
       - "8000:8000"
 
