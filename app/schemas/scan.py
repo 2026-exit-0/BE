@@ -29,6 +29,15 @@ class ScanSessionOut(BaseModel):
         from_attributes = True
 
 
+class ScanStatusOut(BaseModel):
+    """스캔 세션 상태 (트리거 응답 / 폴링용 조회 공용)"""
+    session_id: str
+    status: str
+
+    class Config:
+        from_attributes = True
+
+
 class ScanResultOut(BaseModel):
     """5지표 점수. 측정 제외(OFF) 항목은 None → 프론트에서 '-' 처리 (H.2)"""
     moisture: float | None = None

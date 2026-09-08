@@ -11,9 +11,11 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_db
 from app.core.deps import get_current_user
+from app.crud.scan import get_latest_session
 from app.models.advice import AiAdvice
 from app.models.scan import ScanResult, ScanSession
-from app.schemas.scan import AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut, ScanSessionOut
+from app.schemas.scan import (AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut,
+                              ScanSessionOut, ScanStatusOut)
 
 router = APIRouter(prefix="/scans", tags=["scan"])
 
@@ -46,6 +48,25 @@ def create_scan(data: ScanCreate, db: Session = Depends(get_db),
     db.add(session)
     db.commit()
     db.refresh(session)
+    return session
+
+
+@router.post("/trigger", response_model=ScanStatusOut, status_code=201,
+             summary="스캔 트리거 (하드웨어 연동용 세션 생성)")
+def trigger_scan(db: Session = Depends(get_db), user=Depends(get_current_user)):
+    session = ScanSession(user_id=user.user_id, status="processing")
+    db.add(session)
+    db.commit()
+    db.refresh(session)
+    return session
+
+
+@router.get("/status", response_model=ScanStatusOut,
+            summary="가장 최근 스캔 세션 상태 조회 (폴링용)")
+def get_scan_status(db: Session = Depends(get_db), user=Depends(get_current_user)):
+    session = get_latest_session(db, user.user_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="스캔 세션을 찾을 수 없습니다")
     return session
 
 
