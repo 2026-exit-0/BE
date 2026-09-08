@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [develop, main]
+  pull_request:
+    branches: [develop, main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: damda
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -ppassword"
+          --health-interval=5s
+          --health-timeout=3s
+          --health-retries=10
+
+    env:
+      # MySQL 서비스 컨테이너는 러너에서 localhost:3306 으로 접근 가능
+      DATABASE_URL: mysql+pymysql://root:password@127.0.0.1:3306/damda?charset=utf8mb4
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-web.txt
+
+      # torch/torchvision 은 무거우니 웹 배포용 requirements-web.txt 로 설치
+      - name: Install dependencies
+        run: pip install -r requirements-web.txt
+
+      # 문법 에러 / import 에러만 빠르게 잡는 스모크 테스트
+      - name: App import smoke test
+        run: python -c "from app.main import app; print('import OK')"
+
+      # 모델 ↔ 마이그레이션 히스토리가 어긋나지 않았는지 확인
+      - name: Run DB migrations
+        run: alembic upgrade head
