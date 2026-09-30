@@ -1,4 +1,4 @@
-from fastapi import Depends, HTTPException
+from fastapi import Depends, Header, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm import Session
 
@@ -36,3 +36,30 @@ def get_current_user(
     if not user:
         raise HTTPException(status_code=401, detail="인증이 필요합니다")
     return user
+
+
+def verify_device_key(x_device_key: str | None = Header(None, alias="X-Device-Key")) -> None:
+    """HW(ESP32) 중계 서버 전용 인증. 로그인을 못 하는 기기라 고정 키로 검증한다.
+
+    DEVICE_API_KEY 가 비어있으면(미설정) 무조건 거부 — 키 설정을 깜빡해도 열려있지 않도록.
+    """
+    if not settings.DEVICE_API_KEY or x_device_key != settings.DEVICE_API_KEY:
+        raise HTTPException(status_code=401, detail="유효하지 않은 기기 키입니다")
+
+
+def verify_device_or_user(
+    x_device_key: str | None = Header(None, alias="X-Device-Key"),
+    cred: HTTPAuthorizationCredentials | None = Depends(_bearer),
+    db: Session = Depends(get_db),
+) -> None:
+    """기기 키(X-Device-Key) 또는 사용자 JWT 둘 중 하나만 유효하면 통과.
+
+    GET /device/link/{device_id} 처럼 HW 중계서버·FE 양쪽 다 조회해야 하는 엔드포인트용.
+    """
+    if x_device_key and settings.DEVICE_API_KEY and x_device_key == settings.DEVICE_API_KEY:
+        return
+    if cred and cred.credentials:
+        payload = decode_token(cred.credentials)
+        if payload and "sub" in payload and db.query(User).filter(User.user_id == payload["sub"]).first():
+            return
+    raise HTTPException(status_code=401, detail="인증이 필요합니다 (기기 키 또는 로그인)")
