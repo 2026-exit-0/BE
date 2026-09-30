@@ -29,10 +29,18 @@ class ScanSessionOut(BaseModel):
         from_attributes = True
 
 
+class ScanTriggerIn(BaseModel):
+    """POST /scans/trigger 요청 (명세 웹 스캔). device_id 없으면 순수 웹 트리거로만 동작."""
+    device_id: str | None = None   # 있으면 백엔드가 HW 릴레이(SCAN_RELAY_URL)에 촬영 명령 전달
+    part: str | None = None        # 측정 부위 — 릴레이 전달 + 세션 scan_area 에도 반영
+
+
 class ScanStatusOut(BaseModel):
     """스캔 세션 상태 (트리거 응답 / 폴링용 조회 공용)"""
     session_id: str
     status: str
+    source: str = "web"           # web / hardware
+    device_id: str | None = None  # source=hardware 일 때만 값 있음
 
     class Config:
         from_attributes = True

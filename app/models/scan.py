@@ -34,6 +34,9 @@ class ScanSession(Base):
     total_score = Column(Integer, nullable=True)                    # 종합점수 (H.1)
     skin_type_result = Column(String(20), nullable=True)
     created_at = Column(DateTime, server_default=func.now())
+    # HW(ESP32) 연동 — 기기 전용 트리거로 생성된 세션 구분
+    source = Column(String(20), nullable=False, default="web")     # web / hardware
+    device_id = Column(String(50), nullable=True)                  # 촬영에 쓰인 기기 (web 세션도 기록 가능)
 
     user = relationship("User", back_populates="scan_sessions")
     result = relationship("ScanResult", back_populates="session", uselist=False, cascade="all, delete-orphan")
@@ -68,3 +71,18 @@ class ScanImage(Base):
     region = Column(String(30), nullable=True)
 
     session = relationship("ScanSession", back_populates="images")
+
+
+class DeviceConnection(Base):
+    """기기-사용자 연결 (명세 HW) — device_id 당 '현재' 연결 1건만 유지, 이력 아님.
+
+    연결(link) 시 UPSERT: 기존 연결 있으면 덮어씀. 촬영 시작 시점에 트리거가 이 값을 읽어
+    세션 소유자를 확정하므로, 이후 기기 사용자가 바뀌어도 이미 만든 세션은 영향받지 않는다.
+    """
+    __tablename__ = "device_connections"
+
+    device_id = Column(String(50), primary_key=True)
+    user_id = Column(String(36), ForeignKey("users.user_id", ondelete="CASCADE"), nullable=False)
+    connected_at = Column(DateTime, server_default=func.now())
+
+    user = relationship("User")

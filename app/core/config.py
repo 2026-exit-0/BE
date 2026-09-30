@@ -40,5 +40,11 @@ class Settings(BaseSettings):
     def cors_origins_list(self) -> list[str]:
         return [o.strip() for o in self.CORS_ORIGINS.split(",") if o.strip()]
 
+    # HW(ESP32) 중계 서버 인증 — X-Device-Key 헤더와 비교 (login 못 하는 기기 전용)
+    DEVICE_API_KEY: str = ""
+
+    # 웹 스캔 트리거 시 촬영 명령을 전달할 HW 릴레이 서버 (POST /scan-command)
+    SCAN_RELAY_URL: str = ""   # 예: http://localhost:8001
+
 
 settings = Settings()

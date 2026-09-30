@@ -11,13 +11,14 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_db
 from app.core.deps import get_current_user
-from app.crud.scan import get_latest_session
+from app.crud.scan import expire_stale_sessions, get_latest_session
 from app.models.advice import AiAdvice
 from app.models.scan import ScanResult, ScanSession
 from app.schemas.scan import (AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut,
-                              ScanSessionOut, ScanStatusOut)
+                              ScanSessionOut, ScanStatusOut, ScanTriggerIn)
 from app.services.ai import run_inference
 from app.services.demo import demo_scores, demo_skin_type
+from app.services.relay import send_scan_command
 from app.services.scanner import fetch_scanner_image
 
 router = APIRouter(prefix="/scans", tags=["scan"])
@@ -55,9 +56,15 @@ def create_scan(data: ScanCreate, db: Session = Depends(get_db),
 
 
 @router.post("/trigger", response_model=ScanStatusOut, status_code=201,
-             summary="스캔 트리거 (하드웨어 연동용 세션 생성)")
-def trigger_scan(db: Session = Depends(get_db), user=Depends(get_current_user)):
-    session = ScanSession(user_id=user.user_id, status="processing")
+             summary="스캔 트리거 (device_id 있으면 HW 릴레이에 촬영 명령까지 전달)")
+def trigger_scan(data: ScanTriggerIn = ScanTriggerIn(), db: Session = Depends(get_db),
+                 user=Depends(get_current_user)):
+    if data.device_id:
+        if not send_scan_command(data.device_id, data.part):
+            raise HTTPException(status_code=502, detail="스캔 기기에 촬영 명령을 전달하지 못했습니다")
+
+    session = ScanSession(user_id=user.user_id, status="processing",
+                          device_id=data.device_id, scan_area=data.part or "얼굴 전체")
     db.add(session)
     db.commit()
     db.refresh(session)
@@ -67,6 +74,7 @@ def trigger_scan(db: Session = Depends(get_db), user=Depends(get_current_user)):
 @router.get("/status", response_model=ScanStatusOut,
             summary="가장 최근 스캔 세션 상태 조회 (폴링용)")
 def get_scan_status(db: Session = Depends(get_db), user=Depends(get_current_user)):
+    expire_stale_sessions(db, user.user_id)
     session = get_latest_session(db, user.user_id)
     if not session:
         raise HTTPException(status_code=404, detail="스캔 세션을 찾을 수 없습니다")

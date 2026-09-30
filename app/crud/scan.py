@@ -1,10 +1,12 @@
-"""스캔 세션 조회 공용 쿼리 — history(J.3)/report(L.1·L.2)/care(K.1) 가 공유한다."""
-from datetime import datetime
+"""스캔 세션 조회 공용 쿼리 — history(J.3)/report(L.1·L.2)/care(K.1)/device(HW) 가 공유한다."""
+from datetime import datetime, timedelta
 
 from sqlalchemy.orm import Session, joinedload
 
 from app.models.advice import AiAdvice
-from app.models.scan import ScanSession
+from app.models.scan import DeviceConnection, ScanSession
+
+STALE_PROCESSING_MINUTES = 5   # 이 시간 넘게 processing 이면 방치된 것으로 보고 failed 처리
 
 
 def list_user_sessions(db: Session, user_id: str, since: datetime | None = None) -> list[ScanSession]:
@@ -31,6 +33,38 @@ def get_user_session(db: Session, user_id: str, session_id: str) -> ScanSession 
            .options(joinedload(ScanSession.result))
            .filter(ScanSession.session_id == session_id, ScanSession.user_id == user_id)
            .first())
+
+
+def get_latest_processing_session(db: Session, user_id: str) -> ScanSession | None:
+    """유저의 가장 최근 status='processing' 세션. 없으면 None. (device trigger 싱글톤 / done 콜백용)"""
+    return (db.query(ScanSession)
+           .filter(ScanSession.user_id == user_id, ScanSession.status == "processing")
+           .order_by(ScanSession.created_at.desc())
+           .first())
+
+
+def expire_stale_sessions(db: Session, user_id: str) -> None:
+    """일정 시간(STALE_PROCESSING_MINUTES) 넘게 processing 인 세션을 failed 로 정리.
+
+    HW 는 trigger → done 두 요청 사이에 기기/중계서버가 죽으면 done 이 영영 안 올 수 있어서,
+    조회 시점(트리거 싱글톤 체크·상태 폴링·done 조회 직전)마다 호출해 방치를 막는다.
+    별도 스케줄러 없이 요청 경로에서 확인하는 방식 — 배포 규모상 이걸로 충분하다.
+    """
+    cutoff = datetime.now() - timedelta(minutes=STALE_PROCESSING_MINUTES)
+    stale = (db.query(ScanSession)
+            .filter(ScanSession.user_id == user_id, ScanSession.status == "processing",
+                    ScanSession.created_at < cutoff)
+            .all())
+    if not stale:
+        return
+    for session in stale:
+        session.status = "failed"
+    db.commit()
+
+
+def get_device_connection(db: Session, device_id: str) -> DeviceConnection | None:
+    """device_id 의 현재 연결 상태(1건) 조회. 없으면 None."""
+    return db.query(DeviceConnection).filter(DeviceConnection.device_id == device_id).first()
 
 
 def get_advice_by_session(db: Session, user_id: str, session_id: str) -> AiAdvice | None:
