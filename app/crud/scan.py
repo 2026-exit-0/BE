@@ -4,15 +4,15 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session, joinedload
 
 from app.models.advice import AiAdvice
-from app.models.scan import DeviceConnection, ScanSession
+from app.models.scan import DeviceConnection, ScanImage, ScanSession
 
 STALE_PROCESSING_MINUTES = 5   # 이 시간 넘게 processing 이면 방치된 것으로 보고 failed 처리
 
 
 def list_user_sessions(db: Session, user_id: str, since: datetime | None = None) -> list[ScanSession]:
-    """유저 소유 스캔 세션을 result 즉시로딩 + 최신순 정렬로 조회. since 있으면 그 이후분만."""
+    """유저 소유 스캔 세션을 result/images 즉시로딩 + 최신순 정렬로 조회. since 있으면 그 이후분만."""
     query = (db.query(ScanSession)
-            .options(joinedload(ScanSession.result))
+            .options(joinedload(ScanSession.result), joinedload(ScanSession.images))
             .filter(ScanSession.user_id == user_id))
     if since is not None:
         query = query.filter(ScanSession.created_at >= since)
@@ -75,9 +75,28 @@ def get_advice_by_session(db: Session, user_id: str, session_id: str) -> AiAdvic
            .first())
 
 
+def pick_image_url(images: list[ScanImage], image_type: str) -> str | None:
+    """session.images 중 image_type 매칭 행의 image_url. 없으면 None.
+
+    ScanImage 에 시간 컬럼이 없어 "최신" 이미지를 보장하지 못한다 — 같은 타입이 여러 개
+    저장돼 있어도 매번 같은 결과가 나오도록 image_id 오름차순 정렬 후 첫 번째를 쓴다.
+    (근본 해결은 저장 시점 upsert/unique 제약 — 이번 범위 밖, 후속 작업으로 분리)
+    """
+    matched = sorted(
+        (img for img in images if img.image_type == image_type),
+        key=lambda img: img.image_id,
+    )
+    return matched[0].image_url if matched else None
+
+
 def session_to_metrics(session: ScanSession) -> dict:
-    """ScanSession(+result) → session_id/created_at/5지표 dict. history/report Out 스키마 공용 입력."""
+    """ScanSession(+result/images) → session_id/created_at/5지표+이미지 dict.
+
+    history/report Out 스키마 공용 입력. report.py 의 ReportOut 은 white/uv_image_url
+    필드가 없어서 pydantic extra="ignore" 기본 동작으로 이 두 키는 조용히 무시된다.
+    """
     result = session.result
+    images = session.images or []
     return {
         "session_id": session.session_id,
         "created_at": session.created_at,
@@ -86,4 +105,6 @@ def session_to_metrics(session: ScanSession) -> dict:
         "pore": result.pore if result else None,
         "elasticity": result.elasticity if result else None,
         "pigmentation": result.pigmentation if result else None,
+        "white_image_url": pick_image_url(images, "WHITE_LED"),
+        "uv_image_url": pick_image_url(images, "UV_LED"),
     }

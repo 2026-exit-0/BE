@@ -11,6 +11,8 @@ class HistoryOut(BaseModel):        # 출력값 (명세 J.3) — 스캔 세션 +
     pore: float | None = None
     elasticity: float | None = None
     pigmentation: float | None = None
+    white_image_url: str | None = None   # ScanImage(WHITE_LED).image_url, 없으면 None
+    uv_image_url: str | None = None      # ScanImage(UV_LED).image_url, 없으면 None
 
     class Config:
         from_attributes = True
