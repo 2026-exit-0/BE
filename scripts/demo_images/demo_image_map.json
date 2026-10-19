@@ -1,0 +1,1802 @@
+[
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "20s_F_CHIN_uv_1.jpg",
+    "focus": 68.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_uv_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "20s_F_CHIN_uv_2.jpg",
+    "focus": 24.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_uv_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "20s_F_CHIN_uv_3.jpg",
+    "focus": 15.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_uv_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "20s_F_CHIN_uv_4.jpg",
+    "focus": 3.2,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_uv_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "20s_F_CHIN_white_1.jpg",
+    "focus": 21.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_white_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "20s_F_CHIN_white_2.jpg",
+    "focus": 11.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_white_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "20s_F_CHIN_white_3.jpg",
+    "focus": 11.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_white_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "20s_F_CHIN_white_4.jpg",
+    "focus": 9.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_CHIN_white_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "20s_F_FOREHEAD_uv_1.jpg",
+    "focus": 66.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_uv_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "20s_F_FOREHEAD_uv_2.jpg",
+    "focus": 55.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_uv_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "20s_F_FOREHEAD_uv_3.jpg",
+    "focus": 9.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_uv_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "20s_F_FOREHEAD_uv_4.jpg",
+    "focus": 4.3,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_uv_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "20s_F_FOREHEAD_white_1.jpg",
+    "focus": 69.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_white_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "20s_F_FOREHEAD_white_2.jpg",
+    "focus": 14.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_white_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "20s_F_FOREHEAD_white_3.jpg",
+    "focus": 11.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_white_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "20s_F_FOREHEAD_white_4.jpg",
+    "focus": 1.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_FOREHEAD_white_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "20s_F_L_CHEEK_uv_1.jpg",
+    "focus": 26.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "20s_F_L_CHEEK_uv_2.jpg",
+    "focus": 22.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "20s_F_L_CHEEK_uv_3.jpg",
+    "focus": 19.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "20s_F_L_CHEEK_uv_4.jpg",
+    "focus": 8.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "20s_F_L_CHEEK_white_1.jpg",
+    "focus": 123.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "20s_F_L_CHEEK_white_2.jpg",
+    "focus": 24.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "20s_F_L_CHEEK_white_3.jpg",
+    "focus": 16.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "20s_F_L_CHEEK_white_4.jpg",
+    "focus": 6.4,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_L_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "20s_F_NOSE_uv_1.jpg",
+    "focus": 8.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_NOSE_uv_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "20s_F_NOSE_white_1.jpg",
+    "focus": 12.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_NOSE_white_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "20s_F_R_CHEEK_uv_1.jpg",
+    "focus": 100.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "20s_F_R_CHEEK_uv_2.jpg",
+    "focus": 56.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "20s_F_R_CHEEK_uv_3.jpg",
+    "focus": 25.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "20s_F_R_CHEEK_uv_4.jpg",
+    "focus": 3.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "20s_F_R_CHEEK_white_1.jpg",
+    "focus": 88.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "20s_F_R_CHEEK_white_2.jpg",
+    "focus": 11.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "20s_F_R_CHEEK_white_3.jpg",
+    "focus": 1.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "20대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "20s_F_R_CHEEK_white_4.jpg",
+    "focus": 1.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/20s_F_R_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_F_CHIN_uv_1.jpg",
+    "focus": 10.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_CHIN_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_F_CHIN_uv_2.jpg",
+    "focus": 7.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_CHIN_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_F_CHIN_uv_3.jpg",
+    "focus": 3.1,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_CHIN_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "50s_F_CHIN_white_1.jpg",
+    "focus": 4.5,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_CHIN_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "50s_F_CHIN_white_2.jpg",
+    "focus": 1.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_CHIN_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_F_FOREHEAD_uv_1.jpg",
+    "focus": 283.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_F_FOREHEAD_uv_2.jpg",
+    "focus": 26.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_F_FOREHEAD_uv_3.jpg",
+    "focus": 16.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_F_FOREHEAD_uv_4.jpg",
+    "focus": 3.3,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_uv_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_F_FOREHEAD_white_1.jpg",
+    "focus": 40.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_F_FOREHEAD_white_2.jpg",
+    "focus": 8.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_F_FOREHEAD_white_3.jpg",
+    "focus": 4.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_F_FOREHEAD_white_4.jpg",
+    "focus": 2.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_FOREHEAD_white_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_F_L_CHEEK_uv_1.jpg",
+    "focus": 83.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_L_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_F_L_CHEEK_uv_2.jpg",
+    "focus": 68.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_L_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_F_L_CHEEK_uv_3.jpg",
+    "focus": 9.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_L_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_F_L_CHEEK_white_1.jpg",
+    "focus": 8.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_L_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_F_L_CHEEK_white_2.jpg",
+    "focus": 5.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_L_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_F_L_CHEEK_white_3.jpg",
+    "focus": 4.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_L_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_F_NOSE_uv_1.jpg",
+    "focus": 199.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_F_NOSE_uv_2.jpg",
+    "focus": 189.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_F_NOSE_uv_3.jpg",
+    "focus": 152.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_F_NOSE_uv_4.jpg",
+    "focus": 122.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_uv_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_F_NOSE_white_1.jpg",
+    "focus": 110.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_F_NOSE_white_2.jpg",
+    "focus": 81.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_F_NOSE_white_3.jpg",
+    "focus": 62.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_F_NOSE_white_4.jpg",
+    "focus": 47.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_NOSE_white_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "50s_F_R_CHEEK_uv_1.jpg",
+    "focus": 14.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_R_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "50s_F_R_CHEEK_white_1.jpg",
+    "focus": 2.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_F_R_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_M_CHIN_uv_1.jpg",
+    "focus": 7.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_M_CHIN_uv_2.jpg",
+    "focus": 5.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_M_CHIN_uv_3.jpg",
+    "focus": 4.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "50s_M_CHIN_uv_4.jpg",
+    "focus": 3.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_uv_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "white",
+    "file": "50s_M_CHIN_white_1.jpg",
+    "focus": 8.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "white",
+    "file": "50s_M_CHIN_white_2.jpg",
+    "focus": 5.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "white",
+    "file": "50s_M_CHIN_white_3.jpg",
+    "focus": 4.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "CHIN",
+    "light": "white",
+    "file": "50s_M_CHIN_white_4.jpg",
+    "focus": 4.2,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_CHIN_white_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_M_FOREHEAD_uv_1.jpg",
+    "focus": 36.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_M_FOREHEAD_uv_2.jpg",
+    "focus": 6.2,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_M_FOREHEAD_uv_3.jpg",
+    "focus": 4.3,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "50s_M_FOREHEAD_uv_4.jpg",
+    "focus": 3.4,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_uv_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_M_FOREHEAD_white_1.jpg",
+    "focus": 49.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_M_FOREHEAD_white_2.jpg",
+    "focus": 23.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_M_FOREHEAD_white_3.jpg",
+    "focus": 10.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "50s_M_FOREHEAD_white_4.jpg",
+    "focus": 5.1,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_FOREHEAD_white_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_M_L_CHEEK_uv_1.jpg",
+    "focus": 11.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_M_L_CHEEK_uv_2.jpg",
+    "focus": 4.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_M_L_CHEEK_uv_3.jpg",
+    "focus": 4.3,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "50s_M_L_CHEEK_uv_4.jpg",
+    "focus": 3.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_M_L_CHEEK_white_1.jpg",
+    "focus": 12.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_M_L_CHEEK_white_2.jpg",
+    "focus": 9.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_M_L_CHEEK_white_3.jpg",
+    "focus": 8.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "50s_M_L_CHEEK_white_4.jpg",
+    "focus": 5.2,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_L_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_M_NOSE_uv_1.jpg",
+    "focus": 5.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_NOSE_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_M_NOSE_uv_2.jpg",
+    "focus": 5.2,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_NOSE_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "50s_M_NOSE_uv_3.jpg",
+    "focus": 4.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_NOSE_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_M_NOSE_white_1.jpg",
+    "focus": 11.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_NOSE_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_M_NOSE_white_2.jpg",
+    "focus": 9.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_NOSE_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "NOSE",
+    "light": "white",
+    "file": "50s_M_NOSE_white_3.jpg",
+    "focus": 9.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_NOSE_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "50s_M_R_CHEEK_uv_1.jpg",
+    "focus": 71.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "50s_M_R_CHEEK_uv_2.jpg",
+    "focus": 19.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "50s_M_R_CHEEK_uv_3.jpg",
+    "focus": 19.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "50s_M_R_CHEEK_uv_4.jpg",
+    "focus": 16.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "50s_M_R_CHEEK_white_1.jpg",
+    "focus": 34.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "50s_M_R_CHEEK_white_2.jpg",
+    "focus": 16.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "50s_M_R_CHEEK_white_3.jpg",
+    "focus": 12.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "50대",
+    "gender": "M",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "50s_M_R_CHEEK_white_4.jpg",
+    "focus": 6.3,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/50s_M_R_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "60plus_F_CHIN_uv_1.jpg",
+    "focus": 17.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_uv_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "60plus_F_CHIN_uv_2.jpg",
+    "focus": 12.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_uv_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "60plus_F_CHIN_uv_3.jpg",
+    "focus": 10.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_uv_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "60plus_F_CHIN_uv_4.jpg",
+    "focus": 9.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_uv_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "60plus_F_CHIN_white_1.jpg",
+    "focus": 16.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_white_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "60plus_F_CHIN_white_2.jpg",
+    "focus": 15.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_white_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "60plus_F_CHIN_white_3.jpg",
+    "focus": 15.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_white_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "60plus_F_CHIN_white_4.jpg",
+    "focus": 14.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_CHIN_white_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "60plus_F_FOREHEAD_uv_1.jpg",
+    "focus": 13.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_uv_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "60plus_F_FOREHEAD_uv_2.jpg",
+    "focus": 9.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_uv_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "60plus_F_FOREHEAD_uv_3.jpg",
+    "focus": 9.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_uv_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "60plus_F_FOREHEAD_uv_4.jpg",
+    "focus": 7.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_uv_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "60plus_F_FOREHEAD_white_1.jpg",
+    "focus": 9.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_white_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "60plus_F_FOREHEAD_white_2.jpg",
+    "focus": 8.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_white_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "60plus_F_FOREHEAD_white_3.jpg",
+    "focus": 8.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_white_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "60plus_F_FOREHEAD_white_4.jpg",
+    "focus": 7.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_FOREHEAD_white_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_L_CHEEK_uv_1.jpg",
+    "focus": 13.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_L_CHEEK_uv_2.jpg",
+    "focus": 12.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_L_CHEEK_uv_3.jpg",
+    "focus": 11.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_L_CHEEK_uv_4.jpg",
+    "focus": 11.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "60plus_F_L_CHEEK_white_1.jpg",
+    "focus": 12.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "60plus_F_L_CHEEK_white_2.jpg",
+    "focus": 10.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "60plus_F_L_CHEEK_white_3.jpg",
+    "focus": 7.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "60plus_F_L_CHEEK_white_4.jpg",
+    "focus": 7.2,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_L_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "60plus_F_NOSE_uv_1.jpg",
+    "focus": 37.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_uv_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "60plus_F_NOSE_uv_2.jpg",
+    "focus": 31.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_uv_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "60plus_F_NOSE_uv_3.jpg",
+    "focus": 22.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_uv_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "60plus_F_NOSE_uv_4.jpg",
+    "focus": 16.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_uv_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "60plus_F_NOSE_white_1.jpg",
+    "focus": 29.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_white_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "60plus_F_NOSE_white_2.jpg",
+    "focus": 28.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_white_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "60plus_F_NOSE_white_3.jpg",
+    "focus": 26.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_white_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "60plus_F_NOSE_white_4.jpg",
+    "focus": 23.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_NOSE_white_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_R_CHEEK_uv_1.jpg",
+    "focus": 13.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_R_CHEEK_uv_2.jpg",
+    "focus": 13.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_R_CHEEK_uv_3.jpg",
+    "focus": 11.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "60plus_F_R_CHEEK_uv_4.jpg",
+    "focus": 11.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "60plus_F_R_CHEEK_white_1.jpg",
+    "focus": 15.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "60plus_F_R_CHEEK_white_2.jpg",
+    "focus": 15.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "60plus_F_R_CHEEK_white_3.jpg",
+    "focus": 7.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "60대+",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "60plus_F_R_CHEEK_white_4.jpg",
+    "focus": 4.8,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/60plus_F_R_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "na_F_CHIN_uv_1.jpg",
+    "focus": 28.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_uv_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "na_F_CHIN_uv_2.jpg",
+    "focus": 15.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_uv_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "na_F_CHIN_uv_3.jpg",
+    "focus": 13.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_uv_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "uv",
+    "file": "na_F_CHIN_uv_4.jpg",
+    "focus": 10.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_uv_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "na_F_CHIN_white_1.jpg",
+    "focus": 20.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_white_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "na_F_CHIN_white_2.jpg",
+    "focus": 17.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_white_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "na_F_CHIN_white_3.jpg",
+    "focus": 16.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_white_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "CHIN",
+    "light": "white",
+    "file": "na_F_CHIN_white_4.jpg",
+    "focus": 16.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_CHIN_white_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "na_F_FOREHEAD_uv_1.jpg",
+    "focus": 26.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_uv_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "na_F_FOREHEAD_uv_2.jpg",
+    "focus": 15.7,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_uv_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "uv",
+    "file": "na_F_FOREHEAD_uv_3.jpg",
+    "focus": 8.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_uv_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "na_F_FOREHEAD_white_1.jpg",
+    "focus": 21.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_white_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "na_F_FOREHEAD_white_2.jpg",
+    "focus": 13.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_white_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "na_F_FOREHEAD_white_3.jpg",
+    "focus": 13.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_white_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "FOREHEAD",
+    "light": "white",
+    "file": "na_F_FOREHEAD_white_4.jpg",
+    "focus": 6.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_FOREHEAD_white_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "na_F_L_CHEEK_uv_1.jpg",
+    "focus": 17.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "na_F_L_CHEEK_uv_2.jpg",
+    "focus": 11.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "na_F_L_CHEEK_uv_3.jpg",
+    "focus": 11.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "uv",
+    "file": "na_F_L_CHEEK_uv_4.jpg",
+    "focus": 7.7,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "na_F_L_CHEEK_white_1.jpg",
+    "focus": 7.6,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "na_F_L_CHEEK_white_2.jpg",
+    "focus": 7.4,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "na_F_L_CHEEK_white_3.jpg",
+    "focus": 6.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "L_CHEEK",
+    "light": "white",
+    "file": "na_F_L_CHEEK_white_4.jpg",
+    "focus": 5.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_L_CHEEK_white_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "na_F_NOSE_uv_1.jpg",
+    "focus": 40.2,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_uv_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "na_F_NOSE_uv_2.jpg",
+    "focus": 16.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_uv_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "na_F_NOSE_uv_3.jpg",
+    "focus": 10.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_uv_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "uv",
+    "file": "na_F_NOSE_uv_4.jpg",
+    "focus": 6.9,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_uv_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "na_F_NOSE_white_1.jpg",
+    "focus": 32.0,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_white_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "na_F_NOSE_white_2.jpg",
+    "focus": 30.5,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_white_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "na_F_NOSE_white_3.jpg",
+    "focus": 23.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_white_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "NOSE",
+    "light": "white",
+    "file": "na_F_NOSE_white_4.jpg",
+    "focus": 19.9,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_NOSE_white_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "na_F_R_CHEEK_uv_1.jpg",
+    "focus": 15.6,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_uv_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "na_F_R_CHEEK_uv_2.jpg",
+    "focus": 9.8,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_uv_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "na_F_R_CHEEK_uv_3.jpg",
+    "focus": 6.1,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_uv_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "uv",
+    "file": "na_F_R_CHEEK_uv_4.jpg",
+    "focus": 4.0,
+    "low_quality": true,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_uv_4.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "na_F_R_CHEEK_white_1.jpg",
+    "focus": 16.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_white_1.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "na_F_R_CHEEK_white_2.jpg",
+    "focus": 13.4,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_white_2.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "na_F_R_CHEEK_white_3.jpg",
+    "focus": 12.1,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_white_3.jpg"
+  },
+  {
+    "age_band": "기타",
+    "gender": "F",
+    "part": "R_CHEEK",
+    "light": "white",
+    "file": "na_F_R_CHEEK_white_4.jpg",
+    "focus": 11.3,
+    "low_quality": false,
+    "url": "https://roghtpxrhxkicleukrfz.supabase.co/storage/v1/object/public/scan-images/demo/na_F_R_CHEEK_white_4.jpg"
+  }
+]
