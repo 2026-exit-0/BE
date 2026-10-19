@@ -13,11 +13,12 @@ from app.core.database import get_db
 from app.core.deps import get_current_user
 from app.crud.scan import expire_stale_sessions, get_latest_session
 from app.models.advice import AiAdvice
-from app.models.scan import ScanResult, ScanSession
+from app.models.scan import ScanImage, ScanResult, ScanSession
+from app.models.survey import UserSurvey
 from app.schemas.scan import (AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut,
                               ScanSessionOut, ScanStatusOut, ScanTriggerIn)
 from app.services.ai import run_inference
-from app.services.demo import demo_scores, demo_skin_type
+from app.services.demo import demo_image_urls, demo_scores, demo_skin_type
 from app.services.relay import send_scan_command
 from app.services.scanner import fetch_scanner_image
 
@@ -92,7 +93,15 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     + 세션 시드(재분석해도 값 안 튐). 측정 OFF 항목은 None. 정직성: is_mock=True 로
     FE가 '데모(예시 데이터)' 배지를 반드시 표시.
     """
-    scores = demo_scores(session.session_id, session.scan_area or "얼굴 전체")
+    survey = db.query(UserSurvey).filter(UserSurvey.user_id == session.user_id).first()
+    area = session.scan_area or "얼굴 전체"
+    scores = demo_scores(
+        session.session_id, area,
+        skin_type=(survey.skin_type if survey else None),
+        concerns=(survey.concerns if survey else None),
+        age_band=(survey.age_band if survey else None),
+        gender=(survey.gender if survey else None),
+    )
     moisture = scores["moisture"] if session.moisture_on else None
     sebum = scores["sebum"] if session.moisture_on else None       # 수분/유분 동일 토글(G.3.2)
     pore = scores["pore"] if session.pore_on else None
@@ -112,7 +121,8 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     result.elasticity = elasticity
     result.pigmentation = pigmentation
 
-    skin_type = demo_skin_type({"moisture": moisture or 60, "sebum": sebum or 60})
+    skin_type = (survey.skin_type if survey and survey.skin_type
+                 else demo_skin_type({"moisture": moisture or 60, "sebum": sebum or 60}))
 
     scored = {k: v for k, v in {
         "moisture": moisture, "sebum": sebum, "pore": pore,
@@ -129,6 +139,16 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     advice.night_routine = "클렌징 오일 → 토너 → 앰플 → 수면 크림"
     advice.lifestyle_tips = "수분 섭취와 충분한 수면을 유지하세요."
     advice.next_scan_date = date.today() + timedelta(days=14)
+
+    # 폴백 이미지(기존 Supabase URL) — 설문 연령/성별/부위 매칭. 라이브 촬영 실패 대비.
+    imgs = demo_image_urls(session.session_id, area,
+                           age_band=(survey.age_band if survey else None),
+                           gender=(survey.gender if survey else None))
+    db.query(ScanImage).filter(ScanImage.session_id == session.session_id).delete()
+    for itype, url in imgs.items():
+        if url:
+            db.add(ScanImage(session_id=session.session_id, image_type=itype,
+                             image_url=url, region=area))
 
     session.total_score = total_score
     session.skin_type_result = skin_type
