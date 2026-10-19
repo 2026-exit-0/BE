@@ -1,5 +1,5 @@
-from sqlalchemy import (Column, Date, DateTime, ForeignKey, Integer, String,
-                        Text, func)
+from sqlalchemy import (JSON, Column, Date, DateTime, ForeignKey, Integer,
+                        String, Text, func)
 from sqlalchemy.orm import relationship
 
 from app.core.database import Base
@@ -15,6 +15,7 @@ class AiAdvice(Base):
     morning_routine = Column(Text, nullable=True)    # 아침 루틴 (K.1.1)
     night_routine = Column(Text, nullable=True)      # 저녁 루틴 (K.1.2)
     lifestyle_tips = Column(Text, nullable=True)     # 생활 습관 조언
+    report = Column(JSON, nullable=True)             # 구조화 리포트(지표별 상세·부위 소견·루틴 등)
     next_scan_date = Column(Date, nullable=True)     # 다음 스캔 권장일
     created_at = Column(DateTime, server_default=func.now())
 

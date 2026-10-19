@@ -63,6 +63,7 @@ class AdviceOut(BaseModel):
     morning_routine: str | None = None
     night_routine: str | None = None
     lifestyle_tips: str | None = None
+    report: dict | None = None          # 구조화 리포트(지표별 상세·부위 소견·루틴·추천근거)
     next_scan_date: date | None = None
 
     class Config:
