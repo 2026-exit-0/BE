@@ -20,6 +20,7 @@ from app.schemas.scan import (AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut,
 from app.services.ai import run_inference
 from app.services.demo import demo_image_urls, demo_scores, demo_skin_type
 from app.services.relay import send_scan_command
+from app.services.report import build_report
 from app.services.scanner import fetch_scanner_image
 
 router = APIRouter(prefix="/scans", tags=["scan"])
@@ -86,6 +87,43 @@ def _rand_score() -> float:
     return round(random.uniform(40, 90), 1)
 
 
+def _num(v):
+    return float(v) if v is not None else None
+
+
+def _build_and_store_advice(db: Session, session: ScanSession, metrics: dict,
+                            skin_type, survey) -> AiAdvice:
+    """결과 지표 + 스캔 부위 + 설문 + 환경 → 구조화 리포트 생성·저장 (데모/실제 공용).
+
+    조언·부위 소견을 결과값에서 규칙적으로 파생 → 부위/설문 불일치 제거.
+    report(JSON)에 전체 리포트, summary/루틴/생활팁은 기존 FE 호환용으로 함께 저장.
+    """
+    rep = build_report(
+        metrics,
+        scan_area=session.scan_area or "얼굴 전체",
+        skin_type=skin_type,
+        concerns=(survey.concerns if survey else None),
+        age_band=(survey.age_band if survey else None),
+        gender=(survey.gender if survey else None),
+        environment={
+            "temperature": _num(session.temperature),
+            "humidity": _num(session.humidity),
+            "uv_index": session.uv_index,
+        },
+    )
+    advice = db.query(AiAdvice).filter(AiAdvice.session_id == session.session_id).first()
+    if not advice:
+        advice = AiAdvice(session_id=session.session_id)
+        db.add(advice)
+    advice.summary = rep.get("summary")
+    advice.morning_routine = " → ".join(rep.get("routine_morning", []))
+    advice.night_routine = " → ".join(rep.get("routine_night", []))
+    advice.lifestyle_tips = " / ".join(rep.get("lifestyle", []))
+    advice.report = rep
+    advice.next_scan_date = date.today() + timedelta(days=rep.get("next_scan_days", 14))
+    return advice
+
+
 def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     """시연용 큐레이션 목업 결과를 저장하고 응답 생성 (is_mock=True).
 
@@ -124,21 +162,12 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     skin_type = (survey.skin_type if survey and survey.skin_type
                  else demo_skin_type({"moisture": moisture or 60, "sebum": sebum or 60}))
 
-    scored = {k: v for k, v in {
-        "moisture": moisture, "sebum": sebum, "pore": pore,
-        "elasticity": elasticity, "pigmentation": pigmentation,
-    }.items() if v is not None}
-    weakest_kr = METRIC_LABELS.get(min(scored, key=scored.get), "피부") if scored else "피부"
-
-    advice = db.query(AiAdvice).filter(AiAdvice.session_id == session.session_id).first()
-    if not advice:
-        advice = AiAdvice(session_id=session.session_id)
-        db.add(advice)
-    advice.summary = f"{weakest_kr} 관리가 가장 필요한 {skin_type} 피부예요."
-    advice.morning_routine = "약산성 클렌저 → 토너 → 수분 세럼 → SPF50+ 선크림"
-    advice.night_routine = "클렌징 오일 → 토너 → 앰플 → 수면 크림"
-    advice.lifestyle_tips = "수분 섭취와 충분한 수면을 유지하세요."
-    advice.next_scan_date = date.today() + timedelta(days=14)
+    advice = _build_and_store_advice(
+        db, session,
+        {"moisture": moisture, "sebum": sebum, "pore": pore,
+         "elasticity": elasticity, "pigmentation": pigmentation},
+        skin_type, survey,
+    )
 
     # 폴백 이미지(기존 Supabase URL) — 설문 연령/성별/부위 매칭. 라이브 촬영 실패 대비.
     imgs = demo_image_urls(session.session_id, area,
@@ -229,18 +258,15 @@ def _apply_ai_result(db: Session, session: ScanSession, ai: dict) -> AnalyzeOut:
 
     total_score = round((moisture + sebum + pore + elasticity + pigmentation) / 5)
 
-    scored = {"모공": pore, "색소침착": pigmentation}
-    worst = max(scored, key=lambda k: scored[k])
-
-    advice = db.query(AiAdvice).filter(AiAdvice.session_id == session.session_id).first()
-    if not advice:
-        advice = AiAdvice(session_id=session.session_id)
-        db.add(advice)
-    advice.summary = f"AI 분석 결과 {worst} 관리가 필요합니다."
-    advice.morning_routine = "약산성 클렌저 → 토너 → 수분 세럼 → SPF50+ 선크림"
-    advice.night_routine = "클렌징 오일 → 토너 → 앰플 → 수면 크림"
-    advice.lifestyle_tips = "수분 섭취와 자외선 차단을 유지하세요."
-    advice.next_scan_date = date.today() + timedelta(days=14)
+    survey = db.query(UserSurvey).filter(UserSurvey.user_id == session.user_id).first()
+    if survey and survey.skin_type:
+        skin_type = survey.skin_type
+    advice = _build_and_store_advice(
+        db, session,
+        {"moisture": moisture, "sebum": sebum, "pore": pore,
+         "elasticity": elasticity, "pigmentation": pigmentation},
+        skin_type, survey,
+    )
 
     session.total_score = total_score
     session.skin_type_result = skin_type
