@@ -100,6 +100,8 @@ def session_to_metrics(session: ScanSession) -> dict:
     return {
         "session_id": session.session_id,
         "created_at": session.created_at,
+        "total_score": session.total_score,
+        "skin_type_result": session.skin_type_result,
         "moisture": result.moisture if result else None,
         "sebum": result.sebum if result else None,
         "pore": result.pore if result else None,
