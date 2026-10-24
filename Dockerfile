@@ -20,5 +20,5 @@ COPY . .
 
 EXPOSE 8000
 
-# 컨테이너 시작 시: DB 마이그레이션 → 서버 실행
-CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+# 컨테이너 시작 시: DB 마이그레이션 → 제품 시드(멱등, 실패해도 서버는 뜸) → 서버 실행
+CMD ["sh", "-c", "alembic upgrade head && (python -m scripts.seed_products --file data/products_curated.json || true) && (python -m scripts.seed_products --file data/products_userdb.json || true) && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
