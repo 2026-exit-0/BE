@@ -1,7 +1,7 @@
 import uuid
 
 from sqlalchemy import (JSON, Boolean, Column, DateTime, ForeignKey, Integer,
-                        Numeric, String, UniqueConstraint, func)
+                        Numeric, String, Text, UniqueConstraint, func)
 from sqlalchemy.orm import relationship
 
 from app.core.database import Base
@@ -21,7 +21,10 @@ class Product(Base):
     brand = Column(String(100), nullable=True)
     category = Column(JSON, nullable=True)            # ["보습","진정"]
     subcategory = Column(String(50), nullable=True)   # 에센스/토너 등
-    ingredients = Column(JSON, nullable=True)         # [{"inci":..,"kr":..}] (알레르기 경고 I.3.2)
+    ingredients = Column(JSON, nullable=True)         # 주성분 [{"inci":..,"kr":..}] (알레르기 경고 I.3.2)
+    caution_ingredients = Column(JSON, nullable=True) # 주의성분 ["향료","페녹시에탄올",..] (상세 전용)
+    efficacy = Column(JSON, nullable=True)            # 주요 효능 ["보습","진정",..]
+    full_ingredients = Column(Text, nullable=True)    # 전성분 원문 (상세 전용)
     for_skin = Column(JSON, nullable=True)            # ["건성","복합성"]
     tags = Column(JSON, nullable=True)                # ["저자극","BHA"]
     price = Column(Integer, nullable=True)            # 숫자 정규화 (예산 필터 D.1.6)

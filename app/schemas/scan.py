@@ -2,6 +2,8 @@ from datetime import date
 
 from pydantic import BaseModel
 
+from app.schemas.recommend import RecommendationOut
+
 
 class ScanCreate(BaseModel):
     """스캔 세션 생성 요청 (측정 설정, 명세 G.3)"""
@@ -65,6 +67,7 @@ class AdviceOut(BaseModel):
     lifestyle_tips: str | None = None
     report: dict | None = None          # 구조화 리포트(지표별 상세·부위 소견·루틴·추천근거)
     next_scan_date: date | None = None
+    recommended_products: list[RecommendationOut] = []  # 성분 기반 추천 (카드용)
 
     class Config:
         from_attributes = True
@@ -81,4 +84,5 @@ class AnalyzeOut(BaseModel):
     skin_type_result: str | None = None
     result: ScanResultOut
     advice: AdviceOut
+    recommended_products: list[RecommendationOut] = []  # 성분 기반 추천 (카드용)
     is_mock: bool = False   # True=시연용 예시데이터(배지 표시), False=실제 AI 분석

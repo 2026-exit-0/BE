@@ -19,6 +19,8 @@ from app.schemas.scan import (AdviceOut, AnalyzeOut, ScanCreate, ScanResultOut,
                               ScanSessionOut, ScanStatusOut, ScanTriggerIn)
 from app.services.ai import run_inference
 from app.services.demo import demo_image_urls, demo_scores, demo_skin_type
+from app.services.recommend import (generate_recommendations,
+                                    get_session_recommendations)
 from app.services.relay import send_scan_command
 from app.services.report import build_report
 from app.services.scanner import fetch_scanner_image
@@ -89,6 +91,19 @@ def _rand_score() -> float:
 
 def _num(v):
     return float(v) if v is not None else None
+
+
+def _safe_generate_recommendations(db: Session, session: ScanSession):
+    """분석 직후 설문·결과 기반 제품 추천을 계산·저장하고 응답용 목록 반환.
+
+    제품 풀이 비었거나 추천 계산이 실패해도 분석 자체는 성공해야 하므로 예외는 삼킨다.
+    """
+    try:
+        generate_recommendations(db, session, top_n=12)
+        return get_session_recommendations(db, session.session_id)
+    except Exception:
+        db.rollback()
+        return []
 
 
 def _build_and_store_advice(db: Session, session: ScanSession, metrics: dict,
@@ -187,6 +202,8 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     db.refresh(result)
     db.refresh(advice)
 
+    recs = _safe_generate_recommendations(db, session)
+
     return AnalyzeOut(
         session_id=session.session_id,
         status=session.status,
@@ -194,6 +211,7 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
         skin_type_result=session.skin_type_result,
         result=ScanResultOut.model_validate(result),
         advice=AdviceOut.model_validate(advice),
+        recommended_products=recs,
         is_mock=True,   # 시연용 예시데이터 → FE 데모 배지 표시
     )
 
@@ -276,6 +294,8 @@ def _apply_ai_result(db: Session, session: ScanSession, ai: dict) -> AnalyzeOut:
     db.refresh(result)
     db.refresh(advice)
 
+    recs = _safe_generate_recommendations(db, session)
+
     return AnalyzeOut(
         session_id=session.session_id,
         status=session.status,
@@ -283,6 +303,7 @@ def _apply_ai_result(db: Session, session: ScanSession, ai: dict) -> AnalyzeOut:
         skin_type_result=session.skin_type_result,
         result=ScanResultOut.model_validate(result),
         advice=AdviceOut.model_validate(advice),
+        recommended_products=recs,
         is_mock=False,   # 실제 AI 분석
     )
 

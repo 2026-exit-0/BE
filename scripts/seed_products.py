@@ -41,7 +41,10 @@ def main() -> None:
                 brand=p.get("brand"),
                 category=p.get("category"),
                 subcategory=p.get("subcategory"),
-                ingredients=p.get("main_ingredients"),   # [{inci, kr}]
+                ingredients=p.get("main_ingredients"),   # 주성분 [{inci, kr}]
+                caution_ingredients=p.get("caution_ingredients"),  # 주의성분
+                efficacy=p.get("efficacy"),              # 주요 효능
+                full_ingredients=p.get("full_ingredients"),        # 전성분 원문
                 for_skin=p.get("for_skin"),
                 tags=p.get("tags"),
                 price=p.get("price"),

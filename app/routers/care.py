@@ -10,6 +10,7 @@ from app.core.database import get_db
 from app.core.deps import get_current_user
 from app.crud.scan import get_advice_by_session
 from app.schemas.scan import AdviceOut
+from app.services.recommend import get_session_recommendations
 
 router = APIRouter(prefix="/care", tags=["care"])
 
@@ -20,4 +21,6 @@ def get_care_guide(session_id: str, db: Session = Depends(get_db),
     advice = get_advice_by_session(db, user.user_id, session_id)
     if not advice:
         raise HTTPException(status_code=404, detail="케어가이드를 찾을 수 없습니다")
-    return advice
+    out = AdviceOut.model_validate(advice)
+    out.recommended_products = get_session_recommendations(db, session_id)  # 성분 기반 추천 동봉
+    return out
