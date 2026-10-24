@@ -99,7 +99,7 @@ def _safe_generate_recommendations(db: Session, session: ScanSession):
     제품 풀이 비었거나 추천 계산이 실패해도 분석 자체는 성공해야 하므로 예외는 삼킨다.
     """
     try:
-        generate_recommendations(db, session, top_n=12)
+        generate_recommendations(db, session, top_n=60)
         return get_session_recommendations(db, session.session_id)
     except Exception:
         db.rollback()
