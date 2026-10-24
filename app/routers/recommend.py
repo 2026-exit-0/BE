@@ -10,22 +10,13 @@ from app.core.deps import get_current_user
 from app.models.product import Product, ProductRecommendation
 from app.models.scan import ScanSession
 from app.schemas.recommend import RecommendationOut
-from app.services.recommend import generate_recommendations
+from app.services.recommend import generate_recommendations, to_recommendation_out
 
 router = APIRouter(prefix="/scans", tags=["product"])
 
 
 def _to_out(rec: ProductRecommendation, product: Product) -> RecommendationOut:
-    return RecommendationOut(
-        product_id=product.product_id,
-        name_kr=product.name_kr,
-        brand=product.brand,
-        category=product.category,
-        price=product.price,
-        image_url=product.image_url,
-        match_score=float(rec.match_score),
-        reason=rec.reason,
-    )
+    return to_recommendation_out(rec, product)
 
 
 def _get_owned_session(db: Session, session_id: str, user_id: str) -> ScanSession | None:

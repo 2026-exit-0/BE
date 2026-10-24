@@ -2,8 +2,7 @@
 
 설문(피부타입·고민·알레르기·예산) + 스캔 결과 → 제품별 매칭 점수(0~100) 계산.
 알레르기 성분 포함 제품은 추천에서 제외한다(I.3.2 안전 필터).
-
-※ 뼈대 버전 — 가중치는 상단 상수로 빼두었으니 튜닝하면 된다.
+추천사유는 매칭된 고민에 유효한 주성분을 인용해 구체적으로 생성한다.
 """
 from __future__ import annotations
 
@@ -12,6 +11,7 @@ from sqlalchemy.orm import Session
 from app.models.product import Product, ProductRecommendation
 from app.models.scan import ScanSession
 from app.models.survey import UserSurvey
+from app.schemas.recommend import RecommendationOut
 
 # 설문 고민(D.1.3) → 제품 카테고리 키워드 매핑
 CONCERN_CATEGORY = {
@@ -21,6 +21,20 @@ CONCERN_CATEGORY = {
     "색소침착": {"미백", "브라이트닝", "잡티"},
     "탄력": {"탄력", "주름", "안티에이징"},
     "건조": {"보습"},
+    "민감": {"진정", "트러블"},
+    "진정": {"진정", "트러블"},
+}
+
+# 고민별 "효과 있는 주성분" 키워드 — 추천사유 구체화에 사용
+CONCERN_INGREDIENTS = {
+    "여드름": ["살리실", "티트리", "병풀", "마데카", "센텔라", "징크", "아연", "황련"],
+    "모공": ["나이아신아마이드", "살리실", "글라이콜릭", "글루코노락톤", "징크", "아연", "레티놀"],
+    "주름": ["레티놀", "레티날", "펩타이드", "아데노신", "콜라겐", "비타민"],
+    "탄력": ["펩타이드", "아데노신", "콜라겐", "레티놀", "엘라스틴"],
+    "색소침착": ["아스코빅", "비타민", "나이아신아마이드", "알부틴", "트라넥사믹", "글루타티온"],
+    "건조": ["하이알루로", "히알루론", "세라마이드", "판테놀", "스쿠알란", "시어버터", "글리세린"],
+    "민감": ["병풀", "마데카", "센텔라", "판테놀", "알란토인", "어성초", "시카"],
+    "진정": ["병풀", "마데카", "센텔라", "판테놀", "알란토인", "어성초", "시카", "티트리"],
 }
 
 # 가중치
@@ -30,19 +44,38 @@ W_CONCERN_MAX = 40    # 고민 점수 상한
 W_BUDGET_IN = 20      # 예산 범위 내
 W_BUDGET_NEAR = 10    # 예산 근접(±20%)
 W_LOW_IRRITANT = 10   # 민감성 + 저자극
+MAX_PER_CATEGORY = 3  # 상위 추천 내 카테고리 편중 방지
+
+
+def _ingredient_names(product: Product) -> list[str]:
+    names = []
+    for ing in (product.ingredients or []):
+        if isinstance(ing, dict):
+            v = ing.get("kr") or ing.get("inci")
+            if v:
+                names.append(str(v))
+        elif ing:
+            names.append(str(ing))
+    return names
 
 
 def _has_allergen(product: Product, allergies: list[str]) -> bool:
-    if not allergies or not product.ingredients:
+    if not allergies:
         return False
-    names = []
-    for ing in product.ingredients:
-        if isinstance(ing, dict):
-            names += [str(ing.get("kr", "")), str(ing.get("inci", ""))]
-        else:
-            names.append(str(ing))
-    blob = " ".join(names)
+    blob = " ".join(_ingredient_names(product)) + " " + (product.full_ingredients or "")
     return any(a and a in blob for a in allergies)
+
+
+def _cite_ingredients(product: Product, concern: str) -> list[str]:
+    """제품 주성분 중 해당 고민에 유효한 성분명(최대 2개)."""
+    kws = CONCERN_INGREDIENTS.get(concern, [])
+    hits = []
+    for name in _ingredient_names(product):
+        if any(k in name for k in kws) and name not in hits:
+            hits.append(name)
+        if len(hits) >= 2:
+            break
+    return hits
 
 
 def score_product(product: Product, survey: UserSurvey | None,
@@ -62,12 +95,16 @@ def score_product(product: Product, survey: UserSurvey | None,
         score += W_SKIN_TYPE
         reasons.append(f"{skin_type} 피부 적합")
 
-    # 2) 고민 매칭
+    # 2) 고민 매칭 — 유효 성분을 인용해 구체화
     concerns = (survey.concerns if survey else None) or []
     matched = [c for c in concerns if cats & CONCERN_CATEGORY.get(c, set())]
     if matched:
         score += min(len(matched) * W_CONCERN, W_CONCERN_MAX)
-        reasons.append(f"{'·'.join(matched)} 케어")
+        cites = []
+        for c in matched:
+            hit = _cite_ingredients(product, c)
+            cites.append(f"{c} 개선 — {'·'.join(hit)} 함유" if hit else f"{c} 케어")
+        reasons.append(", ".join(cites))
 
     # 3) 예산
     if survey and product.price and survey.budget_min is not None and survey.budget_max is not None:
@@ -82,11 +119,56 @@ def score_product(product: Product, survey: UserSurvey | None,
     # 4) 민감성 → 저자극 가점
     if skin_type == "민감성" and product.alcohol_free and product.fragrance_free:
         score += W_LOW_IRRITANT
-        reasons.append("저자극")
+        reasons.append("무알코올·무향료 저자극")
 
     score = min(score, 100)
     reason = ", ".join(reasons) or "피부 타입 기반 추천"
     return score, reason
+
+
+def to_recommendation_out(rec: ProductRecommendation, product: Product) -> RecommendationOut:
+    """추천 레코드+제품 → 추천 카드 응답(주성분·효능 포함, 주의성분·링크 제외)."""
+    return RecommendationOut(
+        product_id=product.product_id,
+        name_kr=product.name_kr,
+        brand=product.brand,
+        category=product.category,
+        price=product.price,
+        image_url=product.image_url,
+        key_ingredients=product.ingredients,
+        efficacy=product.efficacy,
+        match_score=float(rec.match_score) if rec.match_score is not None else 0.0,
+        reason=rec.reason or "피부 타입 기반 추천",
+    )
+
+
+def get_session_recommendations(db: Session, session_id: str) -> list[RecommendationOut]:
+    """세션에 저장된 추천을 점수순으로 조회해 응답 형태로 반환 (없으면 빈 리스트)."""
+    pairs = (db.query(ProductRecommendation, Product)
+             .join(Product, ProductRecommendation.product_id == Product.product_id)
+             .filter(ProductRecommendation.session_id == session_id)
+             .order_by(ProductRecommendation.match_score.desc())
+             .all())
+    return [to_recommendation_out(rec, p) for rec, p in pairs]
+
+
+def _diversify(scored: list, top_n: int) -> list:
+    """점수 내림차순에서 카테고리당 MAX_PER_CATEGORY 로 제한해 top_n 선정.
+    편중되면 여유분으로 채워 top_n 개수는 유지."""
+    picked, overflow, per_cat = [], [], {}
+    for s, reason, product in scored:
+        cats = tuple(product.category or ["기타"])
+        key = cats[0]
+        if per_cat.get(key, 0) < MAX_PER_CATEGORY:
+            picked.append((s, reason, product))
+            per_cat[key] = per_cat.get(key, 0) + 1
+        else:
+            overflow.append((s, reason, product))
+        if len(picked) >= top_n:
+            break
+    if len(picked) < top_n:
+        picked.extend(overflow[: top_n - len(picked)])
+    return picked
 
 
 def generate_recommendations(db: Session, session: ScanSession, top_n: int = 10):
@@ -102,7 +184,7 @@ def generate_recommendations(db: Session, session: ScanSession, top_n: int = 10)
         scored.append((s, reason, product))
 
     scored.sort(key=lambda x: x[0], reverse=True)
-    top = scored[:top_n]
+    top = _diversify(scored, top_n)
 
     # 기존 추천 삭제 후 재생성 (재분석 대응)
     (db.query(ProductRecommendation)
