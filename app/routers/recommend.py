@@ -27,7 +27,7 @@ def _get_owned_session(db: Session, session_id: str, user_id: str) -> ScanSessio
 
 @router.post("/{session_id}/recommend", response_model=list[RecommendationOut],
              summary="[I.1] 분석 세션 기반 제품 추천 생성")
-def create_recommendations(session_id: str, top_n: int = 10,
+def create_recommendations(session_id: str, top_n: int = 60,
                            db: Session = Depends(get_db), user=Depends(get_current_user)):
     session = _get_owned_session(db, session_id, user.user_id)
     if not session:
