@@ -61,7 +61,7 @@ def _render_report_html(session: ScanSession) -> str:
 <head>
 <meta charset="utf-8">
 <style>
-    body {{ font-family: sans-serif; padding: 40px; color: #222; }}
+    body {{ font-family: "NanumGothic", "Nanum Gothic", sans-serif; padding: 40px; color: #222; }}
     h1 {{ font-size: 22px; margin-bottom: 4px; }}
     .meta {{ color: #666; margin-bottom: 20px; }}
     .total {{ font-size: 36px; font-weight: bold; margin: 16px 0; }}
