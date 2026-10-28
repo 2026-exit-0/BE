@@ -18,6 +18,7 @@ import httpx
 from app.core.config import settings
 
 ONECALL_URL = "https://api.openweathermap.org/data/3.0/onecall"
+CURRENT_URL = "https://api.openweathermap.org/data/2.5/weather"  # 무료 티어(기온·습도, UV 없음)
 IPGEO_URL = "https://ipapi.co/json/"
 
 # key: (lat2, lon2) -> (expires_at, data)
@@ -108,6 +109,8 @@ def get_weather(lat: float | None = None, lon: float | None = None) -> dict:
     if not settings.WEATHER_API_KEY:
         data = _mock(region)                               # 키 없음 → 목업
     else:
+        data = None
+        # 1순위: One Call 3.0 (정확한 UV 포함, 구독 필요)
         try:
             resp = httpx.get(
                 ONECALL_URL,
@@ -121,7 +124,30 @@ def get_weather(lat: float | None = None, lon: float | None = None) -> dict:
             data = _build(region, float(cur["temp"]), float(cur["humidity"]),
                           float(cur.get("uvi", 0)), is_mock=False)
         except Exception:
-            data = _mock(region)                           # 호출 실패 → 목업
+            data = None
+
+        # 2순위: 무료 현재날씨 2.5 — One Call 미구독/실패 시에도 실제 기온·습도는 제공(UV만 없음).
+        if data is None:
+            try:
+                resp = httpx.get(
+                    CURRENT_URL,
+                    params={"lat": lat, "lon": lon, "appid": settings.WEATHER_API_KEY,
+                            "units": "metric", "lang": "kr"},
+                    timeout=5.0,
+                )
+                resp.raise_for_status()
+                j = resp.json()
+                main = j.get("main", {})
+                # UV는 2.5에 없음 → 0(낮음)으로 두되, 기온·습도·습도기반 케어 문구는 실제값.
+                data = _build(region, float(main["temp"]), float(main["humidity"]),
+                              0.0, is_mock=False)
+                data["uv_unavailable"] = True              # UV만 미제공임을 표시
+            except Exception:
+                data = None
+
+        # 3순위: 둘 다 실패 → 목업
+        if data is None:
+            data = _mock(region)
 
     _cache[key] = (now + settings.WEATHER_CACHE_TTL, data)
     return data
