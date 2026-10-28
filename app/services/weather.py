@@ -94,7 +94,7 @@ def _build(region: str, temp: float, humidity: float, uvi: float, is_mock: bool)
 
 
 def _mock(region: str = "서울") -> dict:
-    return _build(region, 22.0, 45.0, 4.0, is_mock=True)   # uvi 4 → 보통
+    return _build(region, 14.0, 29.0, 4.0, is_mock=True)   # uvi 4 → 보통
 
 
 def get_weather(lat: float | None = None, lon: float | None = None) -> dict:

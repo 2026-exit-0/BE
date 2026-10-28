@@ -63,9 +63,12 @@ def create_scan(data: ScanCreate, db: Session = Depends(get_db),
              summary="스캔 트리거 (device_id 있으면 HW 릴레이에 촬영 명령까지 전달)")
 def trigger_scan(data: ScanTriggerIn = ScanTriggerIn(), db: Session = Depends(get_db),
                  user=Depends(get_current_user)):
+    # 릴레이가 떠 있으면 기기에 촬영 명령 전달(베스트 에포트). 실패해도 502로 끊지 않고
+    # 세션은 생성해 완료 폴링을 이어간다 — 기기 물리버튼 완료 콜백(/device/scans/done)이
+    # 그 세션을 완료시키거나, 아무 실측도 안 오면 FE 타임아웃(15초)이 목업으로 전환한다.
+    # (릴레이 미가동/전시 환경에서 화면 버튼이 즉시 목업으로 떨어지던 문제 해결)
     if data.device_id:
-        if not send_scan_command(data.device_id, data.part):
-            raise HTTPException(status_code=502, detail="스캔 기기에 촬영 명령을 전달하지 못했습니다")
+        send_scan_command(data.device_id, data.part)
 
     session = ScanSession(user_id=user.user_id, status="processing",
                           device_id=data.device_id, scan_area=data.part or "얼굴 전체")
