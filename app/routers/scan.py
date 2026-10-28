@@ -218,6 +218,68 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
     )
 
 
+def apply_hardware_result(db: Session, session: ScanSession,
+                          real_moisture: float | None = None,
+                          real_oil: float | None = None) -> None:
+    """실기기 완료 콜백 전용 — 실측값·실측사진은 유지하고 나머지는 목업으로 보충.
+
+    하드웨어(ESP32)는 수분·유분만 측정한다. 그 두 지표는 실측값으로 넣고(값이 없으면
+    목업으로 대체), 하드웨어가 못 재는 모공·탄력·색소 3지표와 종합점수·리포트·추천은
+    설문 기반 목업으로 채운다. 사진은 device_done 이 실측 URL 로 이미 저장했으므로
+    여기서 이미지는 건드리지 않는다(데모 폴백 이미지 추가 안 함).
+
+    분석(점수·리포트·추천)은 목업 보충분이라 결과 전체를 '실측'으로 단언하지 않는다
+    (정직성). FE 는 /result(사진·실측 수분/유분) + /care(목업 분석) 를 조립해 노출한다.
+    """
+    survey = db.query(UserSurvey).filter(UserSurvey.user_id == session.user_id).first()
+    area = session.scan_area or "얼굴 전체"
+    scores = demo_scores(
+        session.session_id, area,
+        skin_type=(survey.skin_type if survey else None),
+        concerns=(survey.concerns if survey else None),
+        age_band=(survey.age_band if survey else None),
+        gender=(survey.gender if survey else None),
+    )
+    # 실측 우선(수분·유분). 모공·탄력·색소는 하드웨어 미측정 → 항상 목업.
+    moisture = real_moisture if real_moisture is not None else scores["moisture"]
+    sebum = real_oil if real_oil is not None else scores["sebum"]
+    pore = scores["pore"]
+    elasticity = scores["elasticity"]
+    pigmentation = scores["pigmentation"]
+
+    total_score = round((moisture + sebum + pore + elasticity + pigmentation) / 5)
+
+    result = db.query(ScanResult).filter(ScanResult.session_id == session.session_id).first()
+    if not result:
+        result = ScanResult(session_id=session.session_id)
+        db.add(result)
+    result.moisture = moisture
+    result.sebum = sebum
+    result.pore = pore
+    result.elasticity = elasticity
+    result.pigmentation = pigmentation
+
+    skin_type = (survey.skin_type if survey and survey.skin_type
+                 else demo_skin_type({"moisture": moisture, "sebum": sebum}))
+
+    advice = _build_and_store_advice(
+        db, session,
+        {"moisture": moisture, "sebum": sebum, "pore": pore,
+         "elasticity": elasticity, "pigmentation": pigmentation},
+        skin_type, survey,
+    )
+
+    session.total_score = total_score
+    session.skin_type_result = skin_type
+    session.status = "done"
+    db.commit()
+    db.refresh(session)
+    db.refresh(result)
+    db.refresh(advice)
+
+    _safe_generate_recommendations(db, session)
+
+
 @router.post("/{session_id}/analyze-mock", response_model=AnalyzeOut,
              summary="[G.4] 목업 분석 결과 생성")
 def analyze_mock(session_id: str, db: Session = Depends(get_db),

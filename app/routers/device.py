@@ -16,6 +16,7 @@ from app.core.deps import get_current_user, verify_device_key, verify_device_or_
 from app.crud.scan import (expire_stale_sessions, get_device_connection,
                            get_latest_processing_session, get_latest_session)
 from app.models.scan import DeviceConnection, ScanImage, ScanResult, ScanSession
+from app.routers.scan import apply_hardware_result
 from app.schemas.device import DeviceDoneIn, DeviceLinkOut, DeviceScanOut, DeviceTriggerIn
 
 router = APIRouter(prefix="/device/scans", tags=["scan"],
@@ -79,20 +80,17 @@ def device_done(data: DeviceDoneIn, db: Session = Depends(get_db)):
     if data.part:
         session.scan_area = data.part
 
-    result = db.query(ScanResult).filter(ScanResult.session_id == session.session_id).first()
-    if not result:
-        result = ScanResult(session_id=session.session_id)
-        db.add(result)
-    result.moisture = data.moisture
-    result.sebum = data.oil   # "유분" — 기존 sebum 컬럼과 동일 개념
-
+    # 실측 사진 저장(기기 촬영본). 중복 콜백 대비 기존 이미지 제거 후 삽입.
+    db.query(ScanImage).filter(ScanImage.session_id == session.session_id).delete()
     db.add(ScanImage(session_id=session.session_id, image_type="WHITE_LED",
                      image_url=data.white_img, region=data.part))
     db.add(ScanImage(session_id=session.session_id, image_type="UV_LED",
                      image_url=data.uv_img, region=data.part))
 
-    session.status = "done"
-    db.commit()
+    # 실측값은 그대로 두고, 하드웨어가 못 재는 지표·분석·추천은 목업으로 보충 + status=done.
+    # 현재 하드웨어는 수분만 정상 측정 → 유분(oil)은 아직 미작동이라 목업으로 처리(real_oil=None).
+    # 유분 센서가 정상화되면 real_oil=data.oil 로 되돌리면 유분도 실측으로 노출된다.
+    apply_hardware_result(db, session, real_moisture=data.moisture, real_oil=None)
     db.refresh(session)
     return session
 
