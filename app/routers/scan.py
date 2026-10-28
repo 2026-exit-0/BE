@@ -155,11 +155,13 @@ def _apply_demo_result(db: Session, session: ScanSession) -> AnalyzeOut:
         age_band=(survey.age_band if survey else None),
         gender=(survey.gender if survey else None),
     )
-    moisture = scores["moisture"] if session.moisture_on else None
-    sebum = scores["sebum"] if session.moisture_on else None       # 수분/유분 동일 토글(G.3.2)
-    pore = scores["pore"] if session.pore_on else None
-    pigmentation = scores["pigmentation"] if session.melanin_on else None
-    elasticity = scores["elasticity"] if session.elasticity_on else None
+    # 데모는 예시(완전) 데이터 → 측정 토글과 무관하게 5지표 모두 채운다.
+    # (실데이터가 안 들어온 상황을 커버하는 게 데모의 목적이라 유분 등 일부가 비면 안 됨)
+    moisture = scores["moisture"]
+    sebum = scores["sebum"]
+    pore = scores["pore"]
+    pigmentation = scores["pigmentation"]
+    elasticity = scores["elasticity"]
 
     measured = [v for v in [moisture, sebum, pore, elasticity, pigmentation] if v is not None]
     total_score = round(sum(measured) / len(measured)) if measured else None
