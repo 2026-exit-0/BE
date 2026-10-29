@@ -187,7 +187,6 @@ def _render_report_html(session: ScanSession) -> str:
     return f"""<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8">
 <style>
-<<<<<<< HEAD
     @page {{ size: A4; margin: 14mm 0 10mm; }}
     @page :first {{ margin-top: 0; }}
     body {{ font-family: "Noto Sans CJK KR", "Noto Sans KR", "NanumGothic", sans-serif; color: #212121; font-size: 10.5pt; margin: 0; }}
@@ -234,17 +233,6 @@ def _render_report_html(session: ScanSession) -> str:
     .next {{ margin-top: 10px; font-size: 9pt; color: #2E7D32; font-weight: bold; }}
     .foot {{ margin: 14px 34px 0; color: #9E9E9E; font-size: 8pt; border-top: 1px solid #EEEEEE; padding-top: 8px; }}
 </style></head>
-=======
-    body {{ font-family: "NanumGothic", "Nanum Gothic", sans-serif; padding: 40px; color: #222; }}
-    h1 {{ font-size: 22px; margin-bottom: 4px; }}
-    .meta {{ color: #666; margin-bottom: 20px; }}
-    .total {{ font-size: 36px; font-weight: bold; margin: 16px 0; }}
-    table {{ border-collapse: collapse; width: 100%; }}
-    th, td {{ border: 1px solid #ccc; padding: 8px 12px; text-align: left; }}
-    th {{ background: #f5f5f5; }}
-</style>
-</head>
->>>>>>> affea67b1cdfc36fd7cbfb0ee60d8cee8838f607
 <body>
     <div class="hero"><table><tr>
         <td>
