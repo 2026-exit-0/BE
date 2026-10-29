@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpangocairo-1.0-0 \
     libgdk-pixbuf-2.0-0 \
     libcairo2 \
+    fonts-nanum \
+    && fc-cache -f \
     && rm -rf /var/lib/apt/lists/*
 
 # 의존성 먼저 설치 (레이어 캐시 활용)
